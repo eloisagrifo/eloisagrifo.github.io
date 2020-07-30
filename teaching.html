@@ -5,6 +5,38 @@
 <body topmargin="50">
 <body leftmargin="50">
 
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html">Home</a>
+  <div class="dropdown"><button class="dropbtn">Research<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <a href="research.html">Papers</a>
+      <a href="talks.html">Talks and notes</a>
+      <a href="research.html#software">Software</a>
+      <a href="research.html#conferences">Conferences</a>
+    </div>
+  </div> 
+<a href="teaching.html" class=active>Teaching</a>
+<a href=cv.pdf>CV</a> 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
 <head>
 
         <TITLE>
@@ -17,14 +49,7 @@
   
 
 
-  
-<h3> <center>
-	<a href="index.html">Home</a> &nbsp; &nbsp;
-	<a href="research.html">Research</a> &nbsp; &nbsp;
-	<a href="teaching.html">Teaching</a> &nbsp; &nbsp;
-<a href=cv.pdf>CV</a></center>
-
-
+ 
        <H1><center>
             Teaching</center>
         </H1>

@@ -1,56 +1,86 @@
 <HTML>
 <body background=rocks2.jpg>
 
-
 <body topmargin="50">
 <body leftmargin="50">
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html">Home</a>
+  <div class="dropdown"><button class="dropbtn">Research<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <a href="research.html">Papers</a>
+      <a href="talks.html">Talks and notes</a>
+      <a href="research.html#software">Software</a>
+      <a href="research.html#conferences">Conferences</a>
+    </div>
+  </div> 
+<a href="teaching.html">Teaching</a>
+<a href=cv.pdf>CV</a> 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<script>
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
 
 <head>
 
 
-        <TITLE>
+        <title>
             Elo&iacute;sa Grifo | Research
-        </TITLE>
+        </title>
         <LINK REV="made" HREF="mailto:eloisa.grifo&#x40;ucr.edu">
 
-   </HEAD>
+   </head>
   
-  
-<h3> <center>
-	<a href="index.html">Home</a> &nbsp; &nbsp;
-	<a href="research.html">Research</a> &nbsp; &nbsp;
-	<a href="teaching.html">Teaching</a> &nbsp; &nbsp;
-<a href=cv.pdf>CV</a></center>
-    
+<div class="main">
 
  <H1><center>
             Research</center>
         </H1>
 
+<center>
+<a href="https://arxiv.org/search/?query=Elo%C3%ADsa+Grifo&searchtype=author&abstracts=hide&order=-announced_date_first&size=50">
+  <img src="arxivicon.png" alt="arxiv" style="width:30px;height:30px;">
+</a>
+&nbsp;
+<a href="https://scholar.google.com/citations?user=RCz8ojQAAAAJ&hl=en&oi=ao">
+  <img src="scholaricon.png" alt="Google scholar" style="width:30px;height:30px;">
+</a>
+&nbsp;
+<a href="https://www.researchgate.net/profile/Eloisa_Grifo">
+  <img src="researchgateicon.png" alt="researchgate" style="width:30px;height:30px;">
+</a>
+</center>
 
-
-
-
+<br>
 
 <div align="justify"> 
 My research interests lie in commutative algebra and homological algebra. I am interested in applying homological algebra, characteristic p techniques, and p-derivations to different questions in commutative algebra. I have worked on questions that relate to infinite free resolutions, DG algebras, local cohomology, and symbolic powers. I wrote <a href=https://doi.org/10.18130/V3707WN5T>my PhD thesis</a> under the supervision of Craig Huneke, on the containment problem for symbolic and ordinary powers of ideals over regular rings. 
 
-<h4><a href="https://arxiv.org/search/?query=Elo%C3%ADsa+Grifo&searchtype=author&abstracts=hide&order=-announced_date_first&size=50">arXiv</a>
-&nbsp;&nbsp; <a href=https://www.researchgate.net/profile/Eloisa_Grifo>Research Gate</a>
-&nbsp;&nbsp; <a href=https://scholar.google.com/citations?user=RCz8ojQAAAAJ&hl=en&oi=ao>Google Scholar</a>
-&nbsp;&nbsp; <a href=https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1112009>Mathscinet</a>
-<br></h4>
-
 
 <div class="page-content">
       <div class="wrapper">
-        <h2 id="links">Papers</h2>
+        <h2>Papers</h2>
+
+
+
 
 
 <ol reversed>
-
-
-
 
 <li>Expected resurgence of ideals defining Gorenstein rings (with <a href="http://www.math.virginia.edu/people/clh4xd">Craig Huneke</a> and <a href=https://math.virginia.edu/people/vm6y/>Vivek Mukundan</a>)
 <br>
@@ -287,11 +317,11 @@ This paper describes the Macaulay2 package SpectralSequences.
 </li>
 </ol>
 
-
+<br><br>
 
  <div class="page-content">
       <div class="wrapper">
-        <h2 id="links">Talks and notes</h2>
+        <h2 id="notes">Talks and notes</h2>
 
 
 <div>
@@ -336,7 +366,7 @@ Many other <a href=talks.html>notes and slides</a> from some other talks I have 
 
 <div class="page-content">
       <div class="wrapper">
-        <h2>Software</h2>
+        <h2 id=software>Software</h2>
 
 I often use <a href=http://www.math.uiuc.edu/Macaulay2/>Macaulay2</a> in my research, and I have contributed to a few Macaulay2 packages.
 
@@ -366,7 +396,7 @@ This package comes with Macaulay2 version &#8805; 1.10.
 
    <div class="page-content">
       <div class="wrapper">
-        <h2 id="links">Recent and future conferences</h2>
+        <h2 id="conferences">Recent and future conferences</h2>
 
 
 <ul>  
@@ -453,7 +483,7 @@ My research is supported by NSF grant <a href=https://www.nsf.gov/awardsearch/sh
 <p class="caption"><center>
 	email: eloisa.grifo&#64;ucr.edu
 </center> </p>
-
+</div>
 
 </BODY>
 
