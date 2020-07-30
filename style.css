@@ -71,7 +71,7 @@
   color: white;
 }
 
-/* Add a grey background to dropdown links on hover */
+/* Add a background to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #48D1CC;
   color: white;
@@ -113,4 +113,66 @@
     width: 100%;
     text-align: left;
   }
+}
+
+
+.textstyle {
+    background-color: #191970; /* Changing background color */
+    color: white;
+    font-weight: bold; /* Making font bold */
+    border-radius: 10px; /* Making border radius */
+    width: 30px; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 5px 35px 5px 10px; /* Making space around letters */
+    /* font-size: 18px; /* Changing font size */
+}
+
+.arxiv {
+    text-decoration:none;
+    background-color: #191970; /* Changing background color */
+    color: white;
+    font-weight: bold; /* Making font bold */
+    border-radius: 10px; /* Making border radius */
+    width: 100px; /* Making auto-sizable width */
+    height: 20px; /* Making auto-sizable height */
+    padding: 5px 5px 3px 10px; /* Making space around letters */
+    /* font-size: 18px; /* Changing font size */
+}
+
+
+.journalversion {
+    text-decoration:none;
+    background-color: #191970; /* Changing background color */
+    color: white;
+    font-weight: bold; /* Making font bold */
+    border-radius: 10px; /* Making border radius */
+    width: 108px; /* Making auto-sizable width */
+    height: 20px; /* Making auto-sizable height */
+    padding: 5px 5px 5px 10px; /* Making space around letters */
+    /* font-size: 18px; /* Changing font size */
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+a {
+    text-decoration:none;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
 }
