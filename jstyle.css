@@ -1,60 +1,40 @@
-/* <length> value */
-max-width: 3.5em;
-
-/* <percentage> value */
-max-width: 75%;
-
-/* Keyword values */
-max-width: none;
-max-width: max-content;
-max-width: min-content;
-max-width: fit-content(20em);
-
-/* Global values */
-max-width: inherit;
-max-width: initial;
-max-width: unset;
+.jack {	
+	width: 500px;
+}
 
 
-.jack {
+.jeffries {	
+	width: 650px;
+	text-align: justify;
+}
+
+
+.banana {
 	width: 50%;
+	align-content: left;
+  	align-items: center;
+	align-text: center;
+	margin: 0 auto;
 }
 
 
 @media screen and (max-width:480px){
 	.jack {
 		width: 100%;
-}
-}
-
-
-
-
-.jeffries {
-	width: 650px;
-	text-align: justify;
-	align-items: center;
+		align-items: center;
 }
 
-
-@media screen and (max-width:480px){
 	.jeffries {
-		width: 100%;
-		text-align: justify;
-		align-items: center;}
+		width: 95%;
+		text-align: justify;	
+		align-items: center;
 }
 
-
-
-
-.papers {
-	width: 700px;
-	align-items: center;
-}
-
-
-@media screen and (max-width:480px){
-	.papers {
-		width: 100%;
+	.banana {
+		width: 95%;
+		align-content: left;
+  		align-items: center;
+		align-text: center;
+		margin: 0 auto;
 }
 }
