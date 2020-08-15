@@ -32,14 +32,16 @@ max-width: unset;
 
 .jeffries {
 	width: 650px;
+	text-align: justify;
+	align-items: center;
 }
 
 
 @media screen and (max-width:480px){
 	.jeffries {
 		width: 100%;
-		justify-content: center;
-}
+		text-align: justify;
+		align-items: center;}
 }
 
 
@@ -47,7 +49,7 @@ max-width: unset;
 
 .papers {
 	width: 700px;
-	justify-content: center;
+	align-items: center;
 }
 
 
