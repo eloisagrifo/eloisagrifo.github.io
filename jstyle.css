@@ -16,14 +16,27 @@ max-width: initial;
 max-width: unset;
 
 
-@media screen and (max-width:480px){
 .jack {
-width: 100%;
+	width: 50%;
+}
+
+
+@media screen and (max-width:480px){
+	.jack {
+		width: 100%;
 }
 }
 
-@media screen and (min-width:500px){
-.jack {
-width: 50%;
+
+
+
+.jeffries {
+	width: 650px;
+}
+
+
+@media screen and (max-width:480px){
+	.jeffries {
+		width: 100%;
 }
 }
