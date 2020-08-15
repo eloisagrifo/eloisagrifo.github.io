@@ -38,5 +38,21 @@ max-width: unset;
 @media screen and (max-width:480px){
 	.jeffries {
 		width: 100%;
+		justify-content: center;
+}
+}
+
+
+
+
+.papers {
+	width: 700px;
+	justify-content: center;
+}
+
+
+@media screen and (max-width:480px){
+	.papers {
+		width: 100%;
 }
 }
