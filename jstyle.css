@@ -16,7 +16,7 @@ max-width: initial;
 max-width: unset;
 
 
-@media screen and (max-width:400px){
+@media screen and (max-width:480px){
 .jack {
 width: 100%;
 }
