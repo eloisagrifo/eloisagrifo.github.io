@@ -176,3 +176,19 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none;
 }
+
+
+
+.wii {	
+	width: 520px;
+}
+
+
+@media screen and (max-width: 600px) {
+	.wii {
+		width: 95%;
+		text-align: justify;	
+		align-items: center;
+}
+
+}
