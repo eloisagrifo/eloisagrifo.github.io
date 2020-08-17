@@ -217,7 +217,12 @@ details > summary::-webkit-details-marker {
  		display: flex;
 }
 
-	.column {
+	.column1 {
+  		flex: 100%;
+  		padding: 5px;
+}
+
+	.column2 {
   		flex: 100%;
   		padding: 5px;
 }
