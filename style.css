@@ -133,7 +133,7 @@
     color: white;
     font-weight: bold; /* Making font bold */
     border-radius: 10px; /* Making border radius */
-    width: 100px; /* Making auto-sizable width */
+    width: 44px; /* Making auto-sizable width */
     height: 20px; /* Making auto-sizable height */
     padding: 5px 5px 3px 10px; /* Making space around letters */
     /* font-size: 18px; /* Changing font size */
@@ -146,7 +146,7 @@
     color: white;
     font-weight: bold; /* Making font bold */
     border-radius: 10px; /* Making border radius */
-    width: 108px; /* Making auto-sizable width */
+    width: 55px; /* Making auto-sizable width */
     height: 20px; /* Making auto-sizable height */
     padding: 5px 5px 5px 10px; /* Making space around letters */
     /* font-size: 18px; /* Changing font size */
@@ -218,13 +218,11 @@ details > summary::-webkit-details-marker {
 }
 
 	.column1 {
-  		flex: 100%;
-  		padding: 5px;
+  		width: 100%;
 }
 
 	.column2 {
-  		flex: 100%;
-  		padding: 5px;
+  		width: 100%;
 }
 }
 
