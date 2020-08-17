@@ -213,10 +213,6 @@ details > summary::-webkit-details-marker {
 		align-items: center;
 }
 
-	.row {
- 		display: flex;
-}
-
 	.column1 {
   		width: 100%;
 }
