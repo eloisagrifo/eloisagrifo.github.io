@@ -19,13 +19,18 @@
       <a href="research.html">Papers</a>
       <a href="talks.html">Talks and notes</a>
       <a href="research.html#software">Software</a>
-      <a href="research.html#conferences">Conferences</a>
     </div>
   </div> 
 <a href="teaching.html">Teaching</a>
 <a href=cv.pdf>CV</a> 
-<a href=champ/index.html>CHAMP</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  <div class="dropdown"><button class="dropbtn">Conferences and Seminars<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <a href="organization.html">Things I organize</a>
+      <a href="travel.html">My travel schedule</a>
+      <a href=champ/index.html>CHAMP</a>
+    </div>
+ </div> 
+ <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
 <script>
@@ -89,15 +94,31 @@ My research interests lie in commutative algebra and homological algebra. I am i
 
 
 
+<li>Lower bounds on Betti numbers (with <a href="http://home.sandiego.edu/~aboocher/">Adam Boocher</a>)
+<br>
+<i>submitted</i>
+<div class="flex-container">
+<!--
+<a href=https://arxiv.org/abs/2012.01617><div class=arxiv>arXiv</div></a>
+&nbsp;
+--!>
+<details><summary><div class="textstyle">abstract</div></summary>
+We survey recent results on bounds for betti numbers of modules over polynomial rings, with an emphasis on lower bounds. Along the way, we give a gentle introduction to free resolutions and betti numbers, and discuss some of the reasons why one would study these.
+
+</details>
+</div>
+This is a survey on lower bounds for Betti numbers over polynomial rings.
+<br>
+</li>
+
+<br>
+
 
 <li>Symbolic Rees Algebras (with <a href="http://www.math.unl.edu/~aseceleanu2/">Alexandra Seceleanu</a>)
 <br>
 <i>submitted</i>
-
 <div class="flex-container">
-<!--
-<a href=https://arxiv.org/abs/><div class=arxiv>arXiv</div></a>
---!>
+<a href=https://arxiv.org/abs/2012.01617><div class=arxiv>arXiv</div></a>
 &nbsp;
 <details><summary><div class="textstyle">abstract</div></summary>
 We survey old and new approaches to the study of symbolic powers of ideals. Our focus is on the symbolic Rees algebra of an ideal, viewed both as a tool to investigate its symbolic powers and as a source of challenging problems in its own right. We provide an invitation to this area of investigation by stating several open questions.
@@ -331,7 +352,7 @@ We give some lower bounds on the projective levels and derive a new version of T
 
 <br>
 
-<li>On the growth of deviations (with <a href="http://www.math.utah.edu/~boocher/">Adam Boocher<a/>, <a href="http://www.dima.unige.it/~dali/">Alessio D'Al&igrave;</a>, <a href="https://www.math.ku.edu/~j402m915/">Jonathan Monta&ntilde;o</a>, and <a href="https://sites.google.com/site/alessiosammartano/">Alessio Sammartano</a>) 
+<li>On the growth of deviations (with <a href="http://home.sandiego.edu/~aboocher/">Adam Boocher<a/>, <a href="http://www.dima.unige.it/~dali/">Alessio D'Al&igrave;</a>, <a href="https://www.math.ku.edu/~j402m915/">Jonathan Monta&ntilde;o</a>, and <a href="https://sites.google.com/site/alessiosammartano/">Alessio Sammartano</a>) 
 <br>
 <i>Proceedings of the American Mathematical Society</i> 144 (2016), pp. 5049-5060.
 <div class=flex-container>
@@ -348,7 +369,7 @@ We prove some results on deviations that resemble well-known facts about the Bet
 
 <br>
 
-<li>Edge ideals and DG algebra resolutions (with <a href="http://www.math.utah.edu/~boocher/">Adam Boocher<a/>, <a href="http://www.dima.unige.it/~dali/">Alessio D'Al&igrave;</a>, <a href="https://www.math.ku.edu/~j402m915/">Jonathan Monta&ntilde;o</a>, and <a href="https://sites.google.com/site/alessiosammartano/">Alessio Sammartano</a>) <br>
+<li>Edge ideals and DG algebra resolutions (with <a href="http://home.sandiego.edu/~aboocher/">Adam Boocher<a/>, <a href="http://www.dima.unige.it/~dali/">Alessio D'Al&igrave;</a>, <a href="https://www.math.ku.edu/~j402m915/">Jonathan Monta&ntilde;o</a>, and <a href="https://sites.google.com/site/alessiosammartano/">Alessio Sammartano</a>) <br>
 <i>Le Matematiche </i> 70 (2015), no.1, 215-237. 
 <div class=flex-container>
 <a href="http://arxiv.org/abs/1504.01450"><div class=arxiv>arXiv</div></a> 
@@ -384,7 +405,7 @@ This paper describes the Macaulay2 package SymbolicPowers.
 <br>
 	
 
-<li>The software package SpectralSequences (with <a href="http://www.math.utah.edu/~boocher/">Adam Boocher<a/> and <a href="http://www.math.unb.ca/~ngrieve/">Nathan Grieve</a>)
+<li>The software package SpectralSequences (with <a href="http://home.sandiego.edu/~aboocher/">Adam Boocher<a/> and <a href="http://www.math.unb.ca/~ngrieve/">Nathan Grieve</a>)
 <br>
 <i>submitted</i> 
 <div class=flex-container>
@@ -454,7 +475,7 @@ I often use <a href=http://www.math.uiuc.edu/Macaulay2/>Macaulay2</a> in my rese
 
 <br><br>
 
-  <li><a href="http://www.math.uiuc.edu/Macaulay2/doc/Macaulay2-1.10/share/doc/Macaulay2/SpectralSequences/html/">SpectralSequences</a> <br>(developed with <a href="http://www.math.berkeley.edu/~daffyd">David Berlekamp</a>, <a href="http://www.math.utah.edu/~boocher/">Adam Boocher<a/>, <a href="http://www.math.unb.ca/~ngrieve">Nathan Grieve</a>, <a href="http://www.mast.queensu.ca/~ggsmith">Gregory G. Smith</a>, and <a href="http://www.math.unl.edu/~tvu5/">Thanh Vu</a>) <br>
+  <li><a href="http://www.math.uiuc.edu/Macaulay2/doc/Macaulay2-1.10/share/doc/Macaulay2/SpectralSequences/html/">SpectralSequences</a> <br>(developed with <a href="http://www.math.berkeley.edu/~daffyd">David Berlekamp</a>, <a href="http://home.sandiego.edu/~aboocher/">Adam Boocher<a/>, <a href="http://www.math.unb.ca/~ngrieve">Nathan Grieve</a>, <a href="http://www.mast.queensu.ca/~ggsmith">Gregory G. Smith</a>, and <a href="http://www.math.unl.edu/~tvu5/">Thanh Vu</a>) <br>
 This package comes with Macaulay2 version &#8805; 1.10.
 </li>
 <ol>
@@ -470,110 +491,21 @@ This package comes with Macaulay2 version &#8805; 1.10.
 <br><br>
   </ol>
 </li>
+
+
+<li><a href="https://github.com/eloisagrifo/levels">ThickSubcategories</a> <br>(with <a href=https://www.math.uni-bielefeld.de/~jletz/>Janina Letz</a> and <a href=https://www.math.utah.edu/~pollitz/>Josh Pollitz</a>)<br>
+Under construction; use with caution.
+<ol>
+    This is a <a href="http://www.math.uiuc.edu/Macaulay2/">Macaulay2</a> package that provides tools for computations related to thick subcategories of D(R); for example, it computes (or gives bounds for) levels of modules and complexes, and produces modules that are non-proxy small over non-ci quotients of polynomial rings.
+<br><br>
+  </ol>
+</li>
 </ul>
 
-
-
-
-
-   <div class="page-content">
-      <div class="wrapper">
-        <h2 id="conferences">Recent and future conferences</h2>
-
-
-<ul>  
-<li>May 2018: I spoke at the <A href="https://www.math.utah.edu/agtrtg/commutative-algebra/
-">Utah RTG Summer School in Commutative Algebra</A>.
-<br></li>
-
-<li>October 2018: Mathematisches Forschungsinstitut Oberwolfach Mini-workshop on <a href="https://www.mfo.de/occasion/1840b/www_view">Asymptotic Invariants of Homogeneous Ideals</a>.
-<br></li>
-
-
-<li>October 2018: AMS meeting in Ann Arbor, MI. I spoke in the sessions on <a href="http://www.ams.org/meetings/sectional/2259_program_ss15.html#title">Advances in commutative algebra</a> and <a href=http://www.ams.org/meetings/sectional/2259_program_ss32.html#title>Commutative algebra and complexity</a>.
-<br></li>
-
-
-<li>December 2018: I spoke in the session on <a href=https://www2.cms.math.ca/Events/winter18/schedule_session#srp>Symbolic and regular powers of ideals</a> at the <a href=https://winter18.cms.math.ca>CMS Winter Meeting 2018</a>.
-<br></li>
-
-<li>January 2019: I spoke at the conference <A href="https://facard2019.wixsite.com/facard2019">Frobenius Actions in commutative algebra: recent developments</A>, in Barcelona, Spain.
-<br></li>
-
-
-<li>February 2019: I spoke at the Mathematisches Forschungsinstitut Oberwolfach Workshop on <A href="https://www.mfo.de/occasion/1907/www_view">Singularities and Homological Aspects of Commutative Algebra</A>.
-<br></li>
-
-
-<li>March 2019: <a href="https://sites.google.com/site/patriciajklein/">Patricia Klein</a> and I organized an <A href="http://www.ams.org/meetings/sectional/2261_program_ss1.html#title
-">AMS Special Session on developments in Commutative Algebra</A> in Auburn, AL.
-<br></li>
-
-<li>April 13 and 14, 2019: I spoke at the conference <a href=https://math.wvu.edu/mad2019/>Morgantown Algebra Days</a>, at West Virginia University.</li>
-
-<li>October, 2019: I participated in the <a href=http://www.birs.ca/events/2019/5-day-workshops/19w5104>Women in Commutative Algebra workshop</a> at the Banff International Research Station.
-
-<li>November 2, 2019: I spoke at the <a href=https://www.math.uic.edu/ums/>Undergraduate Mathematics Symposium</a>, in the University of Illinois at Chicago.</li>
-
-<li>November, 2019: I gave a lecture series (in spanish) in the <a href=http://ac2019.eventos.cimat.mx>Fall School in Commutative Algebra</a>, at CIMAT, Mexico.</li>
 
 <br>
-
-<li>March, 2020: <a href=http://ssather.people.clemson.edu>Sean Sather-Wagstaff</a> and I organized a <a href=http://www.ams.org/meetings/sectional/2273_program_ss28.html#title>special session on commutative algebra</a> at the <a href=http://www.ams.org/meetings/sectional/2273_special.html>AMS Sectional Meeting at UVa</a>. Unfortunately, the meeting got canceled due to CORONAVIRUS concerns, but we hosted a zoom session on March 21 and 22. Click <a href ="cvillezoom.html">here</a> for more information, including videos of some of the talks.
-</li>
-
-<li>April, 2020: I was going to speak in the special session on <a href=http://www.ams.org/meetings/sectional/2280_program_ss42.html#title>combinatorial techniques in commutative algebra</a> at the <a href=http://www.ams.org/meetings/sectional/2280_special.html>AMS Sectional Meeting at Purdue</a>. Unfortunately, the meeting got canceled due to the CORONAVIRUS crisis.
-</li>
-
-<li>May, 2020: I gave a talk at the <a href=https://www.msri.org/general_events/24976>Fellowship of the ring, worldwide Commutative Algebra Seminar</a>, which was recorded and can be watched <a href=https://www.youtube.com/watch?v=Be83xC1isy4>here</a>.
-</li>
-
-<li>October, 2020: I spoke in the special Session on <a href=http://www.ams.org/meetings/sectional/2278_program_ss5.html#title>Homological Methods in Algebra</a>, at the  <a href=http://www.ams.org/meetings/sectional/2278_special.html>Penn State AMS Sectional Meeting</a>.
-</li>
-
-
-<li>March, 2020: I will speak in the special Session on <a href=http://www.ams.org/meetings/sectional/2284_program_ss1.html#title>Commutative Algebra</a>, at the <a href=http://www.ams.org/meetings/sectional/2284_special.html>Brown Virtual AMS Sectional Meeting</a>.
-</li>
-
-
-<li>April, 2020: I will speak in the special Session on <a href=https://www.ams.org/meetings/sectional/2286_program_ss7.html#title>Commutative Algebra</a>, at the  <a href=https://www.ams.org/meetings/sectional/2286_program.html>Cincinnati Virtual AMS Sectional Meeting</a>.
-</li>
-
-
-<li>May, 2020: <a href=https://sites.google.com/view/alessandracostantini/home>Alessandra Costantini</a> and I are organizing a virtual Special Session titled <a href=http://www.ams.org/meetings/sectional/2282_program_ss7.html#title>Women in Commutative Algebra - One hundred years of Idealtheorie in Ringbereichen</a>, at the  <a href=http://www.ams.org/meetings/sectional/2282_program.html>San Francisco State Virtual AMS Sectional Meeting</a>.
-</li>
-
-
-
-<li>June, 2021: I will give a lecture series in <a href=https://www.math.utah.edu/awmchapter/conference/index.html>BRIDGES</a>, a conference aimed towards early graduate students and advanced undergraduate students, at the University of Utah. This was originally scheduled for May 2020 but has been postponed to 2021 due to the CORONAVIRUS crisis.
-</li>
-
-
-<li>August, 2021: I will speak at the <a href=https://icerm.brown.edu>ICERM</a> workshop <a href=https://icerm.brown.edu/topical_workshops/tw-21-dmga/>D-modules, Group Actions, and Frobenius: Computing on Singularities</a>.
-</li>
-
-
-
-<li>October, 2022: <a href=https://home.sandiego.edu/~aboocher/>Adam Boocher</a>, <a href=https://math.as.uky.edu/users/jke295>Jenny Kenkel</a> and I are organizing a special session on commutative algebra in the Utah AMS Sectional Meeting.
-</li>
-
-<br><br>
-
-Some later date:
-
-<br><br>
-
-<li>I was going to speak at <a href=https://www.math.unl.edu/~aseceleanu2/BrianFest2020.html>BrianFest</a>, aka the Conference on unexpected and asymptotic properties of algebraic varieties, in honor of <a href=http://www.math.unl.edu/~bharbourne1/>Brian Harbourne</a>, at UNL. Unfortunately, the meeting has been postponed to a later date due to CORONAVIRUS concerns.
-</li>
-
-
-
-<li>Vou dar uma palestra no <a href=http://nmath.tecnico.ulisboa.pt/enemath/index.html>ENEMath 2020</a>, no Instituto Superior T&eacute;cnico, Portugal; a confer&ecirc;ncia foi adiada at&eacute; uma data por determinar.</li>
-
-</ul>
-
-<br><br><br>
-
+<br>
+<br>
 
 <center>
 <img src=NSFlogo.png height=100 hspace=25>
