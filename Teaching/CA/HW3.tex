@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Homework 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UCR $\mid$ Elo\'isa Grifo}
+\lhead{Commutative Algebra Winter 2021}
+
+
+\begin{center}
+	{\LARGE Problem Set 3}
+\end{center}
+
+
+
+\begin{problem}
+	Show that
+	$$V(I) = \bigcup_{P \in \textrm{Min}(I)} V(P)$$
+	and conclude that
+	$$\sqrt{I} \,\, = \bigcap_{P \in \textrm{Min}(I)} P.$$
+\end{problem}
+
+
+
+
+
+\begin{problem}	
+Let $I$ and $J$ be ideals in a ring $R$.
+\begin{enumerate}[a)]
+\item Show that $\sqrt{\sqrt{I}} = \sqrt{I}$.
+\item Show that if $I \subseteq J$, then $\sqrt{I} \subseteq \sqrt{J}$.
+\item Show that $\sqrt{I \cap J} = \sqrt{I} \cap \sqrt{J}$.
+\item Show that $\sqrt{I^n} = \sqrt{I}$ for all $n \geqslant 1$.
+\item Show that if $P$ is a prime ideal, then $\sqrt{P^n} = P$ for all $n \geqslant 1$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}$\,$
+	\begin{enumerate}[a)]
+		\item Show that $P$ is a prime ideal if and only if $P$ satisfies the following property: given ideals $I$ and $J$ in $R$, if $IJ \subseteq P$, then $I \subseteq P$ or $J \subseteq P$.
+		\item Show that if $P$ is a prime ideal and $P = I \cap J$ for some ideals $I$ and $J$, then $P = I$ or $P = J$.
+	\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+	Let $R$ be a ring of characteristic $p>0$. The \emph{Frobenius map} on $R$ is the map 
+	$$\xymatrix@R=2mm{R \ar[r]^-{F} & R \\ r \ar@{|->}[r] &r^p}$$
+\begin{enumerate}[a)]
+	\item Show that the Frobenius map is a ring homomorphism.
+	\item Show that the Frobenius map is module-finite if and only if it is algebra-finite.
+	\item Show that the map on spectra induced by the Frobenius map is the identity map.
+\end{enumerate}
+\end{problem} 
+
+
+\begin{problem}
+	Given any subset $X \subseteq \mathbb{A}^d_{\mathbb{C}}$, show that $\mathcal{Z}(\mathcal{I}(X))$ is the closure of $X$ in the Zariski topology.
+\end{problem}
+
+
+\begin{problem}
+	Consider the inclusion map $k[xy,xz,yz] \subseteq k[x,y,z]$. Is the induced map on Spec surjective? If not, give an explicit prime not in the image.
+\end{problem}
+
+
+\begin{problem}
+	Let $R = \mathbb{Q}[x,y,z]/(xy,yz)$, and let $I = (xz)$ in $R$. The $R$-module $I/I^2$ is cyclic; write it explicitly as a quotient of $R$.
+\end{problem}
+
+
+\begin{problem}
+	Let $R = \mathbb{R}[x,y]/(xy)$ and consider the ideal $P = (x-1)$ in $R$. Show that $P$ is a maximal ideal in $R$, and that $R_P \cong \mathbb{R}[t]_{(t-1)}$. What does this mean geometrically?
+\end{problem}
+
+\end{document}
