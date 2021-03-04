@@ -1,0 +1,118 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Homework 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UCR $\mid$ Elo\'isa Grifo}
+\lhead{Commutative Algebra Winter 2021}
+
+
+\begin{center}
+	{\LARGE Problem Set 5}
+\end{center}
+
+
+\begin{problem}
+	Let $R = \mathbb{Z}[\sqrt{-5}]$. While $6 \in R$ cannot be written as a unique product of irreducibles, we are going to show that the ideal $I = (6)$ does have a unique primary decomposition. Unfortunately, Macaulay2 cannot take primary decompositions over $\mathbb{Z}$, but this one we can do the old fashioned way.	
+	\begin{enumerate}[a)]
+	\item Prove that $(2)$ is a primary ideal.
+	\item Prove that $(3)$ is \emph{not} a primary ideal.
+	\item Prove that $(3, 1+\sqrt{-5})$ and $(3, 1+\sqrt{-5})$ are both primary.
+	\item Show that $(6) = (2) \cap (3, 1+\sqrt{-5}) \cap (3, 1 -\sqrt{-5})$.
+	\item Why is this primary decomposition unique?
+	\end{enumerate}
+\end{problem}
+
+
+\begin{problem} Let $R$ be a Noetherian ring. Let $I$ be an ideal in $R$, and $x \in R$. The \emph{saturation} of $I$ with respect to $x$ is the ideal
+$$(I : x^\infty) := \bigcup_{n=1}^\infty (I : x^n).$$
+	\begin{enumerate}[a)]
+	\item Let $Q$ be a primary ideal. Show that
+	$$(Q : x^\infty) = \left\lbrace \begin{array}{ll} Q & \textrm{if } x \notin P \\ R & \textrm{if } x \in P \end{array}\right. .$$
+	\item Show that $(I : x^\infty) = (I : x^n)$ for some $n$.
+	\item Show that $(I \cap J : x^\infty) = (I : x^\infty) \cap (J : x^\infty)$ for any ideals $I$ and $J$.
+	\item Let $I = Q_1 \cap \cdots \cap Q_k$ be a primary decomposition, and $x \in R$. Show that
+	$$(I : x^\infty) = \bigcap_{x \notin P_i} Q_i.$$
+	\end{enumerate}
+\end{problem}
+
+\begin{problem}
+	Let $I$ be a radical ideal in a Noetherian ring $R$. A beautiful theorem of Brodmann says that the set
+	$$\bigcup_{n \geqslant 1} \textrm{Ass } (R/I^n)$$
+	is finite. Show that there exists an element $x$ such that:
+	\begin{itemize}
+		\item $x$ is contained in every embedded prime of $I^n$ for every $n$, and
+		\item $x \notin P$ for all $P \in \textrm{Min}(I)$.
+	\end{itemize}
+	Conclude that there exists $x \in R$ such that $I^{(n)} = (I^n : x^\infty)$ for all $n \geqslant 1$.
+\end{problem}
+
+
+
+\begin{problem}
+	Consider $s$ points $P_1 = (a_{11}, \ldots, a_{1d}), \ldots, P_s = (a_{s1}, \ldots, a_{sd})$ in $\mathbb{A}^d$, and let $I$ be the corresponding radical ideal in $\mathbb{C}[x_1, \ldots, x_d]$. Show that for all $n \geqslant 1$,
+	$$I^{(n)} = \bigcap_{i=1}^s (x_1 - a_{i1}, \ldots, x_d - a_{id})^n.$$
+\end{problem}
+
+\begin{problem} 
+Let $R$ be any ring.
+\begin{enumerate}[a)]
+	\item Show that if $\mathfrak{m}$ is any maximal ideal in $R$, then $\mathfrak{m}^n$ is $\mathfrak{m}$-primary for any $n \geqslant 1$.
+	\item If $R$ is a domain, then
+	$$\bigcap_{n \geqslant 1} I^n = 0.$$
+	for any proper ideal $I$ in $R$.\footnote{Hint: first, do the case where $I$ is a maximal ideal in $R$. Be wise, localize!}
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+If $(R, \mathfrak{m})$ is a Noetherian local ring, show that $M$ has finite length if and only if $M$ is finitely generated and $\mathfrak{m}^n M = 0$ for some $n$.
+\end{problem}
+	
+	
+\begin{problem}
+	Let $k$ be a field, and $R = k[a,b,c,d]/(ad-bc)$. Find prime ideals $P$ and $Q$ in $R$ such that $\textrm{ht}(P) + \textrm{ht}(Q) < \textrm{ht}(P + Q)$.
+\end{problem}
+
+
+\begin{problem}$\,$
+	\begin{enumerate}[a)]
+		\item Find the height of $J = (ab,bc,cd,ad)$ in $k[a,b,c,d]$ over any field $k$, and the dimension of $k[a,b,c,d]/J$.
+		\item Find the dimension of the ring $S$, where $S = \mathbb{Q}[x^3y^3, x^3y^2z, x^2z^3] \subseteq \mathbb{Q}[x,y,z]$.
+		\item Let $I$ be the defining ideal of the curve parametrized by $(t^{13},t^{42},t^{73})$ over $\mathbb{Q}$. Find the height of $I$, and notice that $\textrm{height}(I) < \mu(I)$.
+		\item Let $R=\mathbb{Q}[x,y,z]$, and $I=(x^3, x^2y, x^2z, xyz)$. Find the dimension of $R/I$ and the height of $I$.
+		\item Find the dimension of the module $I/I^2$, where $I = (xz)$ in $R = \mathbb{C}[x,y,z]/(xy,yz)$.	
+	\end{enumerate}
+\end{problem}
+
+
+
+
+\end{document}
