@@ -1,0 +1,124 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathrsfs}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+
+\newcommand{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\Hom}{Hom}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Problem Set 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UCR $\mid$ Elo\'isa Grifo}
+\lhead{Homological Algebra Spring 2021}
+
+
+\begin{center}
+	{\LARGE Problem Set 1}
+\end{center}
+
+\vspace{3em}
+
+\setcounter{problem}{-1}
+
+\begin{problem}
+	Install Macaulay2.\footnote{You can only choose this problem if you did not do the corresponding problem in Commutative Algebra in the Winter.}
+\end{problem}
+
+
+
+\begin{problem}
+	Let $R = \mathbb{Q}[x,y,z]/(x^2,xy)$. Consider the bounded complex
+	$$C = \xymatrix@R=1mm@C=30mm{R \ar[r]^-{\begin{pmatrix} z \\ -y \\ x \end{pmatrix}} & R^3 \ar[r]^-{\begin{pmatrix} -y & -z & 0 \\ x & 0 & -z \\ 0 & x & y \end{pmatrix}
+} & R^3 \ar[r]^-{\begin{pmatrix} x & y & z\end{pmatrix}
+} & R \\ \text{{\tiny 3}} & \text{{\tiny 2}} & \text{{\tiny 1}} & \text{{\tiny 0}}}$$
+Set $C$ up in Macaulay2 and compute its homology. For which $n$ is $\textrm{H}_n(C) = 0$?
+\end{problem}
+
+
+
+\begin{problem}
+	Let $C_n = \mathbb{Z}/8$ for all $n \geqslant 0$, and $C_n = 0$ for $n<0$. Let 
+	$$\xymatrix@R=2mm{C_n \ar[r]^-{d_n} & C_{n-1} \\ x \ar[r] & 4x}$$
+	when $n>0$, and otherwise let $d_n\!: C_n \longrightarrow C_{n-1}$ be the zero map.
+	\begin{enumerate}[a)]
+		\item Show that $(C_\bullet,d_\bullet)$ is a complex.
+		\item Compute its homology.
+	\end{enumerate}
+\end{problem}
+
+
+\begin{problem}[The Five Lemma]
+	Consider the following commutative diagram of $R$-modules with exact rows:
+	$$\xymatrix{A' \ar[d]_-a \ar[r] & B' \ar[r] \ar[d]_-b & C' \ar[r] \ar[d]_-c & D' \ar[d]_-d \ar[r] & E' \ar[d]_-e \\
+	A \ar[r] & B \ar[r] & C' \ar[r] & D' \ar[r] & E'}$$
+	Show that if $a$, $b$, $d$, and $e$ are isomorphisms, then $c$ is an isomorphism.
+\end{problem}
+
+
+\begin{problem}
+	Let $\pi$ denote the projection map from $\ZZ$ to $\ZZ/2\ZZ$. Show that the chain map
+	$$\xymatrix{\cdots \ar[r] & 0 \ar[r] \ar[d]_-0 & \ZZ \ar[r]^-2 \ar[d]_-0 \ar[r] & \ZZ \ar[d]^-{\pi} \ar[r] & 0 \ar[d]_-0 \ar[r] & \cdots \\ 
+	\cdots \ar[r] & 0 \ar[r] & 0 \ar[r] & \ZZ/2\ZZ \ar[r] & 0 \ar[r] & \cdots}$$
+	is a quasi-isomorphism, but not a homotopy equivalence.
+\end{problem}
+
+
+\newpage
+
+\begin{problem}$\,$
+		\begin{enumerate}[a)]
+		\item Show that in any category, every isomorphism is both an epi and a mono.
+		\item Show that the usual inclusion $\mathbb{Z} \longrightarrow \mathbb{Q}$ is an epi in the category {\bf Ring}. This \emph{should} feel weird: it says being epi and being surjective are \emph{not} the same thing.
+		\item Show that the canonical projection $\mathbb{Q} \longrightarrow \mathbb{Q}/\ZZ$ is a mono in the category of divisible abelian groups.\footnote{An abelian group $A$ is divisible if for every $a \in A$ and every positive integer $n$ there exists $b \in A$ such that $nb = a$.} Again, this is very strange: it says being monic and being injective are \emph{not} the same thing. 
+		\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+	Consider the category $R\textbf{-mod}$ of $R$-modules and $R$-module homomorphisms. Show that the monomorphisms in $R\textbf{-mod}$ are precisely the injective homomorphisms of $R$-modules, and that the epimorphisms in $R\textbf{-mod}$ are precisely the surjective homomorphisms of $R$-modules.
+\end{problem}
+
+
+\begin{problem}
+	Show that the bijection in the proof of the Yoneda Lemma is natural on both the object and the functor.
+\end{problem}
+
+
+
+\begin{problem} $\,$
+	\begin{enumerate}[a)]
+		\item The forgetful functor $\textbf{Grp} \longrightarrow \textbf{Set}$ is representable.
+		\item Given a ring $R$, the forgetful functor $R\textbf{-mod} \longrightarrow \textbf{Set}$ is representable.
+	\end{enumerate}
+\end{problem}
+
+
+
+
+\end{document}
