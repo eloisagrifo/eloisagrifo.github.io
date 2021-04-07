@@ -82,9 +82,13 @@ Set $C$ up in Macaulay2 and compute its homology. For which $n$ is $\textrm{H}_n
 
 
 \begin{problem}
-	Let $\pi$ denote the projection map from $\ZZ$ to $\ZZ/2\ZZ$. Show that the chain map
-	$$\xymatrix{\cdots \ar[r] & 0 \ar[r] \ar[d]_-0 & \ZZ \ar[r]^-2 \ar[d]_-0 \ar[r] & \ZZ \ar[d]^-{\pi} \ar[r] & 0 \ar[d]_-0 \ar[r] & \cdots \\ 
-	\cdots \ar[r] & 0 \ar[r] & 0 \ar[r] & \ZZ/2\ZZ \ar[r] & 0 \ar[r] & \cdots}$$
+	Let $\pi$ denote the canonical projection map from $\ZZ$ to $\ZZ/2\ZZ$. Show that the chain map $f\!: F \longrightarrow G$ given by
+	$$\xymatrix@R=1mm{F = & \cdots \ar[r] & 0 \ar[r] \ar[dddd]_-0 & \ZZ \ar[r]^-2 \ar[dddd]_-0 \ar[r] & \ZZ \ar[dddd]^-{\pi} \ar[r] & 0 \ar[dddd]_-0 \ar[r] & \cdots \\
+	&&&&\\ 
+	&&&&\\ 
+	&&&&\\ 
+	G = &\cdots \ar[r] & 0 \ar[r] & 0 \ar[r] & \ZZ/2\ZZ \ar[r] & 0 \ar[r] & \cdots \\
+	&& \textrm{\tiny 2} & \textrm{\tiny 1} & \textrm{\tiny 0} &\textrm{\tiny -1}}$$
 	is a quasi-isomorphism, but not a homotopy equivalence.
 \end{problem}
 
