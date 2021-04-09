@@ -1,0 +1,126 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathrsfs}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{colonequals}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\DeclareMathOperator{\Ch}{Ch}
+\DeclareMathOperator{\Hom}{Hom}
+
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Problem Set 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UCR $\mid$ Elo\'isa Grifo}
+\lhead{Homological Algebra Spring 2021}
+
+
+\begin{center}
+	{\LARGE Problem Set 2}
+\end{center}
+
+
+
+\begin{problem}
+	Let $f$ be a map of chain complexes. Show that if $\ker f$ and $\textrm{coker}\, f$ are exact complexes, then $f$ is a quasi-isomorphism. Is the converse true?
+\end{problem}
+
+
+\begin{problem}
+	A complex is \emph{contractible} if its identity map is null-homotopic. Show that every contractible complex is an exact sequence.
+\end{problem}
+
+
+\begin{problem}
+	Consider a short exact sequence in $\Ch(R)$, say
+	$$\xymatrix{0 \ar[r] & A \ar[r] & B \ar[r] & C \ar[r] & 0.}$$
+	Show that if any two of $A$, $B$, and $C$ are exact everywhere, so is the third one.
+\end{problem}
+
+
+\begin{problem}
+	We used the Snake Lemma to deduce the long exact sequence in homology. In fact, the two statements are equivalent! Assuming the statement of the long exact sequence in homology holds, prove the Snake Lemma. 
+\end{problem}
+
+
+\
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+
+Let $f\!: C \longrightarrow D$ be a map of complexes. The mapping cone of $f$ is the chain complex $\textrm{cone}(f)$ that has $C_{n-1} \oplus D_n$ in homological degree $n$, with differential
+
+\hspace{4.5cm}
+$d_n \colonequals \begin{pmatrix}
+	-d_C & 0 \\ -f & d_D
+\end{pmatrix}:$ 
+\begin{minipage}{0.4\textwidth}
+$\xymatrix@R=2mm@C=10mm{C_{n-1} \ar[r]^-{-d_C} \ar[rdd]^-{-f} & C_{n-2} \\ \oplus & \oplus\\
+D_n \ar[r]_-{d_D} & D_{n-1}}$
+\end{minipage}
+
+\noindent
+where $d_C$ denotes the differential on $C$ and $d_D$ denotes the differential on $D$.
+\end{minipage}} 
+
+\begin{problem} Let $f\!: C \longrightarrow D$ be a map of complexes.
+	\begin{enumerate}[a)]
+		\item Show that there is a short exact sequence of complexes
+		$$\xymatrix{0 \ar[r] & D \ar[r]^-i & \textrm{cone}(f) \ar[r]^-{\pi} & \Sigma^{-1} C \ar[r] & 0}$$
+		where $\Sigma^{-1} C$ is the complex obtained by shifting $C$ to the left, meaning $(\Sigma^{-1} C)_n \colonequals C_{n-1}$.
+		\item Consider the long exact sequence in homology induced by the previous short exact sequence. Show that the connecting homomorphism $\partial$ in that long exact sequence is given by the $R$-module homomorphisms $f_n$.
+		\item Show that $f$ is a quasi-isomorphism if and only if $\textrm{cone}(f)$ is an exact complex.
+	\end{enumerate}
+\end{problem}
+
+\
+
+
+\begin{problem}
+	Let $R = \mathbb{Q}[x,y,z]/(x^2,xy)$. Check that $f$ below is a map of complexes, and compute its kernel, cokernel, and homology.
+	$$\xymatrix@R=2mm{D = \\ \\ \\ \\ \\ C = \ar@<1ex>[uuuuu]^-f} \xymatrix@R=2mm@C=30mm{R \ar[r]^-{\begin{pmatrix} z \\ -y \\ x \end{pmatrix}} & R^3 \ar[r]^-{\begin{pmatrix} -y & -z & 0 \\ x & 0 & -z \\ 0 & x & y \end{pmatrix}
+} & R^3 \ar[r]^-{\begin{pmatrix} x & y & z\end{pmatrix}
+} & R \\ &&&\\ &&&\\ &&&\\ &&&\\ 0 \ar[r]_-0 \ar[uuuuu]^-{0} & R \ar[uuuuu]^-{\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}} \ar[r]_-{\begin{pmatrix} -z \\ y \end{pmatrix}}  \ar[uuuuu]^-{} & R^2 \ar[uuuuu]^-{\begin{pmatrix} 0 & 0 \\ 1 & 0 \\ 0 & 1 \end{pmatrix}} \ar[r]_-{\begin{pmatrix} y & z\end{pmatrix}} & R. \ar@{=}[uuuuu] \\
+\text{{\tiny 3}} & \text{{\tiny 2}} & \text{{\tiny 1}} & \text{{\tiny 0}}}$$
+
+\end{problem}
+
+
+
+\begin{problem}[The Five Lemma]
+	Consider the following commutative diagram of $R$-modules with exact rows:
+	$$\xymatrix{A' \ar[d]_-a \ar[r] & B' \ar[r] \ar[d]_-b & C' \ar[r] \ar[d]_-c & D' \ar[d]_-d \ar[r] & E' \ar[d]_-e \\
+	A \ar[r] & B \ar[r] & C' \ar[r] & D' \ar[r] & E'}$$
+	Show that if $a$, $b$, $d$, and $e$ are isomorphisms, then $c$ is an isomorphism.\footnote{You can only choose this problem if you have not yet received credit for it.}
+\end{problem}
+
+
+
+
+\end{document}
