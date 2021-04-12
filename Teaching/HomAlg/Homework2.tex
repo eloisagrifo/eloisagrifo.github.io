@@ -17,6 +17,7 @@
 
 \DeclareMathOperator{\Ch}{Ch}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\coker}{coker}
 
 
 
@@ -65,11 +66,16 @@
 
 
 \begin{problem}
-	We used the Snake Lemma to deduce the long exact sequence in homology. In fact, the two statements are equivalent! Assuming the statement of the long exact sequence in homology holds, prove the Snake Lemma. 
+	We used the Snake Lemma to deduce the long exact sequence in homology. In fact, the two statements are equivalent! Assuming the statement of the long exact sequence in homology holds, but without using the Snake Lemma, prove that any commutative diagram of $R$-modules with exact rows
+	$$\xymatrix{0 \ar[r] & A \ar[d]_-f
+	\ar[r]^-i & B \ar[r]^-p \ar[d]_-g & C \ar[r] \ar[d]_-h & 0 \\ 0 \ar[r] & A'
+	\ar[r]_-{i'} & B \ar[r]_-{p'} & C \ar[r] & 0}$$
+	induces an exact sequence
+	$$\xymatrix{0 \ar[r] & \ker f \ar[r] & \ker g \ar[r] & \ker h \ar[r] & \coker f \ar[r] & \coker g \ar[r] & \coker h \ar[r] & 0.}$$
 \end{problem}
 
 
-\
+\vfill
 
 \noindent
 \fbox{\begin{minipage}{\textwidth}
@@ -99,7 +105,6 @@ where $d_C$ denotes the differential on $C$ and $d_D$ denotes the differential o
 	\end{enumerate}
 \end{problem}
 
-\
 
 
 \begin{problem}
