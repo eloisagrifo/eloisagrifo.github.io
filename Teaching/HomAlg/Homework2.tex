@@ -49,12 +49,12 @@
 
 
 \begin{problem}
-	Let $f$ be a map of chain complexes. Show that if $\ker f$ and $\textrm{coker}\, f$ are exact complexes, then $f$ is a quasi-isomorphism. Is the converse true?
+	Let $f$ be a map of complexes of $R$-modules. Show that if $\ker f$ and $\textrm{coker}\, f$ are exact complexes, then $f$ is a quasi-isomorphism. Is the converse true?
 \end{problem}
 
 
 \begin{problem}
-	A complex is \emph{contractible} if its identity map is null-homotopic. Show that every contractible complex is an exact sequence.
+	A complex is \emph{contractible} if its identity map is null-homotopic. Show that every contractible complex of $R$-modules is an exact sequence.
 \end{problem}
 
 
@@ -69,7 +69,7 @@
 	We used the Snake Lemma to deduce the long exact sequence in homology. In fact, the two statements are equivalent! Assuming the statement of the long exact sequence in homology holds, but without using the Snake Lemma, prove that any commutative diagram of $R$-modules with exact rows
 	$$\xymatrix{0 \ar[r] & A \ar[d]_-f
 	\ar[r]^-i & B \ar[r]^-p \ar[d]_-g & C \ar[r] \ar[d]_-h & 0 \\ 0 \ar[r] & A'
-	\ar[r]_-{i'} & B \ar[r]_-{p'} & C \ar[r] & 0}$$
+	\ar[r]_-{i'} & B' \ar[r]_-{p'} & C' \ar[r] & 0}$$
 	induces an exact sequence
 	$$\xymatrix{0 \ar[r] & \ker f \ar[r] & \ker g \ar[r] & \ker h \ar[r] & \coker f \ar[r] & \coker g \ar[r] & \coker h \ar[r] & 0.}$$
 \end{problem}
@@ -95,7 +95,8 @@ D_n \ar[r]_-{d_D} & D_{n-1}}$
 where $d_C$ denotes the differential on $C$ and $d_D$ denotes the differential on $D$.
 \end{minipage}} 
 
-\begin{problem} Let $f\!: C \longrightarrow D$ be a map of complexes.
+\begin{problem} 
+Let $f\!: C \longrightarrow D$ be a map of complexes of $R$-modules.
 	\begin{enumerate}[a)]
 		\item Show that there is a short exact sequence of complexes
 		$$\xymatrix{0 \ar[r] & D \ar[r]^-i & \textrm{cone}(f) \ar[r]^-{\pi} & \Sigma^{-1} C \ar[r] & 0}$$
@@ -121,7 +122,7 @@ where $d_C$ denotes the differential on $C$ and $d_D$ denotes the differential o
 \begin{problem}[The Five Lemma]
 	Consider the following commutative diagram of $R$-modules with exact rows:
 	$$\xymatrix{A' \ar[d]_-a \ar[r] & B' \ar[r] \ar[d]_-b & C' \ar[r] \ar[d]_-c & D' \ar[d]_-d \ar[r] & E' \ar[d]_-e \\
-	A \ar[r] & B \ar[r] & C' \ar[r] & D' \ar[r] & E'}$$
+	A \ar[r] & B \ar[r] & C \ar[r] & D \ar[r] & E}$$
 	Show that if $a$, $b$, $d$, and $e$ are isomorphisms, then $c$ is an isomorphism.\footnote{You can only choose this problem if you have not yet received credit for it.}
 \end{problem}
 
