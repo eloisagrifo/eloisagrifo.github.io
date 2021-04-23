@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathrsfs}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{colonequals}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{stmaryrd}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\DeclareMathOperator{\Ch}{Ch}
+\DeclareMathOperator{\Hom}{Hom}
+
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Problem Set 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UCR $\mid$ Elo\'isa Grifo}
+\lhead{Homological Algebra Spring 2021}
+
+
+\begin{center}
+	{\LARGE Problem Set 3}
+\end{center}
+
+
+
+\begin{problem}
+Let $R$ be a ring, $I$ and $J$ ideals in $R$, and $M$ be an $R$-module.
+\begin{enumerate}[a)]
+	\item Show that $R/I \otimes_R R/J \cong R/(I+J)$.
+	\item Show that $R/I \otimes_R M \cong M/IM$.
+	\item There is an $R$-module map $I \otimes_R M \longrightarrow IM$ induced by the $R$-bilinear map $(a,m) \mapsto am$. This map is always clearly surjective; must it be injective?
+\end{enumerate}
+\end{problem}
+
+\vfill
+
+\begin{problem}
+	Let $k$ be a field and $x$ and $y$ be indeterminates.
+	\begin{enumerate}[a)]
+		\item Show that $k[x] \otimes_k k[y] \cong k[x,y]$.
+		\item Is the analogous map $k \llbracket x \rrbracket \otimes_k k \llbracket y \rrbracket \longrightarrow k \llbracket x,y \rrbracket$ an isomorphism?
+	\end{enumerate}
+\end{problem}
+
+
+
+\vfill
+
+\begin{problem}$\,$
+	\begin{enumerate}[a)]
+		\item Consider $R$-module homomorphisms $A \xrightarrow{f} B $ and $B \xrightarrow{g} C$. If
+		$$\xymatrix{\Hom_R(M,A) \ar[r]^{f_*} & \Hom_R(M,B) \ar[r]^-{g_*} & \Hom_R(M,C)}$$
+		is exact for all $M$, then $\xymatrix{A \ar[r]^-f & B \ar[r]^-g & C}$ is an exact sequence.\footnote{In particular, we are not assuming $\xymatrix{A \ar[r]^-f & B \ar[r]^-g & C}$ is a complex!}
+		\item Suppose that $(F,G)$ is an adjoint pair of covariant functors $R\textbf{-mod} \longrightarrow R\textbf{-mod}$. Show that $F$ is left exact and $G$ is right exact.
+	\end{enumerate}
+\end{problem}
+
+
+
+\vspace{2em}
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+Let $R$ be a domain and $M$ be an $R$-module. The {\bf torsion}\index{torsion} of $M$ is the submodule
+	$$T(M) \colonequals \lbrace m \in M \mid rm = 0 \textrm{ for some nonzero } r \in R \rbrace.$$
+	The elements of $T(M)$ are called {\bf torsion elements}, and we say that $M$ {\bf is torsion} if $T(M) = M$. Finally, $M$ is {\bf torsion free} if $T(M) = 0$.
+\end{minipage}} 
+
+\vfill
+
+
+\begin{problem} Let $R$ be a domain and $M$ be an $R$-module.
+	\begin{enumerate}[a)]
+		\item The $R$-module $M/T(M)$ is torsion free.
+		\item If $f\!: M \longrightarrow N$ is an $R$-module homomorphism, $f(T(M)) \subseteq T(N)$.
+		\item Torsion is a left exact covariant functor $R\textbf{-mod} \longrightarrow R\textbf{-mod}$.
+	\end{enumerate}
+\end{problem}
+
+\vfill
+
+\begin{problem}
+	Let $R$ be a domain with fraction field $Q$.
+	\begin{enumerate}[a)]
+		\item Show that for every $Q$-vector space $V$ and every $R$-module $M$, $V \otimes_R M \cong V \otimes_R (M/T(M))$.
+		\item The kernel of the map $M \longrightarrow Q \otimes_R M$ given by $m \mapsto 1 \otimes m$ is $T(M)$.		
+		\item Show that for every $Q$-vector space $V$ and $R$-module $M$, $V \otimes_R M = 0$ if and only if $M$ is torsion.
+		\item Show that $\mathbb{R} \otimes_\mathbb{Z} (\mathbb{R} / (\pi \mathbb{Z})) \neq 0$.
+	\end{enumerate}
+\end{problem}
+
+
+
+\newpage
+
+\begin{problem}
+	Consider the domain $R = \mathbb{Q}[x,y,z,a,b,c]/(xb-ac,yc-bz,xc-az)$, the ideal $I = (x,a)$ in $R$, the $R$-module $N = \mathbb{Q}$, $I = (x,a)$, and consider the $2$-generated $R$-module $M = Rf + Rg$, where the generators $f, g$ satisfy the relations 
+		$$yf-xg = 0 \quad bf - cg = 0 \quad cf - zg = 0.$$
+			\begin{enumerate}[a)]
+		\item Are there nontrivial $R$-module homomorphisms $M \longrightarrow N$? How about $N \longrightarrow M$?
+		\item Does $- \otimes_R M$ preserve the injectivity of the inclusion $I \subseteq R$?
+		\item Apply $\Hom_R(-,R)$ to the short exact sequence 
+		$$\xymatrix{0 \ar[r] & I \ar[r] & R \ar[r] & R/I \ar[r] & 0}.$$
+		Is $R$ an injective $R$-module?
+		\end{enumerate}
+\end{problem}
+
+
+
+
+
+
+\vspace{3em}
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+
+Let $R$ be a ring and $I$ be an ideal in $R$. The functor $\Gamma_I\!: R\textbf{-mod} \longrightarrow R\textbf{-mod}$ that sends each $R$-module $M$ to the $R$-module
+	$$\Gamma_I(M) \colonequals \bigcup_{n \geqslant 1} (0 :_M I^n) = \lbrace m \in M \mid I^n m = 0 \textrm{ for some } n \geqslant 1\rbrace$$
+	and that sends each $R$-module homomorphism $M \xrightarrow{f} N$ to the $R$-module homomorphism $\Gamma_I(M) \xrightarrow{\Gamma_I(f)} \Gamma_I(N)$ given by restricting the domain and codomain of $f$
+	is called the {\bf $I$-torsion functor}.
+\end{minipage}} 
+	
+	
+
+\begin{problem}$\,$
+	\begin{enumerate}[a)]
+		\item Check that any $R$-module homomorphism $M \xrightarrow{f} N$ must send $\Gamma_I(M)$ into $\Gamma_I(N)$, so that our definition of the functor $\Gamma_I$ makes sense.
+		\item Show that $\Gamma_I$ is an additive covariant functor.
+		\item Show that $\Gamma_I$ is left exact.
+		\item Show that $\Gamma_I$ is not necessarily right exact.
+	\end{enumerate}
+\end{problem}
+
+
+
+
+\end{document}
