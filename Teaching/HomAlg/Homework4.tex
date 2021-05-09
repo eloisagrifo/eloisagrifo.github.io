@@ -1,16 +1,30 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathrsfs}
 \usepackage[]{graphicx}
 \usepackage{color,subfigure}
 \usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{colonequals}
 \usepackage{float}
 \usepackage[all]{xypic}
 \usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{stmaryrd}
+\usepackage[bottom]{footmisc}
+
+
 
 \usepackage{fancyhdr, lastpage}
 \pagestyle{fancy}
 \fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\DeclareMathOperator{\Ch}{Ch}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\im}{im}
+\newcommand{\m}{\mathfrak{m}}
+\DeclareMathOperator{\ann}{ann}
 
 
 \title{}
@@ -24,14 +38,14 @@
 \newtheorem{problem}{Problem}
 
 
-\title{Homework 1}
+\title{Problem Set 4}
 
 \begin{document}
 
 \thispagestyle{fancy}
 \pagestyle{fancy}
 \rhead{UCR $\mid$ Elo\'isa Grifo}
-\lhead{Commutative Algebra Winter 2021}
+\lhead{Homological Algebra Spring 2021}
 
 
 \begin{center}
@@ -39,59 +53,93 @@
 \end{center}
 
 
+
 \begin{problem}
-	Let $M$ a Noetherian $R$-module. 
-	
+	Let $R=k[x,y]$, where $k$ is a field, let $Q = \textrm{frac}(R)$ be the fraction field of $R$. We are going to show that the $R$-module $M = Q/R$ is divisible but not injective.
 	\begin{enumerate}[a)]
-	\item Show that every surjective $R$-module homomorphism $M \longrightarrow M$ is an isomorphism.
-	\item Must an injective $R$-module homomorphism $M \longrightarrow M$ be an isomorphism?
+		\item Show that if $ax + by$ for some $a, b \in R$, we must have $b \in (x)$.
+		\item Show that $x \mapsto \frac{1}{y}$ and $y \mapsto 0$ induces a well-defined $R$-module homomorphism $(x,y) \xrightarrow{\, f \,} Q/R$.
+		\item Show that $M$ is a divisible $R$-module, but not injective.
 	\end{enumerate}
 \end{problem}
 
+
+
+\vfill
+
 \begin{problem}
-	Show that $M$ is a Noetherian $R$-module if and only if $M$ is finitely generated and $R/\textrm{ann } M$ is a Noetherian ring.
+	Let $R$ be a domain. Show that if $R$ has a nonzero module $M$ that is both injective and projective, then $R$ must be a field.\footnote{Hint: show that any nonzero $R$-module homomorphism $M \longrightarrow R$ must be surjective, and then show that such a homomorphism must exist.}
 \end{problem}
 
-\begin{problem}$\,$
+
+
+\vfill
+
+
+\begin{problem}
+	Let $R$ be a Noetherian ring, $M$ a finitely generated $R$-module, $N$ an $R$-module, and $W$ a multiplicatively closed subset of $R$. Show that there is an isomorphism
+	$$W^{-1} \Hom_R(M,N) \cong \Hom_{W^{-1} R}(W^{-1}M,W^{-1}N).$$
+	Clearly indicate where you are using the hypotheses that $R$ is Noetherian and $M$ is finitely generated, as they are necessary.\footnote{Hint: start by noting that the obvious map $W^{-1} \Hom_R(M,N) \longrightarrow \Hom_{W^{-1} R}(W^{-1}M,W^{-1}N)$ is natural on $M$ and an isomorphism when $M = R^n$. Then apply appropriate functors to a presentation $R^m \longrightarrow R^n \longrightarrow M$ for $M$.}
+\end{problem}
+
+
+
+\vfill
+
+\begin{problem} Let $\mathcal{A}$ be an abelian category.
+	\begin{enumerate}[a)]
+		\item Show that $\ker(x \xrightarrow{0} y) = 1_x$,  $\coker(x \xrightarrow{0} y) = 1_y$, and $\im(x \xrightarrow{0} y) = 0 \longrightarrow y$.
+		\item Show that $f$ is a mono if and only if $fg = 0$ implies $g = 0$, and $g$ is an epi if and only if $gf = 0$ implies $g = 0$.
+		\item Show that $f$ is a mono if and only if $\ker f = 0$, and $g$ is an epi if and only if $\coker g = 0$.
+		\item Show that $0 \longrightarrow A \xrightarrow{\, f \,} B$ is exact if and only if $f$ is a mono.
+		\item Show that $B \xrightarrow{\, g \,} C \longrightarrow 0$ is exact if and only if $g$ is an epi.
+	\end{enumerate}
+\end{problem}
+
+
+
+\vfill
+
+\begin{problem}
+Consider an abelian category. If $g$ is an epi and $f$ is a mono, then $\ker (fg) = \ker g$, $\coker(fg) = \coker f$, and $\im (fg) = \im f = f$.
+\end{problem}
+
+
+\newpage
+
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+An $R$-module $F$ is \emph{faithfully flat} if $F$ is flat and $F \otimes_R M \neq 0$ for every nonzero $R$-module $M$.
+\end{minipage}} 
+
+\vspace{1em}
+
+\begin{problem} Give an example of a module that is flat but not faithfully flat. Show\footnote{Hints: \begin{itemize}
+	\item For $c) \implies a)$, for each $R$-module $M \neq 0$ consider some nonzero $m \in M$ and $I = \ann m$. 
+	\item For $a) \implies d)$, show that $\im(1_F \otimes f) = F \otimes_R \im f$ and $\ker(1_F \otimes f) = F \otimes_R \ker g$, and then consider the short exact sequence $0 \longrightarrow \im f \longrightarrow \ker g \longrightarrow \ker g/\im f \longrightarrow 0$. 
+	\item For $d) \implies a)$, show that for any $R$-module $M \neq 0$, the identity map on $M$ induces a nonzero map $F \otimes_R M \longrightarrow R \times_R M$.
+\end{itemize}}
+ that the following are equivalent:	
 \begin{enumerate}[a)]
-	\item Let $(R, \mathfrak{m})$ be a local domain that is not a field. Show that the fraction field of $R$ is not a finitely generated $R$-module.
-	\item Let $I$ be a proper ideal in a local ring $(R, \mathfrak{m})$, and $M$ a finitely generated $R$-module. Show that if $IM = M$, then $M = 0$.
-\end{enumerate}
-	\end{problem}
-
-
-\begin{problem}
-	Is there an upper bound for the minimal number of generators of an ideal in $k[x,y]$? Here $k$ is a field. Either prove there is an upper bound or find ideals $I$ with arbitrarily large $\mu(I)$.
-\end{problem}
-
-
-
-\begin{problem}
-	Show that the containment of ideals is a local property: given any ideals $I$ and $J$ in a ring $R$,
-	$$I \subseteq J \Longleftrightarrow I_P \subseteq J_P \textrm{ for all } P \in \textrm{Spec}(R).$$	
-\end{problem}
-
-
-
-\begin{problem}$\,$
-	\begin{enumerate}[a)]
-		\item Describe $\textrm{supp}(I/I^2)$, where $I = (xz)$ in $R = \mathbb{C}[x,y,z]/(xy,yz)$.		\item Find all the minimal primes of $J = (ab,bc,cd,ad)$ in $k[a,b,c,d]$ over any field $k$.
-		\item Find the minimal primes of the ring $S$, where
-		$$S = \mathbb{Q} \begin{bmatrix} ux & uy & uz \\ vx & vy & vz \end{bmatrix} \subseteq \frac{\mathbb{Q}[u,v,x,y,z]}{(x^3+y^3+z^3)}.$$
-		\item Let $I$ be the defining ideal of the curve parametrized by $(t^{13},t^{42},t^{73})$ over $\mathbb{Q}$. Find $\mu(I)$ and a minimal generating set for $I$.
+		\item $F$ is faithfully flat.
+		\item $F$ is flat and for every proper ideal $I$, $IF \neq F$.
+		\item $F$ is flat and for every maximal ideal $\m$, $\m F \neq F$.
+		\item For every sequence of $R$-modules $\xymatrix{A \ar[r]^-f & B \ar[r]^-g & C}$, $\xymatrix{A \ar[r]^-f & B \ar[r]^-g & C}$ is exact if and only if $\xymatrix{F \otimes_R A \ar[r]^-{1 \otimes f} & F \otimes_R B \ar[r]^-{1 \otimes g} & F \otimes_R C}$ is exact.
 	\end{enumerate}
 \end{problem}
 
+\vspace{2em}
 
 \begin{problem}
-Let $R=\mathbb{Q}[x,y,z]$, and $I=(x^3, x^2y, x^2z, xyz)$. Find a prime filtration of $R/I$ and a primary decomposition of $I$.	
+	Consider the ring $R = \mathbb{Q}[x,y,z,a,b,c]/(xb-ac,yc-bz,xc-az)$, the ideal $I = (x,a)$ in $R$, $I = (x,a)$, and the $2$-generated $R$-module $M = Rf + Rg$, where the generators $f, g$ satisfy the relations 
+		$$yf-xg = 0 \quad bf - cg = 0 \quad cf - zg = 0.$$
+		Let $S = \mathbb{Q}[x,y,z]$ and $P$ be the ideal in $R$ defining the curve $\lbrace (t^{13},t^{42},t^{73}) \mid t \in \mathbb{Q} \rbrace$.
+		\begin{enumerate}[a)]
+			\item Find the first $6$ steps in the minimal free resolutions for $R/I$ and $N$ over $R$.
+			\item Apply $\Hom_R(-,N)$ to the portion of a minimal free resolution you found for $R/I$. Is this an exact complex? If not, in what homological degrees do we have non-trivial homology? 
+			\item Find a minimal free resolution for $P$ over $S$. Make sure your resolution *is* minimal!
+		\end{enumerate}
 \end{problem}
-
-
-
-\begin{problem}
-	Let $R$ be a Noetherian ring, $x \in R$, and $I$ be an ideal. Show that if $x$ is not in any of the associated primes of $R/I$, then $(x)I = (x) \cap I$.
-\end{problem}
-
 
 \end{document}
