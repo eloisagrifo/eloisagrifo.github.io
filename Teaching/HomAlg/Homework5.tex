@@ -1,0 +1,126 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathrsfs}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{colonequals}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{stmaryrd}
+\usepackage[bottom]{footmisc}
+
+
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\DeclareMathOperator{\Ch}{Ch}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\depth}{depth}
+\DeclareMathOperator{\pdim}{pdim}
+
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\n}{\mathfrak{n}}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Problem Set 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UCR $\mid$ Elo\'isa Grifo}
+\lhead{Homological Algebra Spring 2021}
+
+
+\begin{center}
+	{\LARGE Problem Set 5}
+\end{center}
+
+
+\begin{problem}
+	Let $R$ be a domain and $Q$ be its fraction field. Let $T(-)$ denote the torsion functor we introduced in Problem Set 3. 
+	\begin{enumerate}[a)]
+		\item Show that $T(M) = \Tor_1^R(M,Q/R)$.\footnote{Hint: you want to look at some long exact sequence for Tor.}
+		\item Show that for every short exact sequence
+	$$\xymatrix{0 \ar[r] & A \ar[r] & B \ar[r] & C \ar[r] & 0}$$
+	of $R$-modules gives rise to an exact sequence\footnote{Hint: apply the Snake Lemma to some nice diagram.}
+	$$\xymatrix@C=7mm{0 \ar[r] & T(A) \ar[r] & T(B) \ar[r] & T(C) \ar[r] & (Q/R) \otimes_R A \ar[r] & (Q/R) \otimes_R B \ar[r] & (Q/R) \otimes_R C \ar[r] & 0.}$$
+	\item Show that the right derived functors of $T$ are $R^1T = (Q/R) \otimes_R -$ and $R^iT = 0$ for all $i \leqslant 2$.	
+	\end{enumerate}
+	\end{problem}
+	
+	\vfill
+
+
+\begin{problem}
+	Let $I$ be an ideal in $R$. Show that
+	$$\Ext^{n}_R(I,M) \cong \Ext^{n+1}_R(R/I,M)$$
+	for all $n \geqslant 1$ and all $R$-modules $M$.
+\end{problem}
+
+\vfill
+
+\begin{problem}
+	Let $(R,\m)$ be a Noetherian local ring. Let $r \in R$ and $M$ and $N$ be finitely generated $R$-modules.
+	\begin{enumerate}[a)]
+		\item Show that the map $\Ext^i_R(M,N) \to \Ext^i_R(M,N)$ induced by $\xymatrix{M \ar[r]^-r & M}$ is the map given by multiplication by $r$.
+		\item Show that if $r$ is regular on $M$ and $\Ext^i_R(M/rM,N) = 0$ for $i \gg 0$, then $\Ext^i_R(M,N) = 0$ for $i \gg 0$.
+	\end{enumerate}
+\end{problem}
+
+\vfill
+
+\begin{problem}
+	Let $(R,\m)$ be a Noetherian local ring.
+	\begin{enumerate}[a)]
+		\item Show that for every short exact sequence $\xymatrix{0 \ar[r] & A \ar[r] & B \ar[r] & C \ar[r] & 0}$ of $R$-modules,
+		$$\depth(A) \geqslant \min \lbrace \depth(B), \depth(C) + 1 \rbrace.$$
+		\item Given any finitely generated $R$-module $M$, show that there exists $n \geqslant 1$ such that either $\pdim(M) < n$ or $\depth(\Omega_n M) = \depth R$.
+	\end{enumerate}
+\end{problem}
+
+
+\newpage
+
+\setcounter{problem}{6}
+
+\begin{problem}
+	Consider the ring $R = \mathbb{Q}[x,y,z,a,b,c]/(xb-ac,yc-bz,xc-az)$ and the $2$-generated $R$-module $M = Rf + Rg$, where the generators $f, g$ satisfy the relations 
+		$$yf-xg = 0 \quad bf - cg = 0 \quad cf - zg = 0.$$
+		Let $P$ be the ideal in $S = \mathbb{Q}[x,y,z]$ defining the curve $\lbrace (t^{13},t^{42},t^{73}) \mid t \in \mathbb{Q} \rbrace$.
+
+\
+
+To solve this problem, you are not allowed to use any additional Macaulay2 packages besides the complexes package and the ones that are automatically loaded with Macaulay2.
+
+\begin{enumerate}[a)]
+	\item Find $\pdim_S(S/P)$ and $\depth(S/P)$. 
+	\item Find $\pdim_R(M)$ and $\depth(M)$.
+	\item Is $R$ a regular ring? Is it Cohen-Macaulay?
+	\item Is $a,b,c$ a regular sequence on $R$?
+\end{enumerate}
+\end{problem}
+
+
+
+\end{document}
