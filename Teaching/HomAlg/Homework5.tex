@@ -27,6 +27,8 @@
 \DeclareMathOperator{\Ext}{Ext}
 \DeclareMathOperator{\depth}{depth}
 \DeclareMathOperator{\pdim}{pdim}
+\DeclareMathOperator{\injdim}{inj dim}
+\DeclareMathOperator{\HH}{H}
 
 \newcommand{\m}{\mathfrak{m}}
 \newcommand{\n}{\mathfrak{n}}
@@ -110,7 +112,18 @@
 
 \newpage
 
-\setcounter{problem}{6}
+\begin{problem}
+	Let $R$ be a ring, $M$ an $R$-module.
+	\begin{enumerate}[a)]
+		\item Show that $M$ is injective if and only if $\Ext_R^1(R/I,M) = 0$ for every ideal $I$.
+		\item Let $E$ be any injective resolution of $M$, $C_0 \colonequals \coker(M \longrightarrow E^0)$, and $C_n \colonequals \coker(E^{n-1} \longrightarrow E^n)$. Show that for all $i \geqslant 2$ and every $R$-module $N$,
+		$$\Ext^i_R(N,M) \cong \Ext^1_R(N,C_{i-2}).$$
+		\item Show that $\injdim_R(M) \leqslant n$ if and only if $\Ext_R^{n+1}(R/I,M) = 0$ for every ideal $I$.
+	\end{enumerate}
+\end{problem}
+
+
+\
 
 \begin{problem}
 	Consider the ring $R = \mathbb{Q}[x,y,z,a,b,c]/(xb-ac,yc-bz,xc-az)$ and the $2$-generated $R$-module $M = Rf + Rg$, where the generators $f, g$ satisfy the relations 
@@ -129,6 +142,29 @@ To solve this problem, you are not allowed to use any additional Macaulay2 packa
 \end{enumerate}
 \end{problem}
 
+\
+
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+	A complex $C$ in $\Ch(R)$ is {\bf split} if there are $R$-module homomorphisms $s_n\!: C_n \longrightarrow C_{n+1}$ such that the differential $\partial$ satisfies $\partial = \partial s \partial$. A complex is {\bf split exact} if it is both exact and split.
+\end{minipage}} 
+
+\begin{problem}
+	Let $R$ be a ring. Our goal is to find the projective objects in $\Ch(R)$.
+	\begin{enumerate}[a)]
+		\item Show that if $C$ is a split complex, then the short exact sequence
+		$$\xymatrix{0 \ar[r] & Z_{n}(C) \ar[r] & C_n \ar[r]^-{d_n} & B_{n-1}(C) \ar[r] & 0}$$
+		must split.
+		\item If $C$ is a split exact complex, show that $C$ is the direct sum of complexes of the form
+		$$\xymatrix{\cdots \ar[r] & 0 \ar[r] & B_n(C) \ar[r]^-{=} & B_{n}(C) \ar[r] & 0 \ar[r] & \cdots}$$
+		\item Show that every complex of the form
+		$$\xymatrix{\cdots \ar[r] & 0 \ar[r] & P \ar[r]^-{=} \ar[r] & P \ar[r] & 0 \ar[r] & \cdots}$$
+		with $P$ projective is a projective object in $\Ch(R)$.
+		
+		\item Show that a complex $P$ is a projective object in $\Ch(R)$ if and only if $P$ is a split exact complex of projectives.\footnote{When $P$ is projective, consider the short exact sequence that comes with the cone of $1_P$.}
+	\end{enumerate}
+\end{problem}
 
 
 \end{document}
