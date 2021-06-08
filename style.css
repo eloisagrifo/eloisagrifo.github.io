@@ -139,6 +139,18 @@
     /* font-size: 18px; /* Changing font size */
 }
 
+.video {
+    text-decoration:none;
+    background-color: #191970; /* Changing background color */
+    color: white;
+    font-weight: bold; /* Making font bold */
+    border-radius: 10px; /* Making border radius */
+    width: 40px; /* Making auto-sizable width */
+    height: 18px; /* Making auto-sizable height */
+    padding: 3px 3px 3px 10px; /* Making space around letters */
+    /* font-size: 14px; /* Changing font size */
+}
+
 
 .journalversion {
     text-decoration:none;
