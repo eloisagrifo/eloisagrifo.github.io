@@ -1,0 +1,132 @@
+
+a {
+        color: #191970;
+	font-weight: bold;
+      }
+
+h1 {
+        color: #191970;
+	
+      }
+
+h2 {
+        color: #191970;
+	
+      }
+
+h3 {
+        color: #191970;
+	
+      }
+
+
+.talk {
+    text-decoration:none;
+    background-color: #191970; /* Changing background color */
+    color: white;
+    font-weight: bold; /* Making font bold */
+    border-radius: 10px; /* Making border radius */
+    width: 35px; /* Making auto-sizable width */
+    height: 20px; /* Making auto-sizable height */
+    padding: 5px 5px 3px 10px; /* Making space around letters */
+    /* font-size: 18px; /* Changing font size */
+}
+
+.notes {
+    text-decoration:none;
+    background-color: #191970; /* Changing background color */
+    color: white;
+    font-weight: bold; /* Making font bold */
+    border-radius: 10px; /* Making border radius */
+    width: 40px; /* Making auto-sizable width */
+    height: 20px; /* Making auto-sizable height */
+    padding: 5px 5px 3px 10px; /* Making space around letters */
+    /* font-size: 18px; /* Changing font size */
+}
+
+
+.slides {
+    text-decoration:none;
+    background-color: #191970; /* Changing background color */
+    color: white;
+    font-weight: bold; /* Making font bold */
+    border-radius: 10px; /* Making border radius */
+    width: 42px; /* Making auto-sizable width */
+    height: 20px; /* Making auto-sizable height */
+    padding: 5px 5px 5px 10px; /* Making space around letters */
+    /* font-size: 18px; /* Changing font size */
+}
+
+.elevator {
+    text-decoration:none;
+    background-color: #191970; /* Changing background color */
+    color: white;
+    font-weight: bold; /* Making font bold */
+    border-radius: 10px; /* Making border radius */
+    width: 100px; /* Making auto-sizable width */
+    height: 20px; /* Making auto-sizable height */
+    padding: 5px 5px 3px 10px; /* Making space around letters */
+    /* font-size: 18px; /* Changing font size */
+}
+
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+
+
+#navcontainer ul
+{
+margin: 0;
+padding: 0;
+}
+
+#navcontainer ol
+{
+margin: 0;
+padding: 0;
+}
+
+
+.my-container {
+    position: relative;
+    overflow: hidden;
+}
+.my-container:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+   opacity: 0.7;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.my-container h3 {
+    text-align: center;
+    position: relative;
+    color: #191970;
+} 
+
+.my-container h1 {
+    text-align: center;
+    position: relative;
+    color: #191970;
+} 
+
+article {
+  background: #fff;
+}
