@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage{colonequals}
+\usepackage{hyperref}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Min}{Min}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Problem Set 0 \\ Introductory Macaulay2 problems}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Elo\'isa Grifo}
+\lhead{Math 918 $\mid$ Spring 2022}
+
+
+\begin{center}
+	{\LARGE Problem Set 2\\
+	
+%	\vspace{0.5em}
+	
+%	Symbolic powers
+}
+\end{center}
+
+\
+
+
+\begin{problem}
+		Let $I$ be an ideal with no embedded primes in a noetherian ring $R$. Show that there exists an ideal $J$, which we can take to be principal, such that $I^{(n)} = (I^n : J^\infty)$ for all $n \geqslant 1$.
+\end{problem}
+
+
+
+
+\begin{problem}
+Let $R = \mathbb{Q}[x_1, x_2, x_3, x_4]$, and consider the ideal $I$ you can define in Macaulay2 as follows:
+\begin{verbatim}
+M = matrix{{0,-x_1,-x_3,x_2,-x_1,x_4,-x_3},{x_1,0,-x_3,x_2,x_1,-x_4,-x_1},
+{x_3,x_3,0,0,-x_3,x_1,x_4},{-x_2,-x_2,0,0,-x_4,x_2,0},
+{x_1,-x_1,x_3,x_4,0,-x_3,x_1},{-x_4,x_4,-x_1,-x_2,x_3,0,x_2},{x_3,x_1,x_4,0,-x_1,x_2,0}}
+I = pfaffians(6,M)
+\end{verbatim}
+Using only the packages that come preloaded with Macaulay2, compute $I^{(2)}$ and $I^{(3)}$. Is $I^{(2)} = I^2$? Is $I^{(3)} = I^3$?
+\end{problem}
+
+\begin{problem}
+	Find all the symbolic powers of $I = (6)$ in $\mathbb{Z}[\sqrt{-5}]$. 
+\end{problem}
+
+
+\begin{problem}
+	Let $x$ be a regular element in a ring $R$, meaning that $xa = 0 \implies a = 0$. 
+	\begin{enumerate}[a)]
+		\item Show that $(x^n : x^{n-1}) = (x)$ for all $n \geqslant 1$.
+		\item Show that $\Ass(x^n) = \Ass(x)$ for all $n \geqslant 1$.
+	\end{enumerate}	
+\end{problem}
+
+
+\begin{problem}
+	Let $R = k[x,y,z]/(xy-z^c)$ where $k$ is a field and $c \geqslant 2$, and let $P = (x,z)$.
+	\begin{enumerate}[a)]
+		\item Show that $(x^n)$ is a primary ideal for all $n \geqslant 1$. What is its radical?
+		\item Prove that $P^{(cn)} = (x^n)$ for all $n \geqslant 1$.
+		\item Prove that $P^{(n)} \neq P^n$ for all $n \geqslant 2$.
+	\end{enumerate}
+\end{problem}
+
+
+\end{document}
