@@ -8,6 +8,7 @@
 \usepackage[all]{xypic}
 \usepackage{colonequals}
 \usepackage{hyperref}
+\usepackage{stmaryrd}
 
 \usepackage{fancyhdr, lastpage}
 \pagestyle{fancy}
@@ -97,7 +98,7 @@ Using only the packages that come preloaded with Macaulay2, compute $I^{(2)}$ an
 \begin{problem}
 Height and dimension.
 	\begin{enumerate}[a)]
-		\item Find the height of $J = (ab,bc,cd,ad)$ in $k[a,b,c,d]$ over any field $k$, and the dimension of $k[a,b,c,d]/J$.
+		\item Given any field $k$, find the height of $J = (ab,bc,cd,ad)$ in $R = k[a,b,c,d]$ and $\dim(R/J)$.
 		\item Find the dimension of the ring $S = \mathbb{Q}[x^3y^3, x^3y^2z, x^2z^3] \subseteq \mathbb{Q}[x,y,z]$.
 		\item Let $I$ be the defining ideal of the curve parametrized by $(t^{13},t^{42},t^{73})$ over $\mathbb{Q}$. Find the height of $I$, and notice that $\textrm{height}(I) < \mu(I)$.
 		\item Let $R=\mathbb{Q}[x,y,z]$, and $I=(x^3, x^2y, x^2z, xyz)$. Find the dimension of $R/I$ and the height of $I$.
@@ -106,6 +107,14 @@ Height and dimension.
 \end{problem}
 
 
-
+\begin{problem}
+	Let $k$ be any field. 
+	\begin{enumerate}[a)]
+		\item Is $x^2, xy, y^2$ a regular sequence on $\mathbb{Q}[x^2,xy,y^2]$?
+		\item Is $x^3-yz, y^2-xz, z^2-x^2y$ a regular sequence on $k[x,y,z]$? (Hint: you can use Example 2.4.)
+		\item What is the maximal possible length of a regular sequence on $R = k \llbracket x,y \rrbracket (x^2,xy)$?
+		\item Let $R = k \llbracket x,y \rrbracket/(x^2,xy)$. Find a regular sequence on $M = R/(x)$ of maximal possible length.
+	\end{enumerate}
+\end{problem}
 
 \end{document}
