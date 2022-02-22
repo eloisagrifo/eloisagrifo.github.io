@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage{colonequals}
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Min}{Min}
+\DeclareMathOperator{\depth}{depth}
+\DeclareMathOperator{\pdim}{pdim}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Problem Set 0 \\ Introductory Macaulay2 problems}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Elo\'isa Grifo}
+\lhead{Math 918 $\mid$ Spring 2022}
+
+
+\begin{center}
+	{\LARGE Problem Set 3\\
+	
+%	\vspace{0.5em}
+	
+%	Symbolic powers
+}
+\end{center}
+
+\
+
+To solve these problems, you are not allowed to use any additional Macaulay2 packages besides the \texttt{Complexes} package and the ones that are automatically loaded with Macaulay2.
+
+\begin{problem}
+	Show that if $R$ is a regular local ring then $R_P$ is regular for every prime $P$.
+\end{problem}
+
+
+
+\begin{problem}
+	Of the following rings, which ones are regular? Which ones are Cohen-Macaulay?
+	\begin{itemize}
+		\item $R = \mathbb{F}_{101}[ X ]/I_2(X)$, where $X$ is a generic $2 \times 3$ matrix.
+		\item $S = \mathbb{Q}[x^2,xy,y^2]$.
+		\item $T = k \llbracket x,y,z,w \rrbracket/(x^2,xy,yz,zw,w^2)$, where $k$ is any field.
+		\item $U = k \llbracket x,y,z \rrbracket /(x+y+z)$, where $k$ is any field.
+		\item $V = \mathbb{Q} \begin{bmatrix} ux & uy & uz \\ vx & vy & vz \end{bmatrix} \subseteq \frac{\mathbb{Q}[u,v,x,y,z]}{(x^3+y^3+z^3)}$.
+	\end{itemize}
+\end{problem}
+
+
+
+
+
+
+
+
+\begin{problem}
+	Consider the ring $R = \mathbb{Q}[x,y,z,a,b,c]/(xb-ac,yc-bz,xc-az)$ and the $2$-generated $R$-module $M = Rf + Rg$, where the generators $f, g$ satisfy the relations 
+		$$yf-xg = 0 \quad bf - cg = 0 \quad cf - zg = 0.$$
+		Let $P$ be the ideal in $S = \mathbb{Q}[x,y,z]$ defining the curve parametrized by $(t^{13},t^{42},t^{73})$.
+
+\begin{enumerate}[a)]
+	\item Find $\pdim(S/P)$ and $\depth(S/P)$.
+	\item Is there a regular sequence that generates $P$?
+	\item Find $\pdim_R(M)$ and $\depth(M)$.
+	\item Is $R$ a regular ring? Is it Cohen-Macaulay?
+\end{enumerate}
+\end{problem}
+
+\end{document}
