@@ -149,6 +149,20 @@ article {
 }
 
 
+@media screen and (max-width: 600px) {
+
+	.profile1 {
+  		width: 100%;
+}
+
+	.profile2 {
+  		width: 100%;
+  		text-align: justify;
+  		text-justify: inter-word;
+}
+}
+
+
 
 /* Clear floats after image containers */
 .row::after {
