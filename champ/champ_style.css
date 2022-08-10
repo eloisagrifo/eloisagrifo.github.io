@@ -132,3 +132,27 @@ padding: 0;
 article {
   background: #fff;
 }
+
+
+.profile1 {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+.profile2 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
