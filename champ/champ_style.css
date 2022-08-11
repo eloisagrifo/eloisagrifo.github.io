@@ -171,6 +171,7 @@ article {
   		width: 100%;
   		text-align: justify;
 		text-align-last: center;
+		padding-top: 20px;
 }
 
 	.profile {
@@ -181,8 +182,10 @@ article {
 }
 
 	.column {
-		width: 80%;
+		width: 100%;
 }
+
+
 }
 
 
