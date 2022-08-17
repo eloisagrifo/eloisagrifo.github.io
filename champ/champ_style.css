@@ -135,16 +135,14 @@ article {
 
 
 .profile1 {
-  float: left;
-  width: 20%;
+  width: 25%;
   vertical-align:middle;
 }
 
 .profile2 {
-  float: left;
-  width: 40%;
-  margin-right: 50px;
-  Margin-left: 0px;
+  width: 35%;
+  margin-right: 30px;
+  padding: 30px;
   align-items: center;
   text-align: justify;
   vertical-align:middle;
@@ -158,6 +156,7 @@ article {
   	vertical-align:middle;
    	display: flex;
     	align-items: center;
+	width: 1250;
 }
 
 @media screen and (max-width: 600px) {
@@ -171,7 +170,7 @@ article {
   		width: 100%;
   		text-align: justify;
 		text-align-last: center;
-		padding-top: 20px;
+		padding: 20px;
 }
 
 	.profile {
@@ -181,21 +180,49 @@ article {
 		flex-direction: column;
 }
 
-	.column {
+	.column1 {
 		width: 100%;
 }
 
+	.column2 {
+		width: 100%;
+}
+
+.row {
+}
+
+
+.name {
+	display: block;
+	color: #191970;
+	padding-bottom: 20px;
+}
+
 
 }
 
 
 
+.row {
+	  width: 1250;
+}
+
+
+.name {
+	display: none;
+}
+
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
+.column1 {
   float: left;
-  width: 42%;
-  padding: 5px;
+  width: 45%;
+}
+
+.column2 {
+  float: left;
+  width: 45%;
+  margin-left: 50px;
 }
 
 /* Clear floats after image containers */
