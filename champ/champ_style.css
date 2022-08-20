@@ -171,6 +171,7 @@ article {
   		text-align: justify;
 		text-align-last: center;
 		padding: 20px;
+		text-size-adjust: none;
 }
 
 	.profile {
@@ -178,6 +179,7 @@ article {
 		display: flex;
     		flex-wrap: wrap;
 		flex-direction: column;
+		width: 100%;
 }
 
 	.column1 {
@@ -193,7 +195,7 @@ article {
 
 
 .name {
-	display: block;
+	display: inline;
 	color: #191970;
 	padding-bottom: 20px;
 }
