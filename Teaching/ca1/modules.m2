@@ -11,3 +11,6 @@ L = image phi
 --finally, we can describe it by generators and relations:
 psi = map(R^2,R^1,{{-z},{y}})
 K = coker psi
+
+--we can also write all this just using matrices, like this:
+K = coker matrix {{-z},{y}}
