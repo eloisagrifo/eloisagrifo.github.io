@@ -21,3 +21,5 @@ use R -- the last ring we defined used the same variables as R,
 aux = QQ[w_1 .. w_6]
 p = map(R,aux,{x^2,x*y,x*z,y^2,y*z,z^2})
 V = aux/ker p
+--sad thing: can't just use the image of the map:
+image p --this gives an error!
