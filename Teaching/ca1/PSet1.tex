@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage{colonequals}
 \usepackage[]{graphicx}
 \usepackage{color,subfigure}
 \usepackage{multicol}
@@ -60,6 +61,16 @@ Install Macaulay2.%\footnote{If you don't have access to a computer, or if your 
 \end{problem}
 
 
+\begin{problem}[Subalgebras]
+	In Macaulay2, set up the following rings:
+	\begin{enumerate}[a)]
+		\item The $\mathbb{Q}$-algebra $\mathbb{Q}[xy,xu,yv,uv] \subseteq \mathbb{Q}[x,y,u,v]$.
+		\item The $k$-algebra $U$, where $k = \mathbb{F}_{73}$ and
+		$$U = k \begin{bmatrix} ux & uy & uz \\ vx & vy & vz \end{bmatrix} \subseteq \frac{k[u,v,x,y,z]}{(x^3+y^3+z^3)}.$$
+	\end{enumerate}
+\end{problem}
+
+
 \begin{problem}[Modules]
 	Consider the domain $R = \mathbb{Q}[x,y,z,a,b,c]/(xb-ac,yc-bz,xc-az)$. Set up the following $R$-modules, making sure Macaulay2 actually sees them as modules over $R$:
 	\begin{enumerate}[a)]
@@ -71,15 +82,33 @@ Install Macaulay2.%\footnote{If you don't have access to a computer, or if your 
 	\end{enumerate}
 \end{problem}
 
-
-\begin{problem}[Subalgebras]
-	In Macaulay2, set up the following rings:
-	\begin{enumerate}[a)]
-		\item The $\mathbb{Q}$-algebra $\mathbb{Q}[xy,xu,yv,uv] \subseteq \mathbb{Q}[x,y,u,v]$.
-		\item The $k$-algebra $U$, where $k = \mathbb{F}_{73}$ and
-		$$U = k \begin{bmatrix} ux & uy & uz \\ vx & vy & vz \end{bmatrix} \subseteq \frac{k[u,v,x,y,z]}{(x^3+y^3+z^3)}.$$
-	\end{enumerate}
+\begin{problem} Fix a field $k$.
+\begin{enumerate}[a)]
+	\item Fix an integer $n > 0$. Show that $x^{2n-1}$, $x^{2n}+x$, and $x^{2n+1}$ generate $k[x]$ as a $k$-algebra.
+	
+	\vspace{0.5em}
+	
+	In contrast, we will show that $x^2, x^3+x$ do not generated $k[x]$ as a $k$-algebra.
+	\item Consider the $k$-algebras $A \colonequals k[x^2] \subseteq B \colonequals k[x^2,x^3+x] \subseteq k[x]$. Show that every element in $B$ can be written uniquely as $f + g(x^3+x)$ for some $f, g \in A$. 
+	\item Show that $x^2, x^3+x$ do not generated $k[x]$ as a $k$-algebra.
+\end{enumerate}
 \end{problem}
+
+\begin{problem}
+	Find a generating set for $\mathbb{R}[x,y,z]$ as a module over $\mathbb{R}[x^2+yz,x+y,z]$ of the smallest possible size.
+\end{problem}
+
+\begin{problem}
+	Let $k$ be a field. Find the integral closure of $k[x^{13}, y^{17}+y^7, z^{23}+z^{11}]$ in $k[x,y,z]$.
+\end{problem}
+
+\begin{problem}
+	 Show that if $R$ is a unique factorization domain, then $R$ is normal.
+\end{problem}
+
+
+
+
 
 
 \end{document}
