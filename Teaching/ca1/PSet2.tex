@@ -1,0 +1,125 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Homework 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Elo\'isa Grifo}
+\lhead{Commutative Algebra I Fall 2022}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 2}
+\end{center}
+
+\vspace{1em}
+
+\noindent
+{\bf Instructions:}
+%For full credit, turn in 5 problems, split between a pdf and a .m2 file (one of each). 
+You are welcome to work together with your classmates on all the problems, and I will be happy to give you hints or discuss the problems with you, but you should write up your solutions by yourself.
+You cannot use any resources besides me, your classmates, our course notes, and the Macaulay2 documentation.
+
+
+\vspace{2em}
+%
+%\begin{problem}
+%	In Macaulay2, set up a polynomial ring $R$ over a field $k$, a nontrivial ideal $I$ in $R$, the $R$-module $M = R/I$ and the ring $S = R/I$. Your work must be turned in as (part of) a .m2 file.
+%\end{problem}
+
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+
+Let $R$ be a ring and $M$ an $R$-module. The {\bf Nagata idealization} of $(R,M)$ is the ring $R \rtimes M$ defined as follows:
+\begin{itemize}
+\item as a set, $R \rtimes M = R\times M$;
+\item the addition is $(r,m) + (s,n)=(r+s,m+n)$;
+\item the multiplication is $(r,m)  (s,n)=(rs,sm+rn)$.
+\end{itemize}
+
+Then $R \rtimes M$ with the operations specified above is a ring.
+
+\
+
+Note that $R$ is a subring of $R\rtimes M$ (via the inclusion $r\mapsto (r,0)$), and as an $R$-module, $R\rtimes M\cong R\oplus M$.
+\end{minipage}} 
+
+\
+
+
+\begin{problem}
+In this problem, we will construct an extension of rings $A \subseteq B \subseteq C$ such that $A \subseteq C$ is module-finite, but $A \subseteq B$ is not.
+%\footnote{We remarked before that such examples exist, but we didn't construct one.}
+
+\begin{enumerate}[a)]
+\item Can you find such an extension with $A$ noetherian?
+\item Let $R$ be a ring that is not noetherian, and $I$ an ideal that is not finitely generated. 
+Show that ${R \subseteq R \rtimes I \subseteq R \rtimes R}$, that $R \subseteq R \rtimes R$ is module-finite, but  $R \subseteq R \rtimes I$ is not.
+\end{enumerate}
+\end{problem}
+
+
+
+
+\begin{problem}
+	Suppose that every ascending chain of prime ideals in $R$ stabilizes. Must $R$ be a noetherian ring? 
+\end{problem}
+
+
+
+\begin{problem}
+Show that $R$ is a noetherian ring if and only if every prime ideal of $R$ is finitely generated.
+Spoiler alert: there's a hint in the footnotes.\footnote{Hint: use Zorn's Lemma to show that if $R$ is a ring that is not noetherian, the set of ideals that are not finitely generated has a maximal element; show that element is a prime ideal.
+
+Second hint: take an ideal $I$ that is maximal among the ideals that are not finitely generated, take $f,g\notin I$ with $fg\in I$, and consider the ideals $(I,f)$ and $(I:f)  \colonequals \{ r\in R \ | \ rf\in I\}$.}
+\end{problem}
+
+
+\begin{problem}
+	Let $k$ be a field. Show that any $k$-algebra $R$ with $k \subseteq R \subseteq k[x]$ is algebra-finite over~$k$.
+\end{problem}
+
+
+\begin{problem}[Graded rings]
+$\,$
+	\begin{enumerate}[a)]
+		\item In Macaulay2, set up $A = \mathbb{Q}[s^3,s^2t,st^2,t^3]$ as an $\mathbb{N}^2$-graded ring with the grading induced by setting $s^3, s^2t, st^2, t^3$ as homogeneous elements of degrees
+		$$\deg(s^3) = (3,0) \quad \deg(s^2t) = (2,1) \quad \deg(st^2) = (1,2) \quad \deg(t^3) = (0,3).$$
+	Check that these $4$ generators have the desired degrees and that your ring is graded.
+		\item The ring $R=\mathbb{Q}[t^3,t^{13},t^{42}]$ is a graded subring of $\mathbb{Q}[t]$ with the standard grading, meaning that the graded structure on $\mathbb{Q}[t]$ induces a grading on $R$. Set up $R$ (with this grading) in Macaulay2.
+		Check that the $3$ algebra generators have the desired degrees and that your ring is graded.
+	\end{enumerate}
+\end{problem}
+
+
+
+\end{document}
