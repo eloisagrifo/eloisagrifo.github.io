@@ -1,0 +1,147 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\DeclareMathOperator{\Spec}{Spec}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Homework 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Elo\'isa Grifo}
+\lhead{Commutative Algebra I Fall 2022}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 3}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+For full credit, turn in 4 problems in a pdf file. 
+You are welcome to work together with your classmates on all the problems, and I will be happy to give you hints or discuss the problems with you, but you should write up your solutions by yourself.
+You cannot use any resources besides me, your classmates, our course notes, and the Macaulay2 documentation.
+
+
+\vspace{0.6em}
+%
+%\begin{problem}
+%	In Macaulay2, set up a polynomial ring $R$ over a field $k$, a nontrivial ideal $I$ in $R$, the $R$-module $M = R/I$ and the ring $S = R/I$. Your work must be turned in as (part of) a .m2 file.
+%\end{problem}
+
+
+
+\begin{problem}
+	Let $k$ be a field, $x$ an indeterminate, and $R \colonequals k[x^2, x^3] \subseteq S \colonequals k[x]$. Find an ideal $I$ in $R$ such that $IS \cap R \supsetneq I$.
+\end{problem}
+
+\begin{problem}
+Let $k$ be an infinite field, $m \geqslant 1$, and let $R = k[x_1,\dots, x_n]$ be a polynomial ring. Let $G= (k^\times)^m$ act on $R$ as follows: 
+\[ \begin{aligned} (\lambda_1,\dots,\lambda_m) \cdot c &= c \qquad & \textrm{for }c \in k,\\
+ (\lambda_1,\dots,\lambda_m) \cdot x_i &= \lambda_1^{a_{1i}} \cdots  \lambda_m^{a_{mi}} x_i \qquad & {i=1,\dots,n}
+ \end{aligned}\]
+ for some $m \times n$ matrix of integers $A=[a_{ij}]$.
+\begin{enumerate}[a)]
+\item Show that $R^G$ has a $k$-vector space basis given by the set of monomials $x_1^{b_1} \cdots x_n^{b_n}$ such that, for $b=(b_1,\dots,b_n)$, $Ab=0$.
+\item Consider the polynomial ring $R$ with a (nonstandard) $\mathbb{Z}^m$-grading given by setting 
+$$\textrm{deg}(x_i) = (a_{1i},\dots,a_{mi})$$ 
+for each $i$. Show that $R^G$ is the degree zero piece of $R$ under this grading.
+\item Show that $R^G$ is a direct summand of $R$, and conclude that $R^G$ is a finitely generated $k$-algebra.
+\item Let $R = k[x,y,z,w]$ and consider the $k$-linear action of $G = k^\times$ on $R$ given by
+$$\lambda \cdot x = \lambda x \qquad \lambda \cdot y = \lambda y \qquad \lambda \cdot z = \lambda^{-1} z \qquad \lambda \cdot w = \lambda^{-1} w.$$
+Find a finite set of generators for $R^G$ as a $k$-algebra.
+\end{enumerate}
+\end{problem}
+
+%\begin{problem}
+%Given two ideals $I$ and $J$, the \emph{product} of $I$ and $J$ is the ideal
+%$$IJ \colonequals \left( fg \mid f \in I \textrm{ and } g \in J \right) .$$
+%\begin{enumerate}[a)]
+%	\item Show that $IJ \subseteq I \cap J$.
+%	\item If $I$ and $J$ satisfy $I+J = R$, then $IJ = I \cap J$.
+%	\item In general, $IJ \neq I \cap J$. Find an example of a ring $R$ and ideals $I$ and $J$ with $IJ \neq I \cap J$.
+%\end{enumerate}
+%\end{problem}
+%
+%
+%
+%
+%\begin{problem}	
+%Let $I$ and $J$ be ideals in a ring $R$.
+%\begin{enumerate}[a)]
+%\item Show that $\sqrt{\sqrt{I}} = \sqrt{I}$.
+%\item Show that if $I \subseteq J$, then $\sqrt{I} \subseteq \sqrt{J}$.
+%\item Show that $\sqrt{I \cap J} = \sqrt{I} \cap \sqrt{J}$.
+%\item Show that $\sqrt{I^n} = \sqrt{I}$ for all $n \geqslant 1$.
+%\item Show that if $P$ is a prime ideal, then $\sqrt{P^n} = P$ for all $n \geqslant 1$.
+%\end{enumerate}
+%\end{problem}
+
+
+
+
+
+\begin{problem}
+	Consider the inclusion map $k[xy,xz,yz] \subseteq k[x,y,z]$, where $k$ is a field. Is the induced map on Spec surjective? If not, give an explicit prime not in the image.
+\end{problem}
+
+
+\
+
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+Let $R$ be a ring of prime characteristic $p$, meaning that the smallest $n>0$ such that
+$$\underset{n \textrm{ times}}{\underbrace{1 + \cdots + 1}} = 0$$
+is $n = p$. Then the map $F\!: R \to R$ given by $F(r) = r^p$ is a ring homomorphism, called the {\bf Frobenius map}.
+\end{minipage}} 
+
+\begin{problem}
+	Let $R$ be a ring of prime characteristic $p$. 
+	\begin{enumerate}[a)]
+	\item Show that the Frobenius map is injective if and only if $\sqrt{(0)} = (0)$.
+	\item Show that the $F(R) \subseteq R$ is module-finite if and only if it is algebra-finite.
+	\item Show that the map on spectra induced by the Frobenius map is the identity map.
+	\end{enumerate}
+\end{problem}
+
+
+\newpage
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+A topological space is \emph{irreducible}\index{irreducible space} if it cannot be written as a union of two proper closed subsets.
+\end{minipage}} 
+\begin{problem}
+	Let $R$ be a ring and be an ideal in $I$. Show that $V(I)$ is irreducible if and only if $\sqrt{I}$ is prime.
+\end{problem}
+
+\end{document}
