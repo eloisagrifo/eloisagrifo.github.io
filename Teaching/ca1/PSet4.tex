@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Min}{Min}
+\DeclareMathOperator{\Supp}{Supp}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Homework 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Elo\'isa Grifo}
+\lhead{Commutative Algebra I Fall 2022}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 4}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+For full credit, turn in 5 problems in a pdf file and a .m2 file. 
+You are welcome to work together with your classmates on all the problems, and I will be happy to give you hints or discuss the problems with you, but you should write up your solutions by yourself.
+You cannot use any resources besides me, your classmates, our course notes, and the Macaulay2 documentation.
+
+
+\vspace{2em}
+
+
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+A topological space $X$ is {\bf disconnected} if there exist disjoint, nonempty closed subsets $Y$ and $Z$ such that $X = Y \cup Z$. A topological space is {\bf connected} if no such $X$ and $Y$ exist.
+\end{minipage}} 
+
+\vspace{2em}
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+Let $R$ be a ring. An element $e \in R$ is a {\bf nontrivial idempotent} if $e^2 = e$ and $e \neq 0, 1$.
+\end{minipage}}
+
+\
+
+\begin{problem}
+Let $R$ be a ring. 
+\begin{enumerate}[a)]
+	\item Show that $\Spec(R)$ is connected if and only if $R$ does not contain any nontrivial idempotent.
+	\item Show that if $R$ is a local ring or a domain, then $\Spec(R)$ is connected.
+\end{enumerate}
+\end{problem}
+
+
+
+
+
+ 
+\begin{problem}
+	Let $R$ be a noetherian ring and $I$ and $J$ be ideals in $R$. Show that the following are equivalent:
+	\begin{enumerate}[(1)]
+		\item $I \subseteq J$
+		\item $I_P \subseteq J_P$ for all $P \in \Spec(R)$.
+		\item $I_P \subseteq J_P$ for all $P \in \mSpec(R)$.
+	\end{enumerate}
+\end{problem}
+
+
+
+
+
+
+\begin{problem}
+	Use Macaulay2 to help you answer the following questions. Consider the ideal $I$ defining the $\mathbb{Q}$-algebra $R=\mathbb{Q}[t^3,t^{13},t^{47}]$ as a quotient of a polynomial ring in three variables.
+	\begin{enumerate}[(a)]
+		\item Find the minimal number of generators of $I$.
+		\item Find $\Min(I)$ and $\Min(I^2)$ with Macaulay2, and give a proof that Macaulay2 is correct.
+		\item Is $\Ass(I) = \Ass(I^2)$?
+		\item There are two more parts commented out about material we have yet to discuss.
+%		\item Is $I$ a primary ideal? Give a complete answer (with a proof!) without using Macaulay2.
+%		\item Find a primary decomposition for $I^2$.
+	\end{enumerate}
+\end{problem}
+
+
+
+\end{document}
