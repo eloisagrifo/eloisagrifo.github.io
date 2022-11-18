@@ -104,7 +104,7 @@ Let $R$ be a ring.
 
 
 \begin{problem}
-	Use Macaulay2 to help you answer the following questions. Consider the ideal $I$ defining the $\mathbb{Q}$-algebra $R=\mathbb{Q}[t^3,t^{13},t^{47}]$ as a quotient of a polynomial ring in three variables.
+	Use Macaulay2 to help you answer the following questions. Consider the ideal $I$ defining the $\mathbb{Q}$-algebra $R=\mathbb{Q}[t^3,t^{17},t^{19}]$ as a quotient of a polynomial ring in three variables.
 	\begin{enumerate}[(a)]
 		\item Find the minimal number of generators of $I$.
 		\item Find $\Min(I)$ and $\Min(I^2)$ with Macaulay2, and give a proof that Macaulay2 is correct.
@@ -120,16 +120,21 @@ Let $R$ be a ring.
 \end{problem}
 
 
+
 \begin{problem}
-	Let $x$ be a regular element in a ring $R$, meaning that $xa = 0 \implies a = 0$. 
+	Recall that an element $x$ in a ring $R$ is regular if $xa = 0 \implies a = 0$. 
 	\begin{enumerate}[a)]
-		\item Show that $(x^n : x^{n-1}) = (x)$ for all $n \geqslant 1$.
-		\item Show that $\Ass(x^n) = \Ass(x)$ for all $n \geqslant 1$.
+		\item Show that if $x$ is a regular element, then $(x^n : x^{n-1}) = (x)$ for all $n \geqslant 1$.
+		\item Show that if $x$ is a regular element, then $\Ass(x^n) = \Ass(x)$ for all $n \geqslant 1$.
 		
 		\noindent
 		Hint: Consider the short exact sequence induced by the quotient map $R/(x^{n+1}) \to R/(x^n)$.
 		
 		\item Let $R = k[x,y,z]/(xy-z^c)$ where $k$ is a field and $c \geqslant 2$. Show that $(x^n)$ is primary for all $n \geqslant 1$. What is the radical of $(x^n)$?
+		
+		
+		\noindent
+		Hint: Show that $x$ is a regular element in $R$, and use part (b).
 	\end{enumerate}	
 \end{problem}
 
