@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Homework 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Elo\'isa Grifo}
+\lhead{Commutative Algebra I Fall 2022}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 4}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+For full credit, turn in 5 problems in a pdf file and a .m2 file. 
+You are welcome to work together with your classmates on all the problems, and I will be happy to give you hints or discuss the problems with you, but you should write up your solutions by yourself.
+You cannot use any resources besides me, your classmates, our course notes, and the Macaulay2 documentation.
+
+
+\vspace{2em}
+
+
+\begin{problem}
+	Let $R$ be a noetherian ring and let $I$ be a proper ideal in $R$.
+	\begin{enumerate}[a)]
+		\item Show that there exists an integer $n$ such that $\sqrt{I}^n \subseteq I$.
+%		\item Let $\m J = Q_1 \cap \cdots \cap Q_s$ be a primary decomposition. Show that $J \subseteq Q_i$ for each $i$.
+%		\item Prove that $J = (0)$.
+		\item Show that if $R$ is local, then
+		$$\bigcap_{n \geqslant 0} I^n = (0).$$
+		
+		\noindent
+		Hint: reduce to the case when $I = \m$, the unique maximal ideal. In that case, let $J \colonequals \displaystyle\bigcap_{n\geqslant 0} \m^n$, and show that if $\m J = Q_1 \cap \cdots \cap Q_s$ is a primary decomposition, then $J \subseteq Q_i$ for all $i$.
+		
+		\item Show that if $R$ is a domain, then
+		$$\bigcap_{n \geqslant 0} I^n = (0).$$
+		\item What if $R$ is not local nor a domain?
+	\end{enumerate}
+\end{problem}
+
+
+\vfill
+
+\begin{problem}
+For each of the following rings $R$ determine whether the inclusion $\C[x] \subseteq R$ is integral, with justification. You do not need to justify that $\C[x] \subseteq R$ is an inclusion.
+\begin{enumerate}[a)]
+\item $R=\C[x,y,z]/(z^2-xy)$
+\item $R=\C[x,y,z]/(y^3-x^2, z^2-xy)$
+\item $R=\C[x,y,z]/(x^2-yz, y^2-xz, z^2-xy)$
+\end{enumerate}
+If the answer is no, you might find it helpful to consider properties of the induced map on spectra.
+\end{problem}
+
+\vfill
+
+
+\begin{problem}
+	For each of the following rings, compute their dimension in Macaulay2 for some particular field $k$ of your choice, and then prove that the answer is correct for all fields $k$.
+
+\begin{enumerate}[a)]
+\item $\displaystyle R=\frac{k[x,y,z]}{(x^3,x^2y,xyz)}$.
+\smallskip
+\item $\displaystyle R=\frac{k[x,y,z,u,v]}{(x^3 u^2 + y^3 uv + z^3 v^2)}$.
+\smallskip
+\item $\displaystyle R=k[x^2 u, xyu, y^2 u, x^2 v, xyv, y^2v] \subseteq k[x,y,u,v]$.
+\smallskip
+\item $R=\C[x,y,z]/(x^2-yz, y^2-xz, z^2-xy)$
+\end{enumerate}
+
+\end{problem}
+
+
+
+
+\end{document}
