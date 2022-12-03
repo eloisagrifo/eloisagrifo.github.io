@@ -53,7 +53,7 @@
 
 \noindent
 {\bf Instructions:}
-For full credit, turn in 5 problems in a pdf file and a .m2 file. 
+For full credit, turn in 4 problems in a pdf file and a .m2 file. 
 You are welcome to work together with your classmates on all the problems, and I will be happy to give you hints or discuss the problems with you, but you should write up your solutions by yourself.
 You cannot use any resources besides me, your classmates, our course notes, and the Macaulay2 documentation.
 
@@ -64,7 +64,7 @@ You cannot use any resources besides me, your classmates, our course notes, and 
 \begin{problem}
 	Let $R$ be a noetherian ring and let $I$ be a proper ideal in $R$.
 	\begin{enumerate}[a)]
-		\item Show that there exists an integer $n$ such that $\sqrt{I}^n \subseteq I$.
+		\item Show that there exists an integer $n$ such that $(\sqrt{I})^n \subseteq I$.
 %		\item Let $\m J = Q_1 \cap \cdots \cap Q_s$ be a primary decomposition. Show that $J \subseteq Q_i$ for each $i$.
 %		\item Prove that $J = (0)$.
 		\item Show that if $R$ is local, then
@@ -134,6 +134,20 @@ If the answer is no, you might find it helpful to consider properties of the ind
 \end{problem}
 
 
+
+\
+
+\begin{problem}
+	For each of the following ideals, compute their dimension in Macaulay2 for some particular field $k$ of your choice, and then prove that the answer is correct for all fields $k$.
+
+\begin{enumerate}[a)]
+\item $I = (a^2,ab,bc,cd,d^2)$ in $k[a,b,c,d]$.
+\item $I = (x,z)$ in $k[x,y,z]/(xy-z^2)$.
+\item The kernel $I$ of the ring homomorphism $f\!: k[a,b,c,d,e] \to k[x,y]$ given by
+$$f(a) = x^4 \quad f(b) = x^3y \quad f(c) = x^2y^2 \quad f(d) = xy^4 \quad f(e) = y^4.$$
+\end{enumerate}
+
+\end{problem}
 
 
 
