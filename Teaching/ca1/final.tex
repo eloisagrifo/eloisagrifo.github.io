@@ -1,0 +1,179 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Min}{Min}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\height}{height}
+
+\newcommand{\m}{\mathfrak{m}}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Homework 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Elo\'isa Grifo}
+\lhead{Commutative Algebra I Fall 2022}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Final Exam} \\ Math 905
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+For full credit, turn in 5 problems in a pdf file. There are two parts; you {\bf must choose at least 2 problems} from each part.
+You cannot use any resources besides me or our course notes. In particular, you cannot discuss the problems with your classmates until after the due date, and you are not allowed to use the internet or any other textbooks as a resource.
+
+\
+
+Any problem stated here is considered a theorem and can be used to prove other problems, even if you did not attempt to show the theorem you want to use.
+
+\vspace{2em}
+
+\section*{Part I: Assorted problems} 
+Choose at least 2 problems.
+
+\
+
+\begin{problem}
+	Show that every ideal in $\mathbb{Z}[\sqrt{-5}]$ has a unique irredundant primary decomposition.
+\end{problem}
+
+\
+
+\begin{problem}
+	Find the dimension of the following rings:
+	
+	\begin{enumerate}[a)]
+		\item $\mathbb{Z}[x]_{(3,x)}$.
+		\item $R_P/I_P$, where $R = k[a,b,c,d,e]$, $I=(ac,ad,ae,bc,bd,be)$, and $P=(c,d,e)$.
+	\end{enumerate}
+\end{problem}
+
+\
+
+
+
+\begin{problem}
+	Let $k$ be a field and $S = k[x_1, \ldots, x_n]$, where $x_1, \ldots, x_n$ are indeterminates. Let $R$ be any subring of $S$ that contains every polynomial $f \in S$ with the property that
+	$$f(x_1, x_2, \ldots, x_{n-1}, x_n) =f(x_2, x_3, \ldots, x_n, x_1).$$
+	Show that $R$ is a finitely-generated $k$-algebra.
+\end{problem}
+
+\
+
+\begin{problem}
+	Let $R$ be a noetherian ring.
+	\begin{enumerate}[a)]
+		\item Show that if $R$ is a domain and $f \neq 0$, then $(f)$ has height $1$.
+		\item Give an example of a ring $R$ and a prime $P$ that has height $1$ but is not principal.
+		\item Show that if $R$ is not a domain, there exists an element $f \neq 0$ such that $\height(f) \neq 1$.
+	\end{enumerate}
+\end{problem}
+
+
+\newpage
+
+
+\section*{Part II: Artinian rings}
+
+Choose at least 2 problems.
+
+
+\vspace{2em}
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+
+A ring $R$ is {\bf artinian} if it satisfies the {\bf descending chain condition}: every chain of ideals
+$$I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots$$
+stops. Equivalently, $R$ is artinian if every nonempty set of ideals in $R$ has a minimal element.
+\end{minipage}} 
+
+\
+
+You do not need to show that these two definitions are equivalent, you can assume it is true.
+
+\
+
+\begin{problem}
+	Let $R$ be \emph{any} ring. Let $I$ be an ideal such that $V(I) = \{ \m_1,\ldots,\m_t \}$ is a finite set of maximal ideals. 
+	\begin{enumerate}[a)]
+		\item Show that $Q_i = I R_{\m_i} \cap R$ is primary.
+		\item Show that $I$ has a primary decomposition $I=Q_1 \cap \cdots \cap Q_t$.
+		
+		Hint: the containment of ideals is a local property.
+		
+		\item Show that $R/I \cong R/Q_1 \times \cdots \times R/Q_t$.
+		
+		Hint: use the CRT, Theorem 0.8 in the notes.
+	\end{enumerate}
+\end{problem}
+
+\
+
+\begin{problem}
+	Let $R$ be an artinian ring.
+	\begin{enumerate}[a)]
+%		\item Show that if $R$ is noetherian and $\dim(R) = 0$, then $R$ is artinian.
+
+	\item Show that $R$ has dimension $0$.
+	
+	Hint: given a prime $P$ and $a \notin P$, consider the chain $(a) \supseteq (a^2) \supseteq (a^3) \supseteq \cdots$ in $R/P$.
+	
+	\item Show that $R$ has finitely many maximal ideals.
+	
+	Hint: Consider a chain obtained from intersecting more and more maximal ideals.	
+	
+	\item Show that $R \cong S_1 \times \cdots \times S_t$, where each $S_i$ is an artinian local ring of dimension zero.
+	
+%	Hint: use problem 5 c).
+	\end{enumerate}
+\end{problem}
+
+\
+
+\begin{problem}
+	Let $(R, \m)$ be an Artinian local ring. Show that $\m^n = 0$ for some $n$.
+		
+	Warning: we do not know whether $\m$ is finitely generated!
+		
+	Hint: Show that $\m^{n+1} = \m^n$ for some $n$, and then consider the set $\mathcal{F}$ of ideals $I$ such that $I \m^n \neq 0$. Show that any minimal element in $\mathcal{F}$ is principal, and that if $(x)\m^n = 0$, then $(x) \m = (x)$.
+\end{problem}
+
+
+
+
+
+\end{document}
