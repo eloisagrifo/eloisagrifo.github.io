@@ -133,18 +133,32 @@ If the answer is no, you might find it helpful to consider properties of the ind
 	\end{enumerate}
 \end{problem}
 
-
+%\
+%
+%
+%\begin{problem}
+%Let $X= \begin{bmatrix} x_{11} & x_{12} & x_{13} \\ x_{21} & x_{22} & x_{23} \end{bmatrix}$ be a $2\times 3$ matrix of indeterminates over $\mathbb{C}$ and $R=\mathbb{C}[X]$. Let $I$ be the ideal of $2\times 2$ minors of $X$. 
+%	\begin{enumerate}[a)]
+%		\item Show that $S = \mathbb{C}[x_{11}, x_{12}-x_{21}, x_{13}-x_{22}, x_{23}]$ is a Noether normalization for $R/I$.
+%		
+%		Hint 1: to show that $S \subseteq R/I = M$ is module-finite, consider $M/S_+M$.
+%		
+%		Hint 2: to show that $S \subseteq R/I$, consider the quotient map $R/I \to \mathbb{C}[]$
+%		
+%		\item Find $\height(I)$.
+%	\end{enumerate}
+%\end{problem}
 
 \
 
 \begin{problem}
-	For each of the following ideals, compute their height in Macaulay2 for some particular field $k$ of your choice, and then prove that the answer is correct for all fields $k$.
+	For each of the following ideals, compute their dimension in Macaulay2 for some particular field $k$ of your choice, and then prove that the answer is correct for all fields $k$.
 
 \begin{enumerate}[a)]
 \item $I = (a^2,ab,bc,cd,d^2)$ in $k[a,b,c,d]$.
 \item $I = (x,z)$ in $k[x,y,z]/(xy-z^2)$.
 \item The kernel $I$ of the ring homomorphism $f\!: k[a,b,c,d,e] \to k[x,y]$ given by
-$$f(a) = x^4 \quad f(b) = x^3y \quad f(c) = x^2y^2 \quad f(d) = xy^4 \quad f(e) = y^4.$$
+$$f(a) = x^4 \quad f(b) = x^3y \quad f(c) = x^2y^2 \quad f(d) = xy^3 \quad f(e) = y^4.$$
 \end{enumerate}
 
 \end{problem}
