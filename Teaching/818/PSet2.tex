@@ -22,6 +22,7 @@
 \DeclareMathOperator{\Supp}{Supp}
 \DeclareMathOperator{\height}{height}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
 
 \newcommand{\m}{\mathfrak{m}}
 \newcommand{\C}{\mathbb{C}}
@@ -36,8 +37,6 @@
 \theoremstyle{definition}
 \newtheorem{problem}{Problem}
 
-
-\title{Homework 1}
 
 \begin{document}
 
@@ -68,6 +67,22 @@ I will post the .tex code for these problems for you to use if you wish to type 
 
 
 
+\begin{problem}
+	Given a homomorphism of $R$-modules $f\!: M \to N$, show that $\ker(f)$ is an $R$-submodule of~$M$.
+\end{problem}
+
+
+\begin{problem}
+	Show that there is a $\Z$-module isomorphism $\Hom_\Z(\Z/(n),\Z/(m)) \cong \Z / (\gcd(m,n))$.
+\end{problem}
+
+
+\begin{problem}
+Let $R$ be a commutative ring. Given an $R$-module $M$, its {\bf annihilator} is the ideal 
+$$\ann(M) \colonequals \{ a \in R \mid am = 0 \textrm{ for all } m \in M \}.$$
+Show that if there is an isomorphism of $R$-modules $M \cong N$, then $\ann(M) = \ann(N)$.
+\end{problem}
+
 
 
 \begin{problem}
@@ -77,7 +92,6 @@ Show that $M$ is a simple if and only if there exists a maximal ideal $\m$ of $R
 \noindent
 Note: recall that a proper ideal $\m$ is {\bf maximal} if it is maximal with respect to inclusion, meaning that for any ideal $I$, $\m \subseteq I$ implies $\m = I$ or $\m = R$.
 \end{problem}
-
 
 
 \begin{problem}
