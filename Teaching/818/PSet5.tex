@@ -74,15 +74,10 @@ You are encouraged to work together on these problems, but each student should h
 I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook.
 
 
-\vspace{2em}
+\
 
 
 
-
-
-\begin{problem}
-	Let $R$ be a commutative ring. Show that $R$ is noetherian if and only if every ideal of $R$ is a finitely generated $R$-module.
-\end{problem}
 
 
 
@@ -99,6 +94,24 @@ $$\ann_R (M \oplus N) = \ann_R (M) \cap \ann_R (N)$$
 \end{problem}
 
 
+\begin{problem}
+Let $R$ be a domain and let $M$ be an $R$-module. The torsion submodule of $M$ is 
+$$\Tor(M) = \{m \in M \mid rm = 0 \text{ for some } r \in R \textrm{ with } r \neq 0 \}.$$ 
+Elements of $\Tor(M)$ are called the torsion elements of $M$, and the module $M$ is called {\bf torsion-free} if $\Tor(M) = 0$. You may take for granted that this is actually a submodule of $M$ without proof.
+
+\begin{enumerate}[a)]
+\item Show that if $M$ and $N$ are $R$-modules, then $\Tor(M \oplus N) = \Tor(M) \oplus \Tor(N)$.
+\item Show that if $M \cong N$, then $\Tor(M) \cong \Tor(N)$.
+\item Show that if $M$ is a free $R$-module then $\Tor(M)=0$.
+%\item Show that if $I$ is an ideal of $R$ that is not principal, then $I$ is a torsion-free $R$-module that is not a free $R$-module. 
+\item Show that if $I\neq(0)$ is an ideal of $R$ then $\Tor(R/I)=R/I$.
+\item Suppose that R is a PID, and that $M$ is a finitely generated $R$-module. Show that $M$ is a torsion-free $R$-module if and only if $M$ is a free $R$-module.
+\end{enumerate} 
+\end{problem}
+
+
+
+
 
 \begin{problem}
 Consider the matrix 
@@ -110,6 +123,38 @@ $$A=\begin{bmatrix}
 \in \M_{3,4}(\Z).$$
 Determine the simplest representative in the isomorphism class of the $\Z$-module presented by $A$.
 \end{problem}
+
+
+
+%
+%
+%
+%\begin{problem}
+%Let $R$ be a PID and let $M$ be a finitely generated $R$-module. 
+%\begin{enumerate}[a)]
+%\item Determine a generator for the principal ideal $\ann_R(M)$ in terms of the invariant factors and the free rank of $M$.
+%\item Determine a generator for the principal ideal $\ann_R(M)$ in terms of the elementary divisors and the free rank of $M$.
+%\end{enumerate}
+%\end{problem}
+%
+%
+%
+%
+%
+%\begin{problem}
+%Consider the matrix 
+%$$A=\begin{bmatrix}
+%x & 1 & 0 \\
+%1 & x & -3 \\
+%0 & 0 & x-1
+%\end{bmatrix}
+%\in \M_{3,3}(R),$$ 
+%where $R=\Q[x]$. 
+%\begin{enumerate}[a)]
+%\item Determine the Smith normal form for $A$.
+%\item Determine the representatives in the isomorphism class of the module presented by $A$ which are written in invariant factor form and in elementary divisor form.
+%\end{enumerate}
+%\end{problem}
 
 
 
