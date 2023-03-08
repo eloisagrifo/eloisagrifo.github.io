@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL | Spring 2023}
+\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 6}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, our course notes, and the textbook.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook.
+
+
+\
+
+
+
+
+
+\begin{problem}
+Let $F$ be a field and consider a monic polynomial $f(x)=x^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$ in $F[x]$ with $n \geqslant 1$.
+\begin{enumerate}[a)]
+\item Show that the principal ideal $(f(x))$ is a subspace of the $F$-vector space $F[x]$.
+\item Show that  the set $B=\{\ov{1},\ov{x},\ldots,\ov{x^{n-1}}\}$, where $\ov{x^i}=x^i+(f(x))$, is a basis for the quotient $F$-vector space $F[x]/(f(x))$.
+\item Consider the linear transformation $\l_x : F [x]/(f (x)) \to F[x]/(f(x))$ defined by $\l_x(v)=\ov{x}v$ for any $v\in F [x]/(f (x))$. Find the matrix representing $\l_x$ in the basis $B$ from part b).
+\end{enumerate}	
+\end{problem}
+
+\vfill
+
+\begin{problem}
+Let $V = \R^3$ with the standard basis $B=\{e_1,e_2,e_3\}$ and let $t: V \to V$ be the linear transformation represented by the matrix 
+$$[t]_B^B =
+\begin{bmatrix}
+0	&	-1	&	0\\
+-1	&	0	&	3\\	
+0	&	0	&	1	
+\end{bmatrix}.$$ 
+
+\begin{enumerate}[a)]
+\item Find the invariant factor decomposition of the $\R[x]$-module $V_t$. 
+\item Find the characteristic and minimal polynomials of $t$.
+\item Find the Jordan canonical form of $t$.
+\end{enumerate}	
+\end{problem}
+
+
+\vfill
+
+
+\begin{problem}
+Let $F$ be a field, let $V$ and $W$ be vector spaces over $F$, let $a\!: V \to V$ and $b\!:W \to W$ be linear transformations and let $V_a$ and $W_b$ be the $F[x]$-modules they determine. 
+\begin{enumerate}[a)]
+\item Show that a function $g: V_a \to W_b$ is an $F[x]$-module homomorphism if and only if 
+\begin{enumerate}[(1)]
+\item $g: V \to W$ is a linear transformation and 
+\item $g \circ a = b \circ g$.
+\end{enumerate} 
+\item Suppose that $V = F^m = W$, and let $A, B \in \M_m(F)$ be the matrices representing the linear transformations $a$ and $b$, respectively. Show that there is an $F[x]$-module isomorphism $V_a \cong W_b$ if and only if the matrices $A$ and $B$ are similar.
+\end{enumerate}
+\end{problem}
+
+\vfill
+
+\begin{problem}
+Let $F$ be a field and $n$ a positive integer. We say an $n \times n$ matrix $A$ with entries in F is {\bf unipotent} if $A-I_n$ is nilpotent, meaning that $(A-I_n)^k = 0$ for some $k \geqslant 1$. For the field $F = \Q$, find (with complete justification) the number of similarity classes of $4 \times 4$ unipotent matrices and give an explicit representative for each class.
+\end{problem}
+
+
+
+\end{document}
