@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL | Spring 2023}
+\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 7}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, our course notes, and the textbook.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook.
+
+
+\
+
+
+\begin{problem}
+	Determine, with justification, if the following two matrices with complex entries are similar.
+	
+	$$A = \begin{bmatrix}
+		0 & -4 & 0 & 0 \\
+		1 & 4 & 0 & 0 \\
+		0 & 0 & 0 & -4 \\
+		0 & 0 & 1 & 4
+	\end{bmatrix} \textrm{ and } B = \begin{bmatrix}
+		2 & 0 & 0 & 0 \\ 0 & 2 & 0 & 0 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 1 & 2
+	\end{bmatrix}.$$ 
+\end{problem}
+
+
+
+
+
+\begin{problem}
+Let $F$ be a field.
+\begin{enumerate}[a)]
+	\item Let A and B be two $3 \times 3$ matrices with entries in $F$. Prove A and B are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.
+\item Show, by way of an example with justification, that the statement in part a) would become false if $3 \times 3$ were replaced by $4 \times 4$.
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Let $F$ be any field. Up to similarity, how many matrices in $\M_{5}(F)$ of the form
+$$A = \begin{bmatrix}
+    1 & * & * & * & * \\
+    0 & 1 & * & * & * \\
+    0 & 0 & 1 & * & * \\
+    0 & 0 & 0 & 1 & * \\
+    0 & 0 & 0 & 0 & 1 \\
+\end{bmatrix}$$
+are there? Justify. 
+\end{problem}
+
+
+\end{document}
