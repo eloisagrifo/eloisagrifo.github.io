@@ -68,7 +68,7 @@
 \vspace{3em}
 
 \begin{center}
-	{\LARGE Problem Set 11}
+	{\LARGE Problem Set 12}
 \end{center}
 
 \
@@ -85,72 +85,45 @@ I will post the .tex code for these problems for you to use if you wish to type 
 
 
 \begin{problem}
-Let $n$ be a positive integer and let $p$ be a prime integer. Let $q(x) = x^{p^n} - x \in (\Z/p)[x]$, and let $K$ be the splitting field of $q$ over $\Z/p$. 
+Prove that if $F$ is a field, then any finite subgroup $G$ of $(F^\times,\cdot)$  is cyclic.
 
+\noindent
+{\em Hint:} Use the classification of Finitely Generated Modules over PIDs to find a polynomial of the form $p = x^n-1 \in F[x]$ such that every element of $G$ is a root for $p$. Compare the number of roots of $p$ to $\deg(p)$.
+\end{problem}
+
+
+
+\begin{problem}
+Let $p$ be a prime number and let $L$ be the splitting field of $x^p-2$ over $\Q$. In Problem Set 10, you showed that $L = \Q(b,\zeta)$ for $b = \sqrt[p]{2}$ and $\zeta = e^{2\pi i/p}$, and $[L : \Q] = p(p-1)$.
 \begin{enumerate}[a)]
-\item Show that the subset $E \subseteq K$ consisting of all roots of $q$ in $K$ is a subfield of $K$. 
+\item  Determine all the elements of $\Aut(L/\Q)$.
 
-%{\em Hint:} We will show in class very soon that if a field $K$ contains $\Z/p$ then the function $h: K\to K, h(x)=x^{p^n}$ is a ring automorphism for any positive integer $n$.
-
-\item Show that $|E| = p^n$ and $E = K$. 
-
-%{\em Hint:} To show that $q$ has no roots of multiplicity higher than 1 it suffices to show that no roots of $q$ are also roots of its derivative $q'$.
-
-
-\item Let $L$ be any field with $|L| = p^n$, and let $F$ be the prime field of $L$. Show that $F \cong \Z/p$ and that $L$ is the splitting field of the polynomial $q_F(x)= x^{p^n} - x\in F[x]$ over $F$. 
-
-{\em Hint:} Consider the multiplicative group $(L^\times, \cdot)$.
-
-\item Show that any two fields of order $p^n$ are isomorphic.
+\item Decide, with justification, whether $G=\Aut(L/\Q)$ is abelian.
 \end{enumerate}
 \end{problem}
 
 
 
 \begin{problem}
-Show that every algebraic field extension of a finite field is separable.	
-\end{problem}
+Let $L$ be the splitting field of $x^6-4$ over $\Q$. Let $\alpha = \sqrt[3]{2}$ be the unique positive real root of $x^6-4$, and $\zeta = e^{2\pi i/6}$. You showed in Problem Set 10 that $L=\Q(\alpha,\zeta)$ and $[L:\Q]=6$.
 
-
-\begin{problem}
-Assume $F$ is field and let $f \in F[x]$.
 \begin{enumerate}[a)]
-\item Assume $\ch(F) = 0$. Prove that $f$ is not separable if and only if the prime factorization of $f$ in $F[x]$ admits a repeated factor.
+\item Give, with justification, an explicit basis of $K$ as a vector space over $\Q$. 
 
-\item Give a counterexample to the previous part when the assumption $\ch(F) = 0$ is omitted.
+\item Let $g \in \Aut(K/\Q)$ be an automorphism that maps $g(\alpha)= \alpha\zeta^2$ and $g(\alpha\zeta)=\alpha$. Determine all the possibilities for $g$ by describing where $g$ maps each element of your basis for $K$. 
+
+\item Let $h \in \Aut(K/\Q)$ be the restriction of the complex conjugation map to $K$. Determine the subfield $K^{\langle h \rangle} \colonequals \{k\in K \mid h(k)=k\}$ explicitly. 
 \end{enumerate}
 \end{problem}
 
 
 
 
-\begin{problem}
-	Let $L$ be the splitting field of $f = x^5 - 11 \in \Q[x]$.
-	\begin{enumerate}[a)]
-		\item Find the degree of $[L : \Q]$.
-		\item Let $F = \Q(\xi)$, where $\xi = e^{\frac{2 \pi i}{5}}$ is a primitive $5$th root of unity. Show that $f$ is irreducible over~$F$.
-	\end{enumerate}
-\end{problem}
 
-
-\begin{problem}
-Let $F$ be a field, let $a_1,\ldots, a_n$ be elements of an extension of $F$, and $L~=~F(a_1, \ldots, a_n)$.
-
-\begin{enumerate}[a)]
-\item Show that
-$$F(a_1,\ldots,a_n) = \left\{\frac{f(a_1,\ldots, a_n)}{g(a_1,\ldots,a_n)}\mid f,g \in F[x_1,\ldots, x_n], g \neq 0\right\}.$$
-
-\item Let 
-$$F[a_1,\ldots,a_n] \colonequals \left\{f(a_1,\ldots, a_n)\mid f \in F[x_1,\ldots, x_n]\right\}.$$ 
-Prove that if $a_1,\ldots, a_n$ are algebraic over $F$, then $L=F[a_1,\ldots,a_n]$.
-
-\item Prove that if $\sigma\in\Aut(L/F)$ and $f\in L[x_1, \ldots, x_n]$, then 
-$$\sigma(f(a_1,\ldots, a_n)) = f^\sigma(\sigma(a_1),\ldots, \sigma(a_n)),$$
-where $f^\sigma$ denotes the polynomial obtained from $f$ by applying $\sigma$ to its coefficients and leaving the variables unchanged.
-
-\item Prove that if $\sigma \in \Aut(L/F)$, then $\sigma$ is uniquely determined by $\sigma(a_1),\ldots, \sigma(a_n)$.
-\end{enumerate}
-\end{problem}
-
+%
+%
+%\begin{problem}
+%Let $F$ be a perfect field. Prove that if $L$ is the splitting field over $F$ of a (not necessarily separable) polynomial in $f \in F[x]$, then $F \subseteq L$ is a Galois extension.
+%\end{problem}
 
 \end{document}
