@@ -1,0 +1,288 @@
+<HTML>
+<body style="background-color:powderblue;">
+
+
+<body topmargin="50">
+<body leftmargin="50">
+
+<head>
+
+
+        <TITLE>
+            Homological Algebra | UCR Spring 2021
+        </TITLE>
+        <LINK REV="made" HREF="mailto:eloisa.grifo&#x40;ucr.edu">
+
+   </HEAD>
+  
+ 
+    
+
+ <H1><center>
+            Homological Algebra</center>
+        </H1>
+
+ <h2><center>
+            Fall 2023</center>
+        </h2>
+ <h2><center>
+University of Nebraska-Lincoln 
+ </h2>
+
+
+
+<b>Instructor:</b> <a href=https://eloisagrifo.github.io>Elo&iacute;sa Grifo</a> (please address me as Elo&iacute;sa)
+
+<br><br>
+
+<b><a href=915notes.pdf>Course notes</a></b> 
+
+<br>
+<br>
+
+<div class="page-content">
+      <div class="wrapper">
+        <h3 id="links">Basic information</h3>
+
+
+<div align="justify"> 
+Welcome to Homological Algebra!
+<br><br>
+This course is an introduction to homological algebra; we will assume that nobody has seen homological algebra before.
+<br><br>
+
+Homological algebra is the study of homology in a general algebraic setting. While you may have encountered some homological ideas in algebraic topology, homological tools play a central role in other fields. We will learn about some of these tools, building on examples and motivation primarily from the world of modules.
+
+Before we start discussing homological algebra, we will need an introduction to category theory; again, no familiarity with categories and categorical notation will be assumed.
+The remainder of the class will be an introduction to homological algebra.
+Topics will include complexes and short exact sequences, Hom and tensor, free and projective modules, free and projective resolutions, exact functors, and Ext and Tor. Once we have built enough of these things over R-modules, we will talk a little bit about abelian categories in general, and how to generalize these constructions. Towards the end of the course, we will introduce spectral sequences. 
+
+<br><br>
+Computing homology of complexes in general can be quite difficult. As surprising as it may sound, we <i>can</i> use a computer to do very abstract calculations! Sadly, we will not have the chance to learn how we can use <a href=http://www2.macaulay2.com/Macaulay2/>Macaulay2</a> to do homological calculations; those students who are familiar with Macaulay2 are welcome to ask me about this outside of class.
+
+<br><br><br>
+
+<b>Prerequisites:</b> The official prerequisite is the Algebra sequence at UNL (Math 817-818). If you have taken an introduction to ring and module theory somewhere else, I will allow you to enroll as long as you convince me you have enough background to follow.
+
+
+<br><br>
+<b>Course expectations:</b> 
+Attendance is expected. There will be 4 problem sets, which you are very welcome to (read: encouraged to!) work on together in groups; you should however write your own solutions to the problem sets. There will be a midterm and a final; you should work on those by yourself. Your final grade will be based on the problem sets, midterm, and final exam.
+
+
+
+<br><br>
+<b>Office Hours:</b> 
+Mondays 5 &mdash; 6 pm, Fridays 2 &mdash; 3 pm, and by appointment.
+
+
+
+<br><br><br>
+<div class="page-content">
+      <div class="wrapper">
+        <h3>
+Course notes
+</h3>
+
+
+Here are the <a href=915notes.pdf>Course notes</a>. I will be updating these throughout the semester. If you find any typos at all, however small, please let me know.
+<br><br>
+Apart from these notes, we will not follow any particular textbook, but recommended sources include:
+
+<br><br>
+<li>Rotman's <i>An Introduction to Homological Algebra</i>, second edition</li> (important! The first and second edition are two completely different books)
+<li>Weibel's <i>Homological Algebra</i></li>
+<li>Mac Lane's <i>Categories for the working mathematician</i></li>
+<li>Emily Riehl's <a href=https://math.jhu.edu/~eriehl/context.pdf>Category Theory in context</a></li>
+
+
+
+<br><br>
+<div class="page-content">
+      <div class="wrapper">
+        <h3 id="problemsets">
+Problem Sets
+</h3>
+
+
+<b>Instructions:</b> 
+For each problem set, pick <b>4 problems</b> to submit. You are welcome to work together with your classmates on the problems, and I will be happy to give you hints or discuss the problems with you, but you should write up your solutions by yourself. You will submit your work on canvas; your submission should be a pdf file, but you are not required to type your solutions. If you prefer to handwrite your work on paper, there are apps like Scannable or Genius Scan that can scan your work into one pdf.
+
+
+<ul>
+<li>
+<a href=Homework1.pdf>Problem Set 1</a>: due September 8 (<a href=Homework1.tex>tex</a>)
+</li>
+
+<!--
+
+<li>
+<a href=Homework2.pdf>Problem Set 2</a>: due September 23 (<a href=Homework2.tex>tex</a>)
+</li>
+
+
+<li>
+<a href=midterm.pdf>Midterm</a>: due October 13 (<a href=midterm.tex>tex</a>)
+</li>
+
+<li>
+<a href=Homework3.pdf>Problem Set 3</a>: due November 3 or 10 (<a href=Homework3.tex>tex</a>)
+</li>
+
+
+<li>
+<a href=Homework4.pdf>Problem Set 4</a>: due December 1 (<a href=Homework4.tex>tex</a>)
+</li>
+
+
+<li>
+<a href=final.pdf>Final Exam</a>: due December 8 (<a href=final.tex>tex</a>)
+</li>
+
+--!>
+
+</ul>
+
+
+
+<br>
+<div class="page-content">
+      <div class="wrapper">
+        <h3 id="schedule">
+Schedule
+</h3>
+
+
+
+<ul>
+
+<li>
+Monday, August 21: Complexes and homology. Exact sequences.
+</li>
+
+
+<li>
+Wednesday, August 23</a>: Categories for the working homological algebraist: an introduction.
+</li>
+
+
+
+
+<!--
+
+<li>
+: <a href=https://www.youtube.com/watch?v=etbcKWEKnvg>The Snake Lemma</a> and the long exact sequence in homology.
+</li>
+
+
+<li>
+<a href=lectures/Lecture5.pdf>Monday, April 12</a>: The naturality of the LES in homology. How to construct maps of complexes. (<a href=M2/maps.m2>M2 examples</a>)
+</li>
+
+
+<li>
+<a href=lectures/Lecture6.pdf>Wednesday, April 14</a>: Sidenote on universal properties. The Hom functors.
+</li>
+
+
+<li>
+<a href=lectures/Lecture7.pdf>Monday, April 19</a>: Tensor. <a href=https://www.reddit.com/r/math/comments/83se4o/why_are_tensor_products_scary/>Why are tensor products scary?</a>
+</li>
+
+
+
+<li>
+<a href=lectures/Lecture8.pdf>Wednesday, April 21</a>: The splitting lemma.
+</li>
+
+
+<li>
+<a href=lectures/Lecture9.pdf>Monday, April 26</a>: Projectives and injectives.
+</li>
+
+
+<li>
+<a href=lectures/Lecture10.pdf>Wednesday, April 28</a>: Enough injectives. Flat modules.
+</li>
+
+
+<li>
+<a href=lectures/Lecture11.pdf>Monday, May 3</a>: Projective and free resolutions. (<a href=M2/HomTensor.m2>M2 examples</a>)
+</li>
+
+
+<li>
+<a href=lectures/Lecture12.pdf>Wednesday, May 5</a>: Minimal free resolutions. (<a href=M2/betti.m2>M2 examples</a>)
+</li>
+
+
+<li>
+<a href=lectures/Lecture13.pdf>Monday, May 10</a>: Abelian categories.
+</li>
+
+<li>
+<a href=lectures/Lecture14.pdf>Wednesday, May 12</a>: Complexes and homology in any abelian category. The Yoneda embedding. Enough projectives and injectives. The Horseshoe Lemma.
+</li>
+
+
+<li>
+<a href=lectures/Lecture15.pdf>Monday, May 17</a>: <a href=lectures/derived.pdf>Derived functors.</a>
+</li>
+
+
+<li>
+<a href=lectures/Lecture16.pdf>Wednesday, May 19</a>: <a href=lectures/ExtTor.pdf>Ext and Tor</a>.
+</li>
+
+<li>
+<a href=lectures/Lecture17.pdf>Monday, May 24</a>: Projective and injective dimension. The Koszul complex. Regular sequences.
+</li>
+
+<li>
+<a href=lectures/Lecture18.pdf>Wednesday, May 26</a>: <a href=lectures/CArecap.pdf>Commutative algebra recap.</a> A homological characterization of <a href=lectures/regular.pdf>regular rings</a>. Depth and <a href=lectures/CMrings.pdf>Cohen-Macaulay rings</a>.
+</li>
+
+<li>
+<a href=lectures/Lecture19.pdf>Wednesday, June 2</a>: Depth and Cohen-Macaulay rings wrap up. Some examples of derived functors beyond Ext and Tor. <a href=lectures/whathavewelearned.pdf>What have we learned this quarter?</a>
+</li>
+--!>
+
+
+</ul>
+
+
+
+<br><br>
+<b>Here are some random resources</b>: 
+
+
+<ul>
+
+<li>
+<a href=https://arxiv.org/pdf/1404.0135.pdf>Why every ring should have a 1</a>
+</li>
+
+<li>
+<a href=
+https://ncatlab.org/nlab/show/HomePage>nLab</a>, a math wiki written from the perspective of (higher) category theory
+</li>
+
+<li>
+<a href=http://www2.macaulay2.com/Macaulay2/>Macaulay2</a>, a commutative algebra software
+</li>
+
+<li>
+<a href=https://www.unimelb-macaulay2.cloud.edu.au>Macaulay2 online</a>, a way to run Macaulay2 without installing it
+</li>
+</ul>
+
+
+
+<br><br>
+<hr color=#808080>
+<p class="caption"><center>
+	University of Nebraska-Lincoln 
+</center> </p>
+
+
+</BODY>

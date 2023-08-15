@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Min}{Min}
+\DeclareMathOperator{\im}{im}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Homework 1}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Elo\'isa Grifo}
+\lhead{Commutative Algebra I Fall 2022}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Midterm}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+For full credit, turn in 5 problems in a pdf file. 
+You cannot use any resources besides me or our course notes. In particular, you cannot discuss the problems with your classmates until after the due date, and you are not allowed to use the internet or any other textbooks as a resource.
+
+
+\vspace{2em}
+
+
+
+\begin{problem}
+	For each of the following, either give an example with justification, or prove that no such example exists.
+	\begin{enumerate}[a)]
+		\item A ring $R$ such that $\mathbb{C}[y^2] \subseteq R \subseteq \mathbb{C}[x,y]$ that is not noetherian.
+		\item A ring $R$ such that $\mathbb{C}[x^2,y^2] \subseteq R \subseteq \mathbb{C}[x,y]$ that is not noetherian.
+	\end{enumerate}
+\end{problem}
+
+
+\vfill
+
+\begin{problem}
+	Let $R$ be a noetherian ring and $I$ and $J$ be ideals in $R$. Show that $I \subseteq J$ if and only if $I_P \subseteq J_P$ for all $P \in \Ass(J)$.
+\end{problem}
+
+
+\vfill
+
+\begin{problem}
+	Let $R \subseteq S$ be a module-finite extension of domains. Show that every nonzero $s \in S$ has a nonzero multiple in $R$, meaning that there exists $t \in S$ such that $ts \neq 0$ and $ts \in R$.
+\end{problem}
+
+
+
+\vfill
+
+\begin{problem}
+	Let $R$ be a noetherian ring. Show that if $P$ is a minimal prime of $R$, then
+	$$P \nsubseteq \bigcup_{\substack{Q \in \Min(R) \\ Q \neq P}} Q.$$
+\end{problem}
+
+
+\vfill
+
+\begin{problem}
+	Let $W$ be a multiplicatively closed subset of $R$. Show that if $W$ contains a nonunit, then $R$ is not a direct summand of $W^{-1}R$ via the canonical map $R \to W^{-1}R$.
+\end{problem}
+
+\vfill
+
+\begin{problem}
+	In this problem we are going to show that localization is exact. Let $R$ be a ring and $W$ a multiplicatively closed set.
+	\begin{enumerate}[a)]
+		\item Show that if $M \xrightarrow{f} N$ is a homomorphism of $R$-modules, then $W^{-1}(\ker(f)) = \ker(W^{-1}(f))$. 
+		\item Show that if $M \xrightarrow{f} N$ is a homomorphism of $R$-modules, then $W^{-1}(\im(f)) = \im(W^{-1}(f))$
+		\item Show that if
+		$$\xymatrix{0 \ar[r] & A \ar[r]^-{f} & B \ar[r]^-{g} & C \ar[r] & 0}$$ 
+		is a short exact sequence of $R$-modules, then 
+		$$\xymatrix{0 \ar[r] & W^{-1}A \ar[rr]^-{W^{-1}(f)} && W^{-1}B \ar[rr]^-{W^{-1}(g)} && W^{-1}C \ar[r] & 0}$$
+		is also a short exact sequence.
+	\end{enumerate}
+\end{problem}
+
+\vfill
+
+\begin{problem}
+	Let $k$ be a field, $R = k[x,y]$, and let $M = R/(x^2,xy)$. Find a prime filtration for $M$ and determine $\Ass(M)$.
+\end{problem}
+
+\end{document}

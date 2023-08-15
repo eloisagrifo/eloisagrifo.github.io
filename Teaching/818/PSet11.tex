@@ -1,0 +1,156 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL | Spring 2023}
+\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 11}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, our course notes, and the textbook.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook.
+
+
+\
+
+
+\begin{problem}
+Let $n$ be a positive integer and let $p$ be a prime integer. Let $q(x) = x^{p^n} - x \in (\Z/p)[x]$, and let $K$ be the splitting field of $q$ over $\Z/p$. 
+
+\begin{enumerate}[a)]
+\item Show that the subset $E \subseteq K$ consisting of all roots of $q$ in $K$ is a subfield of $K$. 
+
+%{\em Hint:} We will show in class very soon that if a field $K$ contains $\Z/p$ then the function $h: K\to K, h(x)=x^{p^n}$ is a ring automorphism for any positive integer $n$.
+
+\item Show that $|E| = p^n$ and $E = K$. 
+
+%{\em Hint:} To show that $q$ has no roots of multiplicity higher than 1 it suffices to show that no roots of $q$ are also roots of its derivative $q'$.
+
+
+\item Let $L$ be any field with $|L| = p^n$, and let $F$ be the prime field of $L$. Show that $F \cong \Z/p$ and that $L$ is the splitting field of the polynomial $q_F(x)= x^{p^n} - x\in F[x]$ over $F$. 
+
+{\em Hint:} Consider the multiplicative group $(L^\times, \cdot)$.
+
+\item Show that any two fields of order $p^n$ are isomorphic.
+\end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}
+Show that every algebraic field extension of a finite field is separable.	
+\end{problem}
+
+
+\begin{problem}
+Assume $F$ is field and let $f \in F[x]$.
+\begin{enumerate}[a)]
+\item Assume $\ch(F) = 0$. Prove that $f$ is not separable if and only if the prime factorization of $f$ in $F[x]$ admits a repeated factor.
+
+\item Give a counterexample to the previous part when the assumption $\ch(F) = 0$ is omitted.
+\end{enumerate}
+\end{problem}
+
+
+
+
+\begin{problem}
+	Let $L$ be the splitting field of $f = x^5 - 11 \in \Q[x]$.
+	\begin{enumerate}[a)]
+		\item Find the degree of $[L : \Q]$.
+		\item Let $F = \Q(\xi)$, where $\xi = e^{\frac{2 \pi i}{5}}$ is a primitive $5$th root of unity. Show that $f$ is irreducible over~$F$.
+	\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Let $F$ be a field, let $a_1,\ldots, a_n$ be elements of an extension of $F$, and $L~=~F(a_1, \ldots, a_n)$.
+
+\begin{enumerate}[a)]
+\item Show that
+$$F(a_1,\ldots,a_n) = \left\{\frac{f(a_1,\ldots, a_n)}{g(a_1,\ldots,a_n)}\mid f,g \in F[x_1,\ldots, x_n], g \neq 0\right\}.$$
+
+\item Let 
+$$F[a_1,\ldots,a_n] \colonequals \left\{f(a_1,\ldots, a_n)\mid f \in F[x_1,\ldots, x_n]\right\}.$$ 
+Prove that if $a_1,\ldots, a_n$ are algebraic over $F$, then $L=F[a_1,\ldots,a_n]$.
+
+\item Prove that if $\sigma\in\Aut(L/F)$ and $f\in L[x_1, \ldots, x_n]$, then 
+$$\sigma(f(a_1,\ldots, a_n)) = f^\sigma(\sigma(a_1),\ldots, \sigma(a_n)),$$
+where $f^\sigma$ denotes the polynomial obtained from $f$ by applying $\sigma$ to its coefficients and leaving the variables unchanged.
+
+\item Assume that $a_1, \ldots, a_n$ are algebraic over $F$. Prove that if $\sigma \in \Aut(L/F)$, then $\sigma$ is uniquely determined by $\sigma(a_1),\ldots, \sigma(a_n)$.
+\end{enumerate}
+\end{problem}
+
+
+\end{document}

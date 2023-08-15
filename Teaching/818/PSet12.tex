@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL | Spring 2023}
+\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 12}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, our course notes, and the textbook.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook.
+
+
+\
+
+
+\begin{problem}
+Prove that if $F$ is a field, then any finite subgroup $G$ of $(F^\times,\cdot)$  is cyclic.
+
+\noindent
+{\em Hint:} Use the classification of Finitely Generated Modules over PIDs to find a polynomial of the form $p = x^n-1 \in F[x]$ such that every element of $G$ is a root for $p$. Compare the number of roots of $p$ to $\deg(p)$.
+\end{problem}
+
+
+
+\begin{problem}
+Let $p$ be a prime number and let $L$ be the splitting field of $x^p-2$ over $\Q$. In Problem Set 10, you showed that $L = \Q(b,\zeta)$ for $b = \sqrt[p]{2}$ and $\zeta = e^{2\pi i/p}$, and $[L : \Q] = p(p-1)$.
+\begin{enumerate}[a)]
+\item  Determine all the elements of $\Aut(L/\Q)$.
+
+\item Decide, with justification, whether $G=\Aut(L/\Q)$ is abelian.
+\end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}
+Let $K$ be the splitting field of $x^6-4$ over $\Q$. Let $\alpha = \sqrt[3]{2}$ be the unique positive real root of $x^6-4$, and $\zeta = e^{2\pi i/6}$. You showed in Problem Set 10 that $K=\Q(\alpha,\zeta)$ and $[K:\Q]=6$.
+
+\begin{enumerate}[a)]
+\item Give, with justification, an explicit basis of $K$ as a vector space over $\Q$. 
+
+\item Let $g \in \Aut(K/\Q)$ be an automorphism that maps $g(\alpha)= \alpha\zeta^2$ and $g(\alpha\zeta^2)=\alpha$. Determine all the possibilities for $g$ by describing where $g$ maps each element of your basis for $K$. 
+
+\item Let $h \in \Aut(K/\Q)$ be the restriction of the complex conjugation map to $K$. Determine the subfield $K^{\langle h \rangle} \colonequals \{k\in K \mid h(k)=k\}$ explicitly. 
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Let $F$ be a perfect field. Prove that if $L$ is the splitting field over $F$ of a (not necessarily separable) polynomial in $f \in F[x]$, then $F \subseteq L$ is a Galois extension.
+\end{problem}
+
+
+
+
+\begin{problem}
+Assume $F \subseteq L$ is a finite extension of fields and that the characteristic of $F$ is $p$, where $p$ is a prime. Suppose there exists an element $a \in L$ such that $a \notin F$ but $a^p \in F$.
+\begin{enumerate}[a)]
+\item Prove $\sigma(a) = a$ for all $\sigma \in \Aut(L/F)$.
+\item Prove that $F \subseteq L$ is not Galois.
+\end{enumerate}
+\end{problem}  
+
+
+
+\begin{problem}
+	Let $f(x) \in \Q[x]$ be an irreducible cubic (degree $3$) polynomial having exactly one real root. 
+Let $L$ be the splitting field of $f(x)$ over $\Q$. Show that $\Aut(L/\Q) \cong S_3$.
+\end{problem}
+
+
+
+\end{document}

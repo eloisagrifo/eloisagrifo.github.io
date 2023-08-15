@@ -1,0 +1,138 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL | Spring 2023}
+\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 9}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, our course notes, and the textbook.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook.
+
+
+\
+
+\begin{problem}
+Let $K \subseteq L$ be a finite extension of fields and assume $f(x)$ is a polynomial with coefficients in $K$ that is irreducible in the ring $K[x]$. 
+
+\begin{enumerate}[a)]
+\item Prove $f(x)$ remains irreducible when regarded as an element of the ring $L[x]$ provided $[L : K]$ is relatively prime to the degree of $f(x)$.
+
+\item Give an explicit example with justification showing that the statement in part a) would become false if we ommitted the assumption that $[L : K]$ is relatively prime to the degree of $f(x)$.
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Let $p$ be a prime integer and let $F = \Q(i)$. Use the theory of field extensions to show that the polynomial $x^3 - p$ is irreducible in $F[x]$.
+\end{problem}
+
+
+
+\begin{problem}
+Let $E$ be the field extension of $\Q$ obtained by adjoining to $\Q$ all four complex roots of the polynomial $x^4 + 5$. 
+%($E$ is what's known as the {\bf splitting field} of $x^4 + 5$ over $\Q$.)
+That is, $E = \Q(\alpha_1, \alpha_2, \alpha_3, \alpha_4)$ where
+$$\alpha_1 = e^{\pi i/4}\sqrt[4]{5}, \quad
+\alpha_2 = e^{3\pi i/4}\sqrt[4]{5}, \quad
+\alpha_3 = e^{5\pi i/4}\sqrt[4]{5}, \quad
+\alpha_4 = e^{7\pi i/4}\sqrt[4]{5},.$$
+
+\begin{enumerate}[a)]
+\item Prove that there exist a field extension $\Q \subseteq F$ such that $F \subseteq E$, $F \subseteq \R$ and $[F :\Q]=4$.
+
+{\em Hint:} Note that $\alpha_1 + \alpha_4$ is a real number; find it explicitly. 
+
+\item Determine $[E : \Q]$ with justification.
+\end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}
+Let
+$$F_0 \subseteq F_1 \subseteq F_2 \subseteq \cdots$$
+be fields such that $F_i \subseteq F_{i+1}$ is an algebraic extension for all $i \geqslant 0$, and let
+$$E = \bigcup_i F_i.$$
+\begin{enumerate}[a)]
+\item Show that $E$ is a field.
+\item Show that $F_0 \subseteq E$ is an algebraic extension.
+\end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}
+Let $F$ be a field and $f,g \in F[x]$ be nonzero polynomials. Show that $\gcd(f,g) = 1$ in $F[x]$ if any only if $f$ and $g$ have no common roots in an algebraic closure $\overline{F}$ of $F$.
+\end{problem}
+
+
+\end{document}

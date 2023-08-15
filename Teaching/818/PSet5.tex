@@ -1,0 +1,162 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL | Spring 2023}
+\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 5}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, our course notes, and the textbook.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook.
+
+
+\vspace{2em}
+
+
+
+
+
+
+\begin{problem}
+	Let $R$ be a commutative ring and $I$ an ideal of $R$. Show that if $R$ is noetherian then $R/I$ is also noetherian.
+\end{problem}
+
+
+\vfill
+
+\begin{problem}
+Let $R$ be a commutative ring with $1 \neq 0$. Show that
+$$\ann_R (M \oplus N) = \ann_R (M) \cap \ann_R (N)$$	
+\end{problem}
+
+\vfill
+
+\begin{problem}
+Let $R$ be a domain and let $M$ be an $R$-module. The torsion submodule of $M$ is 
+$$\Tor(M) = \{m \in M \mid rm = 0 \text{ for some } r \in R \textrm{ with } r \neq 0 \}.$$ 
+Elements of $\Tor(M)$ are called the torsion elements of $M$, and the module $M$ is called {\bf torsion-free} if $\Tor(M) = 0$. You may take for granted that this is actually a submodule of $M$ without proof.
+
+\begin{enumerate}[a)]
+\item Show that if $M$ and $N$ are $R$-modules, then $\Tor(M \oplus N) = \Tor(M) \oplus \Tor(N)$.
+\item Show that if $M \cong N$, then $\Tor(M) \cong \Tor(N)$.
+\item Show that if $M$ is a free $R$-module then $\Tor(M)=0$.
+%\item Show that if $I$ is an ideal of $R$ that is not principal, then $I$ is a torsion-free $R$-module that is not a free $R$-module. 
+\item Show that if $I\neq(0)$ is an ideal of $R$ then $\Tor(R/I)=R/I$.
+\item Suppose that R is a PID, and that $M$ is a finitely generated $R$-module. Show that $M$ is a torsion-free $R$-module if and only if $M$ is a free $R$-module.
+\end{enumerate} 
+\end{problem}
+
+
+\vfill
+
+
+\begin{problem}
+Consider the matrix 
+$$A=\begin{bmatrix}
+1 & 6 & 5 & 2 \\
+2 & 1 & -1 & 0 \\
+3 & 0 & 3 & 0
+\end{bmatrix}
+\in \M_{3,4}(\Z).$$
+Determine the simplest representative in the isomorphism class of the $\Z$-module presented by $A$.
+\end{problem}
+
+
+
+\newpage 
+
+
+\begin{problem}
+Let $R$ be a PID and let $M$ be a finitely generated $R$-module. 
+\begin{enumerate}[a)]
+\item Determine a generator for the principal ideal $\ann_R(M)$ in terms of the invariant factors and the free rank of $M$.
+\item Determine a generator for the principal ideal $\ann_R(M)$ in terms of the elementary divisors and the free rank of $M$.
+\end{enumerate}
+\end{problem}
+
+
+
+\
+
+\begin{problem}
+Consider the matrix 
+$$A=\begin{bmatrix}
+x & 1 & 0 \\
+1 & x & -3 \\
+0 & 0 & x-1
+\end{bmatrix}
+\in \M_{3,3}(R),$$ 
+where $R=\Q[x]$. 
+\begin{enumerate}[a)]
+\item Determine the Smith normal form for $A$.
+\item Determine the representative in the isomorphism class of the module presented by $A$ which is written in invariant factor form and in elementary divisor form.
+\end{enumerate}
+\end{problem}
+
+
+
+\end{document}

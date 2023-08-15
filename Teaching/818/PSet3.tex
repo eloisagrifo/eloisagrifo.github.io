@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL | Spring 2023}
+\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 3}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, our course notes, and the textbook.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook.
+
+
+\vspace{2em}
+
+
+
+
+\begin{problem}
+	Let $R$ be a commutative ring with $1 \neq 0$. Show that if every $R$-module is free then $R$ is a field.
+\end{problem}
+
+\begin{problem}
+An abelian group $A$ is called divisible if for each $a \in A$ and $n \in \N$, there exists $b \in A$ such that $a = nb$. Prove that if $A \neq\{0_A\}$ is a divisible abelian group then $A$ is not a free $\Z$-module. Deduce that $\Q$ is not a free $\Z$-module.
+\end{problem}
+
+
+
+\begin{problem}
+	Let $R$ be a commutative ring with $1 \neq 0$.
+	\begin{enumerate}[a)]
+		\item Show that if $M$ is a free $R$-module, then $\ann(M) = 0$.
+		\item Give an example of a ring $R$ an a nonzero module $M$ such that $\ann(M) \neq 0$.
+	\end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}
+Prove that if $R$ is a commutative ring with $1\neq 0$ then $R^m \cong R^n$ as $R$-modules if and only if $m = n$. In order to do that, you will complete he following steps:
+
+\begin{enumerate}[a)]
+
+\item Show that if $I$ is any ideal of $R$ and $M$ is any $R$-module, then $M/IM$ is an $R/I$-module via 
+$$(r + I) \cdot (m + IM) = rm + IM.$$
+ 
+\item Show that if $I$ is any ideal of $R$, then $R^n/IR^n \cong (R/I)^n$ as $R/I$-modules.
+
+\item Apply the previous part when $I = \m$ is a maximal ideal of $R$. 
+
+{\bf Tip}: You will need to use the following fact, which we shall prove in class very soon: if $F$ is a field, then $F^n\cong F^m$ as $F$-vector spaces if and only if $m=n$.
+\end{enumerate}
+\end{problem}
+
+
+
+\end{document}

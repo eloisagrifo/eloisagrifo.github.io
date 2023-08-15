@@ -72,6 +72,8 @@ h3 {
 
 .flex-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .flex-child {
@@ -129,4 +131,105 @@ padding: 0;
 
 article {
   background: #fff;
+}
+
+
+.profile1 {
+  width: 25%;
+  vertical-align:middle;
+}
+
+.profile2 {
+  width: 35%;
+  margin-right: 30px;
+  padding: 30px;
+  align-items: center;
+  text-align: justify;
+  vertical-align:middle;
+}
+
+
+
+.profile {
+	margin:auto;
+  	text-align:center;
+  	vertical-align:middle;
+   	display: flex;
+    	align-items: center;
+	width: 1250;
+}
+
+@media screen and (max-width: 600px) {
+
+	.profile1 {
+  		width: 100%;
+		align-items: center;
+}
+
+	.profile2 {
+  		width: 100%;
+  		text-align: justify;
+		text-align-last: center;
+		padding: 20px;
+		text-size-adjust: none;
+}
+
+	.profile {
+		text-align: justify;
+		display: flex;
+    		flex-wrap: wrap;
+		flex-direction: column;
+		width: 100%;
+}
+
+	.column1 {
+		width: 100%;
+}
+
+	.column2 {
+		width: 100%;
+}
+
+.row {
+}
+
+
+.name {
+	display: inline;
+	color: #191970;
+	padding-bottom: 20px;
+}
+
+
+}
+
+
+
+.row {
+	  width: 1250;
+}
+
+
+.name {
+	display: none;
+}
+
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column1 {
+  float: left;
+  width: 45%;
+}
+
+.column2 {
+  float: left;
+  width: 45%;
+  margin-left: 50px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }

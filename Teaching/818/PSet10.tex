@@ -1,0 +1,124 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL | Spring 2023}
+\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 10}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, our course notes, and the textbook.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook.
+
+
+\
+
+
+
+\begin{problem}
+	Let $F \subseteq L$ be a field extension and let $S \subseteq L$ be an arbitrarily subset of $L$ whose elements are all algebraic over $F$. Show that $F \subseteq F(S)$ is algebraic.
+\end{problem}
+
+
+
+\begin{problem}
+Suppose $F \subseteq L$ and $F \subseteq L'$ be two field extensions. Let $S$ be the set of pairs $(E,i)$ where $E$ is a subfield of $L$ that contains $F$ and $i: E \hookrightarrow L'$ is a ring map with $i|_F = \id_F$. Make $S$ into a poset by declaring that $(E,i) \leq (E',i')$ if and only if $E \subseteq E'$ and $i'|_E = i$. Show that the poset $(S, \leq)$ satisfies the hypothesis of Zorn's Lemma.
+\end{problem}
+
+
+
+\begin{problem} 
+For any prime $p$, the {\bf $p$th cyclotomic polynomial}
+$$f(x) = x^{p-1} + x^{p-2} + \cdots + x^2 + x + 1 \in \Z[x]$$
+is irreducible in $\Q[x]$.
+\end{problem}
+
+
+
+\begin{problem}
+	Let $q$ be a quadratic polynomial with coefficients in $\R$. Show that the splitting field of $q$ is either $\R$ or $\C$.
+\end{problem}
+
+
+
+\begin{problem}
+	Determine, with justification, the splitting field $K$ of the polynomial $x^6 -4$ over $\Q$ and the degree $[K : \Q]$.
+\end{problem}	
+
+
+\begin{problem}
+Let $L$ be the splitting field of $x^p -2 \in \Q[x]$ over $\Q$ where $p$ is an odd prime integer. Find $[L: \Q]$.
+
+\noindent
+{\em Hint}: Consider both chains $\Q \subseteq \Q(\sqrt[p]{2}) \subseteq L$ and $\Q \subseteq \Q(e^{2 \pi i/p}) \subseteq L$.
+\end{problem}
+
+\end{document}

@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL | Spring 2023}
+\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 4}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, our course notes, and the textbook.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook.
+
+
+\vspace{2em}
+
+
+
+
+
+\begin{problem}
+	Let $W$ be a subspace of a vector space $V$. Show that $\dim(V) = \dim(W) + \dim(V/W)$.
+\end{problem}
+
+
+
+
+
+\begin{problem} 
+Let $F$ be a field, $f\!: V \to W$ be an $F$-linear transformation, and $\coker(f) \colonequals W/\im(f)$. Prove that
+$$\dim(\coker(f)) + \dim(V) = \dim(W) + \dim(\ker(f)).$$
+\end{problem}
+
+
+
+\begin{problem}
+Let $\phi: V \to V$ be an $F$-linear transformation. Prove that if $\phi \circ \phi  = 0$, then
+$$\dim(\im(\phi))) \leqslant \frac{1}{2} \dim(V).$$
+\end{problem}
+
+
+
+\begin{problem}
+Let $R$ be a commutative ring with $1 \neq 0$.
+Let $f\!: R^n \to R^m$ be a surjective $R$-module homomorphism. Show that $n \geqslant m$.	
+\end{problem}
+
+\begin{problem}
+Let $R$ be a ring, $M$ and $N$ left $R$-modules, and $p\!: M \to  N$ a surjective $R$-module homomorphism.
+We say $p$ is a {\bf split surjection} if there exists an $R$-module homomorphism $j\!: N \to M$ such that $p \circ j = id_N$.
+\begin{enumerate}[a)]
+\item Prove that if $N$ is free, then every surjective $R$-module homomorphism of the form $p: M \to N$ is a split surjection.
+  \item Give an explicit example of a ring $R$ and a surjective $R$-module homomorphism that is not split.
+\end{enumerate}
+\end{problem}  
+
+
+
+
+
+\end{document}
