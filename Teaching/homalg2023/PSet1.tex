@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Homological Algebra}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 1}
+\end{center}
+
+%\
+%
+%\noindent
+%{\bf Instructions:}
+%You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+%
+%
+%I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook; numbers change, theorem statements do not.
+
+
+\
+
+
+\begin{problem}
+Consider the category {\bf $R$-mod}.
+
+\begin{enumerate}[a)]
+\item Show that a homomorphism of $R$-modules is injective if and only if it is a mono in {\bf $R$-mod}, and surjective if and only if it is an epi in {\bf $R$-mod}.
+
+\item Show that the homomorphism of $\Z$-modules $\Z \xrightarrow{2} \Z$ is monic but has no left inverse in {\bf $\Z$-mod}.
+
+\item Show that the canonical homomorphism of $\Z$-modules $\Z \twoheadrightarrow \Z/2/Z$ is epic but has no right inverse in {\bf $\Z$-mod}.
+\end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}$\,$
+		\begin{enumerate}[a)]
+		\item Show that in any category, every isomorphism is both an epi and a mono.
+				
+		\item Show that the usual inclusion $\mathbb{Z} \hookrightarrow \mathbb{Q}$ is an epi in the category {\bf Ring}. 
+		
+		
+		\noindent
+		This \emph{should} feel weird: it says being epi and being surjective are \emph{not} the same thing.
+		\item Show that the canonical projection $\mathbb{Q} \longrightarrow \mathbb{Q}/\Z$ is a mono in the category of divisible abelian groups.\footnote{An abelian group $A$ is divisible if for every $a \in A$ and every positive integer $n$ there exists $b \in A$ such that $nb = a$.} 
+		
+		\noindent
+		Again, this is very strange: it says being monic and being injective are \emph{not} the same thing. 
+		\end{enumerate}
+\end{problem}
+
+
+
+
+\end{document}
