@@ -1,18 +1,21 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumerate}
 \usepackage[]{graphicx}
 \usepackage{color,subfigure}
 \usepackage{multicol}
 \usepackage{float}
 \usepackage[all]{xypic}
-\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{hyperref}
 \usepackage{colonequals}
+\usepackage{mathrsfs} 
 
 \usepackage{fancyhdr, lastpage}
 \pagestyle{fancy}
-\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
 
+\setlength{\itemsep}{10em}
 
 
 \DeclareMathOperator{\mSpec}{mSpec}
@@ -32,6 +35,9 @@
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\ch}{char}
 \DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\PO}{\mathbf{PO}}
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
 %\DeclareMathOperator{\dim}{dim}
 
 
@@ -43,6 +49,7 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\ov}[1]{\overline{#1}}
+
 
 \def\ov#1{\overline{#1}}
 
@@ -71,11 +78,19 @@
 	{\LARGE Problem Set 1}
 \end{center}
 
+
+\vspace{0.5em}
+
+
+\noindent
+Turn in any {\bf 4} of the following problems. 
+Slightly more challenging problems are indicated by $(\star)$ .
+
 %\
 %
-%\noindent
+\noindent
 %{\bf Instructions:}
-%You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
 %
 %
 %I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook; numbers change, theorem statements do not.
@@ -86,19 +101,21 @@
 
 \begin{problem}
 Consider the category {\bf $R$-mod}.
-
+\vspace{-0.3em}
 \begin{enumerate}[a)]
 \item Show that a homomorphism of $R$-modules is injective if and only if it is a mono in {\bf $R$-mod}, and surjective if and only if it is an epi in {\bf $R$-mod}.
 
 \item Show that the homomorphism of $\Z$-modules $\Z \xrightarrow{2} \Z$ is monic but has no left inverse in {\bf $\Z$-mod}.
 
-\item Show that the canonical homomorphism of $\Z$-modules $\Z \twoheadrightarrow \Z/2\Z$ is epic but has no right inverse in {\bf $\Z$-mod}.
+\item Show that the canonical homomorphism $\Z \twoheadrightarrow \Z/2\Z$ is epic but has no right inverse in {\bf $\Z$-mod}.
 \end{enumerate}
 \end{problem}
 
+\vfill
 
 
 \begin{problem}$\,$
+\vspace{-0.5em}
 		\begin{enumerate}[a)]
 		\item Show that in any category, every isomorphism is both an epi and a mono.
 				
@@ -107,14 +124,38 @@ Consider the category {\bf $R$-mod}.
 		
 		\noindent
 		This \emph{should} feel weird: it says being epi and being surjective are \emph{not} the same thing.
-		\item Show that the canonical projection $\mathbb{Q} \longrightarrow \mathbb{Q}/\Z$ is a mono in the category of divisible abelian groups.\footnote{An abelian group $A$ is divisible if for every $a \in A$ and every positive integer $n$ there exists $b \in A$ such that $nb = a$.} 
+		\item Show that the canonical projection $\mathbb{Q} \twoheadrightarrow \mathbb{Q}/\Z$ is a mono in the category of divisible abelian~groups.\footnote{An abelian group $A$ is divisible if for every $a \in A$ and every positive integer $n$ there exists $b \in A$ such that $nb = a$.} 
 		
 		\noindent
 		Again, this is very strange: it says being monic and being injective are \emph{not} the same thing. 
 		\end{enumerate}
 \end{problem}
 
+\vfill
+
+\begin{problem}
+Suppose that $\mathscr{C}$ and $\mathscr{D}$ are concrete categories and $F\!:\mathscr{C} \to \mathscr{D}$ is a covariant functor.
+\begin{enumerate}[a)]
+\item Show that if $\alpha$ is an arrow in $\mathscr{C}$ that has a left inverse, then $F(\alpha)$ is an injective function.
+\item Show that if $\alpha$ is an arrow in $\mathscr{C}$ that has a right inverse, then $F(\alpha)$ is a surjective function.
+\item Use part (a) to show\footnote{Hint: You might consider some appropriate inclusion of the group $\Z/2$ into the symmetric group $\mathbb{S}_3$.} that there is no covariant functor $F\!: \textrm{\bf Grp} \to \textrm{\bf Grp}$ that, on objects, maps a group to its center.
+%\item $(\star)$ Show$^2$ that if we only assume that $\alpha$ is monic, then $F(\alpha)$ may not be injective.
+\end{enumerate}
+\end{problem}
+
+\vfill
 
 
+\begin{problem}
+We will show that every functor creates isos, and fully faithful functors reflect isos. Let $F\!: \mathscr{C} \to \mathscr{D}$ be a functor.
+\begin{enumerate}[a)]
+	\item Show that if $f$ is an iso in $\mathscr{C}$, then $F(f)$ is an iso in $\mathscr{D}$.
+	\item Show that if $X$ and $Y$ are isomorphic objects in $\mathscr{C}$, then $F(X)$ and $F(Y)$ are isomorphic in~$\mathscr{D}$.
+	\item Suppose $F$ is fully faithful. Show that if $F(f)$ is an iso, then $f$ is an iso.
+	\item Let $F$ be fully faithful. Show that if $F(X)$ and $F(Y)$ are isomorphic in $\mathscr{D}$, then $X$ and $Y$ are isomorphic in $\mathscr{C}$.
+	\item Find an example to show that a faithful functor need not reflect isomorphisms.
+\end{enumerate}
+\end{problem}
 
+\vfill
 \end{document}
