@@ -158,4 +158,59 @@ We will show that every functor creates isos, and fully faithful functors reflec
 \end{problem}
 
 \vfill
+
+\newpage
+
+\begin{problem}
+Let $\Set^\infty$ be the full subcategory of $\Set$ consisting of all infinite sets. Let 
+$$F\!:\Set^\infty \to \Set^\infty$$ 
+be the functor that on objects is given by the rule $F(S)=S\times S$, and on morphisms is given by $F(f)=(f,f)$. Show that there is no natural isomorphism $\eta: F\Rightarrow 1_{\Set^{\infty}}$.
+
+\vspace{0.5em}
+
+\noindent
+Note: whenever $S$ is an infinite set, there {\bf is} a bijection between $S \times S$ and $S$; that is not the issue.
+\end{problem}
+
+\
+
+
+
+\begin{problem}
+Given $X$ a partially ordered set, let {\bf $\PO(X)$} denote the corresponding category. 
+\begin{enumerate}[a)]
+	\item Let $Y$ be a set, and $\mathbb{P}(Y)$ be its power set, which we can view as a partially ordered set under $\subseteq$. For any two subsets of $A$ and $B$ of $Y$, show that their product in $\PO(\mathbb{P}(Y))$ is the set $A \cap B$, and that their coproduct is $A \cup B$.
+	\item Generalize the previous example: show that for all objects $A$ and $B$ in {\bf $\PO(X)$}, their coproduct is the least upper bound of $A$ and $B$, and their product is the greatest lower bound.
+\end{enumerate}
+\end{problem}
+
+
+\
+
+\begin{problem}
+Let $R$ be a ring and let $M$ be an $R$-module.
+\begin{enumerate}[a)]
+	\item Let
+$$M_1 \supseteq M_2 \supseteq M_3 \supseteq \cdots$$
+be a descending chain of submodules of $M$, which we can think of as an inverse system in the natural way. Show that the limit of this inverse system is the intersection of the submodules.
+\item Let 
+$$M_1 \subseteq M_2 \subseteq M_3 \subseteq \cdots$$
+be an ascending chain of submodules of $M$, which we can think of as a direct system in the natural way. Show that the colimit of this direct system is the union of the submodules.
+\end{enumerate}
+\end{problem}
+
+
+\
+
+
+\begin{problem}$\,$
+\begin{enumerate}[a)]
+	\item Interpret the notion of pullback as a limit and a pushout as a colimit. More precisely, describe a partially ordered set and corresponding inverse system or direct system whose limit or colimit is the same as a pushout or pullback.
+\item Explicitly describe pullbacks and pushouts in {\bf $R$-mod}.
+\end{enumerate}
+\end{problem}
+
+
+
+
 \end{document}
