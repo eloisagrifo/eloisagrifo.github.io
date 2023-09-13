@@ -1,0 +1,194 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage{hyperref}
+\usepackage{colonequals}
+\usepackage{mathrsfs} 
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+\setlength{\itemsep}{10em}
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\PO}{\mathbf{PO}}
+\DeclareMathOperator{\Ch}{Ch}
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Homological Algebra}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 1}
+\end{center}
+
+
+\vspace{0.5em}
+
+
+\noindent
+Turn in any {\bf 4} of the following problems. 
+Slightly more challenging problems are indicated by $(\star)$ .
+
+%\
+%
+\noindent
+%{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+%
+%
+%I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook; numbers change, theorem statements do not.
+
+
+\
+
+\noindent
+Pick {\bf four} of the following probems.
+
+\begin{problem}[The Five Lemma]
+Consider the following commutative diagram of $R$-modules with exact rows:
+$$\xymatrix{A' \ar[d]_-a \ar[r] & B' \ar[r] \ar[d]_-b & C' \ar[r] \ar[d]_-c & D' \ar[d]_-d \ar[r] & E' \ar[d]_-e \\
+	A \ar[r] & B \ar[r] & C' \ar[r] & D' \ar[r] & E'}$$
+Show that if $a$, $b$, $d$, and $e$ are isomorphisms, then $c$ is an isomorphism.
+\end{problem}
+
+
+\vfill
+
+\begin{problem}$\,$
+\begin{enumerate}[a)]
+	\item Let $\pi$ denote the canonical projection map from $\Z$ to $\Z/2\Z$. Show that the chain map $f\!: F \longrightarrow G$ given by
+$$\xymatrix@R=1mm{F = & \cdots \ar[r] & 0 \ar[r] \ar[dddd] & \Z \ar[r]^-2 \ar[dddd] \ar[r] & \Z \ar[dddd]^-{\pi} \ar[r] & 0 \ar[dddd] \ar[r] & \cdots \\
+	&&&&\\ 
+	&&&&\\ 
+	&&&&\\ 
+	G = &\cdots \ar[r] & 0 \ar[r] & 0 \ar[r] & \Z/2\Z \ar[r] & 0 \ar[r] & \cdots \\
+	&& \textrm{\tiny 2} & \textrm{\tiny 1} & \textrm{\tiny 0} &\textrm{\tiny -1}}$$
+is a quasi-isomorphism, but not a homotopy equivalence.
+	
+\item Consider the map of complexes $g\!: A \to B$ given by
+$$\xymatrix{A = & \cdots \ar[r] & 0 \ar[r] \ar[d] & 0 \ar[r] \ar[d] \ar[r] & \Z \ar[d]^-{2} \ar[r] & 0 \ar[d] \ar[r] & \cdots \\ 
+	B = & \cdots \ar[r] & 0 \ar[r] & \Z/2\Z \ar[r]_-2 & \Z/2\Z \ar[r] & 0 \ar[r] & \cdots}$$
+Show that $g$ is not nullhomotopic, but that the induced map in homology is zero.
+\end{enumerate}
+\end{problem}
+
+\vfill
+
+\begin{problem}
+	A complex is \emph{contractible} if its identity map is null-homotopic. Show that every contractible complex of $R$-modules is an exact sequence.
+\end{problem}
+
+\vfill
+
+
+\begin{problem}
+	Let $k$ be a field. 
+\begin{enumerate}[a)]
+	\item Show that every short exact sequence of $k$-vector spaces splits.	
+	\item Use part a) to prove the Rank-Nulity Theorem: given any linear transformation $T\!: V \to W$ of $k$-vector spaces, 
+	$$\dim(\im T) + \dim(\ker T) = \dim V.$$
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+	We used the Snake Lemma to deduce the long exact sequence in homology. In fact, the two statements are equivalent! Assuming the statement of the long exact sequence in homology holds, but without using the Snake Lemma, prove that any commutative diagram of $R$-modules with exact rows
+	$$\xymatrix{0 \ar[r] & A \ar[d]_-f
+	\ar[r]^-i & B \ar[r]^-p \ar[d]_-g & C \ar[r] \ar[d]_-h & 0 \\ 0 \ar[r] & A'
+	\ar[r]_-{i'} & B' \ar[r]_-{p'} & C' \ar[r] & 0}$$
+	induces an exact sequence
+	$$\xymatrix{0 \ar[r] & \ker f \ar[r] & \ker g \ar[r] & \ker h \ar[r] & \coker f \ar[r] & \coker g \ar[r] & \coker h \ar[r] & 0.}$$
+\end{problem}
+
+
+\vspace{2em}
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+
+Let $f\!: C \longrightarrow D$ be a map of complexes. The mapping cone of $f$ is the chain complex $\textrm{cone}(f)$ that has $C_{n-1} \oplus D_n$ in homological degree $n$, with differential
+
+\hspace{4.5cm}
+$d_n \colonequals \begin{pmatrix}
+	-d_C & 0 \\ f & d_D
+\end{pmatrix}:$ 
+\begin{minipage}{0.4\textwidth}
+$\xymatrix@R=2mm@C=10mm{C_{n-1} \ar[r]^-{-d_C} \ar[rdd]^-{f} & C_{n-2} \\ \oplus & \oplus\\
+D_n \ar[r]_-{d_D} & D_{n-1}}$
+\end{minipage}
+
+\noindent
+where $d_C$ denotes the differential on $C$ and $d_D$ denotes the differential on $D$.
+\end{minipage}} 
+
+\begin{problem} 
+Let $f\!: C \longrightarrow D$ be a map of complexes of $R$-modules.
+	\begin{enumerate}[a)]
+		\item Show that there is a short exact sequence of complexes
+		$$\xymatrix{0 \ar[r] & D \ar[r]^-i & \textrm{cone}(f) \ar[r]^-{\pi} & \Sigma^{-1} C \ar[r] & 0}$$
+		where $\Sigma^{-1} C$ is the complex obtained by shifting $C$ to the left, meaning $(\Sigma^{-1} C)_n \colonequals C_{n-1}$.
+		\item Consider the long exact sequence in homology induced by the previous short exact sequence. Show that the connecting homomorphism $\partial$ in that long exact sequence is given by the $R$-module homomorphisms $f_n$.
+		\item Show that $f$ is a quasi-isomorphism if and only if $\textrm{cone}(f)$ is an exact complex.
+	\end{enumerate}
+\end{problem}
+
+
+\end{document}
