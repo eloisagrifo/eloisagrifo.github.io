@@ -80,7 +80,7 @@
 \end{center}
 
 
-\vspace{0.5em}
+\vspace{2em}
 
 
 \noindent
@@ -97,15 +97,12 @@ You are encouraged to work together on these problems, but each student should h
 %I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Do not refer to theorems by their number in the course notes or textbook; numbers change, theorem statements do not.
 
 
-\
-
-\noindent
-Pick {\bf four} of the following problems.
+\vspace{2em}
 
 \begin{problem}[The Five Lemma]
 Consider the following commutative diagram of $R$-modules with exact rows:
-$$\xymatrix{A' \ar[d]_-a \ar[r] & B' \ar[r] \ar[d]_-b & C' \ar[r] \ar[d]_-c & D' \ar[d]_-d \ar[r] & E' \ar[d]_-e \\
-	A \ar[r] & B \ar[r] & C' \ar[r] & D' \ar[r] & E'}$$
+$$\xymatrix{A \ar[d]_-a \ar[r] & B \ar[r] \ar[d]_-b & C \ar[r] \ar[d]_-c & D \ar[d]_-d \ar[r] & E \ar[d]_-e \\
+	A' \ar[r] & B' \ar[r] & C' \ar[r] & D' \ar[r] & E'}$$
 Show that if $a$, $b$, $d$, and $e$ are isomorphisms, then $c$ is an isomorphism.
 \end{problem}
 
@@ -140,8 +137,7 @@ Show that $g$ is not nullhomotopic, but that the induced map in homology is zero
 	A complex is \emph{contractible} if its identity map is null-homotopic. Show that every contractible complex of $R$-modules is an exact sequence.
 \end{problem}
 
-\vfill
-
+\newpage
 
 \begin{problem}
 	Let $k$ be a field. 
@@ -151,6 +147,8 @@ Show that $g$ is not nullhomotopic, but that the induced map in homology is zero
 	$$\dim(\im T) + \dim(\ker T) = \dim V.$$
 \end{enumerate}
 \end{problem}
+
+\vfill
 
 
 \begin{problem}
@@ -163,32 +161,35 @@ Show that $g$ is not nullhomotopic, but that the induced map in homology is zero
 \end{problem}
 
 
-\vspace{2em}
+\vfill
 
 \noindent
 \fbox{\begin{minipage}{\textwidth}
 
-Let $f\!: C \longrightarrow D$ be a map of complexes. The mapping cone of $f$ is the chain complex $\textrm{cone}(f)$ that has $C_{n-1} \oplus D_n$ in homological degree $n$, with differential
+Let $f\!: C \longrightarrow D$ be a map of complexes. The {\bf mapping cone} of $f$ is the chain complex $\textrm{cone}(f)$ that has $C_{n-1} \oplus D_n$ in homological degree $n$, with differential
 
 \hspace{4.5cm}
 $d_n \colonequals \begin{pmatrix}
-	-d_C & 0 \\ f & d_D
+	-d^C & 0 \\ f & d^D
 \end{pmatrix}:$ 
 \begin{minipage}{0.4\textwidth}
-$\xymatrix@R=2mm@C=10mm{C_{n-1} \ar[r]^-{-d_C} \ar[rdd]^-{f} & C_{n-2} \\ \oplus & \oplus\\
-D_n \ar[r]_-{d_D} & D_{n-1}}$
+$\xymatrix@R=2mm@C=10mm{C_{n-1} \ar[r]^-{-d^C} \ar[rdd]^-{f} & C_{n-2} \\ \oplus & \oplus\\
+D_n \ar[r]_-{d^D} & D_{n-1}}$
 \end{minipage}
 
 \noindent
-where $d_C$ denotes the differential on $C$ and $d_D$ denotes the differential on $D$.
+where $d^C$ denotes the differential on $C$ and $d^D$ denotes the differential on $D$.
+
+\
+
+Given a complex $C$, $\Sigma^{-1} C$ is the complex obtained by shifting $C$ to the left, so $(\Sigma^{-1} C)_n \colonequals C_{n-1}$.
 \end{minipage}} 
 
 \begin{problem} 
 Let $f\!: C \longrightarrow D$ be a map of complexes of $R$-modules.
 	\begin{enumerate}[a)]
 		\item Show that there is a short exact sequence of complexes
-		$$\xymatrix{0 \ar[r] & D \ar[r]^-i & \textrm{cone}(f) \ar[r]^-{\pi} & \Sigma^{-1} C \ar[r] & 0}$$
-		where $\Sigma^{-1} C$ is the complex obtained by shifting $C$ to the left, meaning $(\Sigma^{-1} C)_n \colonequals C_{n-1}$.
+		$$\xymatrix{0 \ar[r] & D \ar[r]^-i & \textrm{cone}(f) \ar[r]^-{\pi} & \Sigma^{-1} C \ar[r] & 0.}$$
 		\item Consider the long exact sequence in homology induced by the previous short exact sequence. Show that the connecting homomorphism $\partial$ in that long exact sequence is given by the $R$-module homomorphisms $f_n$.
 		\item Show that $f$ is a quasi-isomorphism if and only if $\textrm{cone}(f)$ is an exact complex.
 	\end{enumerate}
