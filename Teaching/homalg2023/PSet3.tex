@@ -1,0 +1,228 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage{hyperref}
+\usepackage{colonequals}
+\usepackage{mathrsfs} 
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+\setlength{\itemsep}{10em}
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\PO}{\mathbf{PO}}
+\DeclareMathOperator{\Ch}{Ch}
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Homological Algebra}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 3}
+\end{center}
+
+
+\
+
+
+\noindent
+Turn in {\bf 4} of the following problems. You {\bf must} pick at least {\bf 2 problems} involving tensor~products.
+%Slightly more challenging problems are indicated by $(\star)$ .
+
+%\
+%
+\noindent
+%{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+\vspace{0.8em}
+
+\begin{problem}
+Consider an exact sequence
+$$\xymatrix{A \ar[r]^-a & B \ar[r]^-b & C \ar[r]^-c & D \ar[r]^-d & E.}$$
+
+\begin{enumerate}[a)]
+	\item Show $a$ is surjective if and only if $c$ is injective.
+\item Show that if $a$ and $d$ are isos, then $C = 0$.
+\item Show that every short exact sequence as above
+breaks into short exact sequences
+$$\xymatrix{0 \ar[r] & \coker a \ar[r]^\alpha & C \ar[r] & \ker d \ar[r] & 0}$$
+with
+$$\alpha(x + \im a) = b(x) \qquad \textrm{and} \qquad \beta(x) = c(x).$$
+\end{enumerate}
+\end{problem}
+
+
+\vspace{0.5em}
+
+\begin{problem}
+	Let $T\!: R\textbf{-mod} \longrightarrow S\textbf{-mod}$ be an additive functor. Show that if
+	$$\xymatrix{0 \ar[r] & A \ar[r]^-f & B \ar[r]^-g & C \ar[r] & 0}$$
+	is a split short exact sequence of $R$-modules, then 
+	$$\xymatrix@C=12mm{0 \ar[r] & T(A) \ar[r]^-{T(f)} & T(B) \ar[r]^-{T(g)} & T(C) \ar[r] & 0}$$
+is a short exact sequence of $S$-modules.
+\end{problem}
+
+
+
+\vspace{0.6em}
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+
+Let $R$ be a commutative ring and $I$ be an ideal in $R$. The {\bf $I$-torsion functor} is the functor $\Gamma_I\!: R\textbf{-mod} \longrightarrow R\textbf{-mod}$ that sends each $R$-module $M$ to the $R$-module
+	$$\Gamma_I(M) \colonequals \bigcup_{n \geqslant 1} (0 :_M I^n) = \lbrace m \in M \mid I^n m = 0 \textrm{ for some } n \geqslant 1\rbrace$$
+	and that sends each $R$-module homomorphism $f\!: M \to N$ to its restriction to $\Gamma_I(M) \to \Gamma_I(N)$. 
+\end{minipage}} 
+	
+	
+	
+	
+\begin{problem} 
+Let $R$ be a commutative ring and $I$ be an ideal in $R$.
+	\begin{enumerate}[a)]
+		\item Show that any $R$-module homomorphism $f\!: M \to N$ satisfies $f(\Gamma_I(M)) \subseteq \Gamma_I(N)$.
+		\item Show that $\Gamma_I$ is an indeed additive covariant functor.
+		\item Show that $\Gamma_I$ is left exact.
+		\item Show that $\Gamma_I$ is not right exact.
+	\end{enumerate}
+\end{problem}
+
+
+
+
+
+
+\begin{problem}
+Let $R$ be a ring, $I$ and $J$ ideals in $R$, and $M$ be an $R$-module.
+\begin{enumerate}[a)]
+	\item Show that $R/I \otimes_R R/J \cong R/(I+J)$.
+	\item Show that $R/I \otimes_R M \cong M/IM$.
+	\item There is an $R$-module map $I \otimes_R M \longrightarrow IM$ induced by the $R$-bilinear map $(a,m) \mapsto am$. This map is always clearly surjective; must it be injective?
+\end{enumerate}
+\end{problem}
+
+\
+
+
+\begin{problem}
+	Let $R = \Z[x]$, $I = (2,x)$, and consider the $R$-module $M = I \otimes_R I$.
+	\begin{enumerate}[a)]
+		\item Show that $2 \otimes 2 + x \otimes x$ is not a simple tensor in $M$.
+		\item Show that $m = 2 \otimes x - x \otimes 2$ is a nonzero torsion element in $M$.
+		\item Show that the submodule of $I \otimes_R I$ generated by $m$ is isomorphic to $R/I$.
+	\end{enumerate}
+\end{problem}
+
+
+
+\vspace{2em}
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+Let $R$ be a domain and $M$ be an $R$-module. The {\bf torsion}\index{torsion} of $M$ is the submodule
+	$$T(M) \colonequals \lbrace m \in M \mid rm = 0 \textrm{ for some nonzero } r \in R \rbrace.$$
+	The elements of $T(M)$ are called {\bf torsion elements}, and we say that $M$ {\bf is torsion} if $T(M) = M$. Finally, $M$ is {\bf torsion free} if $T(M) = 0$.
+\end{minipage}} 
+
+
+\
+
+
+
+\begin{problem} By torsion abelian group we mean torsion $\Z$-module.
+	\begin{enumerate}[a)]
+		\item Show that if $A$ is a divisible abelian group and $T$ is a torsion abelian group, then $A \otimes_\Z T = 0$.
+		\item Prove that there is no exist nonzero (unital) ring $R$ such that the underlying abelian group $(R,+)$ is both torsion and divisible. 
+		
+		\noindent
+		For example, this shows that there is not is no ring whose underlying abelian group is $\Q/\Z$.
+	\end{enumerate}
+\end{problem}
+
+
+\
+
+
+\begin{problem} Let $R$ be a domain with fraction field $Q$ and $M$ be an $R$-module.
+	\begin{enumerate}[a)]
+		\item Show that the $R$-module $M/T(M)$ is torsion free.
+		\item If $f\!: M \longrightarrow N$ is an $R$-module homomorphism, $f(T(M)) \subseteq T(N)$.
+		\item Show that the kernel of the map $M \longrightarrow Q \otimes_R M$ given by $m \mapsto 1 \otimes m$ is $T(M)$.		
+		\item Show that torsion is a left exact covariant functor $R\textbf{-Mod} \to R\textbf{-Mod}$.
+	\end{enumerate}
+\end{problem}
+
+\
+
+\begin{problem}
+	Let $R$ be a domain with fraction field $Q$.
+	\begin{enumerate}[a)]
+		\item Show that for every $Q$-vector space $V$ and every $R$-module $M$, $V \otimes_R M \cong V \otimes_R (M/T(M))$.
+		\item Show that for every $Q$-vector space $V$ and $R$-module $M$, $V \otimes_R M = 0$ if and only if $M$ is torsion.
+		\item Show that $\mathbb{R} \otimes_\mathbb{Z} (\mathbb{R} / \mathbb{Z}) \neq 0$.
+	\end{enumerate}
+\end{problem}
+
+
+
+
+\end{document}
