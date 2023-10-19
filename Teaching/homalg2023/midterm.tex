@@ -1,0 +1,174 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage{hyperref}
+\usepackage{colonequals}
+\usepackage{mathrsfs} 
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+\setlength{\itemsep}{10em}
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\PO}{\mathbf{PO}}
+\DeclareMathOperator{\Ch}{Ch}
+\DeclareMathOperator{\HH}{H}
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+\newcommand{\Rmod}{R\textbf{-Mod}}
+
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Fall 2023}
+\lhead{Homological Algebra}
+
+\vspace{2em}
+
+\begin{center}
+	{\LARGE Midterm}
+\end{center}
+
+\
+
+
+\noindent
+{\bf Instructions:}
+Turn in {\bf 4} of the following problems. 
+You cannot use any resources besides me and our course notes.
+In particular, you cannot discuss the problems with your classmates until after the due date, and you are not allowed to use the internet or any other textbooks as a resource.
+
+
+\
+
+
+
+
+
+\begin{problem}
+	Consider a short exact sequence in $\Ch(R)$, say
+	$$\xymatrix{0 \ar[r] & A \ar[r] & B \ar[r] & C \ar[r] & 0.}$$
+	Show that if any two of $A$, $B$, and $C$ are exact everywhere, then so is the third one.
+\end{problem}
+
+\vfill
+
+
+\begin{problem}
+	Let $C$ and $D$ be complexes of $R$-modules and let $f\!: C \to D$ be a map of complexes. 
+	\begin{enumerate}[a)]
+		\item Show that if $\ker(f)$ and $\coker(f)$ are both exact, then $f$ is a quasi-iso.
+		\item Is the converse of a) true? Either prove it or give a counterexample.
+	\end{enumerate}
+\end{problem}
+
+
+\vfill
+
+
+\begin{problem} Let $R$ be a commutative ring.
+\begin{enumerate}[a)]
+	\item Let 
+	$$\xymatrix{A \ar[r]^-f & B} \quad \textrm{and} \quad \xymatrix{B \ar[r]^-g & C}$$
+	be two $R$-module homomorphisms such that for all $R$-modules $M$, 
+	$$\xymatrix{\Hom_R(M,A) \ar[r]^-{f_*} & \Hom_R(M,B) \ar[r]^-{g_*} & \Hom_R(M,C)}$$
+	is an exact complex. Show that
+	$$\xymatrix{A \ar[r]^-f & B \ar[r]^-g & C}$$
+	is an exact complex.
+	\item Let $(F,G)$ be an adjoint pair of covariant additive functors $\Rmod \to \Rmod$, where $R$ is commutative; assume that for all $R$-modules $M$ and $N$, there is an isomorphism of $R$-modules	
+	$$\Hom_R(F(M),N) \cong \Hom_R(M,G(N))$$
+	which is natural on both $M$ and $N$. Show that $G$ must be a left exact functor.
+\end{enumerate}
+\end{problem}
+
+
+\vfill
+
+\begin{problem}
+	Let $R$ be a commutative ring and let $M$ and $N$ be $R$-modules.
+	
+	\begin{enumerate}[a)]
+		\item Show that if $M$ and $N$ are both projective, then $M \otimes_R N$ is projective.
+		\item Show that if $M$ and $N$ are both flat, then $M \otimes_R N$ is flat.
+	\end{enumerate}
+\end{problem}
+
+
+
+\vfill
+
+
+\begin{problem}
+	Let $k$ be a field. Give a proof for a) before proving b).
+	\begin{enumerate}[a)]
+		\item Show that all $k$-vector spaces are projective, injective, and flat.
+		\item Show that every additive functor $k\textbf{-Mod} \longrightarrow k\textbf{-Mod}$ is exact.
+	\end{enumerate}
+\end{problem}
+
+
+\vfill
+
+\begin{problem}
+	Let $(R, \m)$ be a commutative local ring and $M$ and $N$ be finitely generated $R$-modules. 
+	\begin{enumerate}[a)]
+	\item Using only properties of tensor products and without exhibiting an explicit iso, show that
+	$$R/\m \otimes_R (M \otimes_R N) \cong (R/\m \otimes_R M) \otimes_{R/\m} (R/\m \otimes_R N).$$
+	\item Show that if $M \otimes_R N = 0$, then $M = 0$ or $N = 0$.
+	\end{enumerate}
+\end{problem}
+
+
+\end{document}
