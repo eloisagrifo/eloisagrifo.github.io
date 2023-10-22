@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage{hyperref}
+\usepackage{colonequals}
+\usepackage{mathrsfs} 
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+\setlength{\itemsep}{10em}
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\PO}{\mathbf{PO}}
+\DeclareMathOperator{\Ch}{Ch}
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+%\DeclareMathOperator{\dim}{dim}
+
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Homological Algebra}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 4}
+\end{center}
+
+
+\
+
+
+\noindent
+Turn in {\bf 4} of the following problems. Slightly more challenging problems are indicated by $(\star)$ .
+
+%\
+%
+\noindent
+%{\bf Instructions:}
+%You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+\vspace{2em}
+
+
+
+
+\begin{problem}
+	Let $R=k[x,y]$, where $k$ is a field, let $Q = \textrm{frac}(R)$ be the fraction field of $R$. We are going to show that the $R$-module $M = Q/R$ is divisible but not injective.
+	\begin{enumerate}[a)]
+		\item Show\footnote{If you know about regular sequences, this is easy to justify. But we aren't assuming anyone has seen regular sequences, so the challenge here is to give a clear, easy justification without invoking anything about regular sequences; though it's certainly ok to say the word regular.} that if $ax + by = 0$ for some $a, b \in R$, we must have $b \in (x)$.
+		\item Show that $x \mapsto \frac{1}{y} + R$ and $y \mapsto 0$ induces a well-defined $R$-module homomorphism $(x,y) \xrightarrow{\, f \,} Q/R$.
+		\item Show that $M$ is a divisible $R$-module, but not injective.
+	\end{enumerate}
+\end{problem}
+
+
+\vspace{1em}
+
+\begin{problem}
+	$(\star)$ Let $R$ be a domain. Show that if $R$ has a nonzero module $M$ that is both injective and projective, then $R$ must be a field.\footnote{Hint: show that any nonzero $R$-module homomorphism $M \longrightarrow R$ must be surjective, and then show that such a homomorphism must exist.}
+\end{problem}
+
+\vspace{2em}
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+An $R$-module $F$ is \emph{faithfully flat} if $F$ is flat and $F \otimes_R M \neq 0$ for every nonzero $R$-module $M$.
+\end{minipage}} 
+
+\vspace{0.5em}
+
+\begin{problem} 
+$(\star)$ Let $R$ be a commutative ring.
+Show that the following are equivalent:	
+\begin{enumerate}[a)]
+		\item $F$ is faithfully flat.
+		\item $F$ is flat and for every proper ideal $I$, $IF \neq F$.
+		\item $F$ is flat and for every maximal ideal $\m$, $\m F \neq F$.
+		\item The complex
+		$$\xymatrix{A \ar[r]^-f & B \ar[r]^-g & C}$$
+		is exact if and only if 
+		$$\xymatrix{F \otimes_R A \ar[r]^-{1 \otimes f} & F \otimes_R B \ar[r]^-{1 \otimes g} & F \otimes_R C}$$ 
+		is exact.
+	\end{enumerate}
+\end{problem}
+
+
+\end{document}
