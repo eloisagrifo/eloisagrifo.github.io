@@ -42,6 +42,9 @@
 %\DeclareMathOperator{\dim}{dim}
 
 
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\injdim}{injdim}
+
 \def\ra{\rightarrow}
 \newcommand{\m}{\mathfrak{m}}
 \newcommand{\C}{\mathbb{C}}
@@ -76,7 +79,8 @@
 \vspace{3em}
 
 \begin{center}
-	{\LARGE Problem Set 4}
+	{\LARGE Problem Set 4}\\
+	Due Friday, December 1
 \end{center}
 
 
@@ -84,7 +88,7 @@
 
 
 \noindent
-Turn in {\bf 4} of the following problems. Slightly more challenging problems are indicated by $(\star)$ .
+Turn in {\bf 5} of the following problems. Slightly more challenging problems are indicated by $(\star)$ .
 
 %\
 %
@@ -136,6 +140,84 @@ Show that the following are equivalent:
 		is exact.
 	\end{enumerate}
 \end{problem}
+
+
+\vfill
+
+
+
+\begin{problem}
+Let $M$ be an $R$-module. Show that $M$ is flat if and only if $\Tor_1^R(M,N) = 0$ for every $R$-module $N$.
+\end{problem}
+
+
+
+\vfill
+	
+\begin{problem}
+Let $M$ and $N$ be $R$-modules. Let $f\!: M \to M$ be multiplication by a fixed element $r \in R$. Show that the map $\Ext^i(f,M)\!: \Ext^i_R(M,N) \to \Ext^i_R(M,N)$ induced by $f$ is multiplication by $r$ on $\Ext^i_R(M,N)$.
+\end{problem}
+
+
+
+
+\vfill
+
+
+\newpage
+
+\begin{problem}
+Let $(R, \m)$ be a commutative local ring, and let $M$ be a finitely presented $R$-module with minimal presentation
+$$\xymatrix{0 \ar[r] & K \ar[r] & R^n \ar[r]^-\pi & M \ar[r] & 0.}$$
+Note that the assumption here is that $K$ is also a finitely generated module.
+\begin{enumerate}[a)]
+	\item Show that if $M$ is flat, then
+$$\xymatrix{0 \ar[r] & K \otimes_R R/\m \ar[r] & R^n \otimes_R R/m \ar[r] & M \otimes_R R/m \ar[r] & 0}$$
+is exact.
+\item Show that 
+	  M is free $\iff$ $M$ is projective $\iff$ $M$ is flat.
+\end{enumerate}
+\end{problem}
+
+\vfill
+
+
+\begin{problem}
+	$(\star)$ Let $R$ be a domain and $Q$ be its fraction field. Let $T$ denote the torsion functor. 
+	\begin{enumerate}[a)]
+		\item Show that $T(M) = \Tor_1^R(M,Q/R)$.
+		\item Show that for every short exact sequence
+	$$\xymatrix{0 \ar[r] & A \ar[r] & B \ar[r] & C \ar[r] & 0}$$
+	of $R$-modules gives rise to an exact sequence
+	$$\xymatrix@C=7mm{0 \ar[r] & T(A) \ar[r] & T(B) \ar[r] & T(C) \ar[r] & (Q/R) \otimes_R A \ar[r] & (Q/R) \otimes_R B \ar[r] & (Q/R) \otimes_R C \ar[r] & 0.}$$
+	\item Show that the right derived functors of $T$ are $R^1T = (Q/R) \otimes_R -$ and $R^iT = 0$ for all $i \geqslant 2$.	
+	\end{enumerate}
+	\end{problem}
+	
+	
+
+\vfill
+
+\begin{problem}
+	Let $k$ be a field, $R = k[x,y]$, and $\m = (x,y)$.
+	\begin{enumerate}[a)]
+		\item Show that
+		$$\xymatrix@C=14mm{0 \ar[r] & R \ar[r]^-{\begin{pmatrix}
+			y \\ -x
+		\end{pmatrix}} & R^2 \ar[r]^-{\begin{pmatrix}
+			x & y
+		\end{pmatrix}} & R \ar[r] & 0}$$
+		is a free resolution for $k = R/\m$.
+		\item Compute $\Tor_i^R(k,k)$ for all $i$.
+		\item Show that
+		$$\Tor_1(\m,k) \cong \Tor_2(k,k).$$
+	\end{enumerate}
+\end{problem}
+	
+\vfill
+	
+	
+
 
 
 \end{document}
