@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage{hyperref}
+\usepackage{colonequals}
+\usepackage{mathrsfs} 
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+\setlength{\itemsep}{10em}
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\PO}{\mathbf{PO}}
+\DeclareMathOperator{\Ch}{Ch}
+\DeclareMathOperator{\HH}{H}
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+%\DeclareMathOperator{\dim}{dim}
+
+
+
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\pdim}{pdim}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+\newcommand{\Rmod}{R\textbf{-Mod}}
+
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Fall 2023}
+\lhead{Homological Algebra}
+
+\vspace{2em}
+
+\begin{center}
+	{\LARGE Final Exam}
+\end{center}
+
+\
+
+
+\noindent
+{\bf Instructions:}
+Turn in {\bf 4} of the following problems. 
+You cannot use any resources besides me and our course notes.
+In particular, you cannot discuss the problems with your classmates until after the due date, and you are not allowed to use the internet or any other textbooks as a resource.
+
+\
+
+
+\begin{problem}
+	Show that for all finitely generated abelian groups $M$ and $N$ and all $i \geqslant 2$,
+	$$\Ext^i_\Z(M,N) = 0.$$
+\end{problem}
+
+\vfill
+
+
+\begin{problem}
+	Let $(R, \m, k)$ be a commutative noetherian local ring, and let $M$ be a finitely generated $R$-module. Show that
+	$$\beta_i(M) = \dim_k \left( \Tor_i^R(M,k) \right) = \dim_k \left( \Ext^i_R(M,k) \right).$$
+	
+	\noindent
+	You do not need to justify why $\Tor_i^R(M,k)$ and $\Ext^i_R(M,k)$ are $k$-vector spaces.
+\end{problem}
+
+
+\vfill
+
+\begin{problem}
+Show that if $\pi\!: M \to N$ is a surjective map of $R$-modules with $M$ and $N$ both flat, then $\ker \pi$ is flat.
+\end{problem}
+
+
+\vfill
+
+
+\begin{problem}
+	Show that $\pdim_R M \leqslant d$ if and only if $\Ext^{d+1}_R(M,N) = 0$ for all $R$-modules $N$.
+\end{problem}
+
+\vfill
+
+\begin{problem}
+Let $(R,\m)$ be a commutative noetherian local ring, $M$ and $N$ be finitely generated $R$-modules, and $r \in \m$. Show that if $r$ is regular on $M$ and $\Ext^i_R(M/rM,N) = 0$ for $i \gg 0$, then $\Ext^i_R(M,N) = 0$ for $i \gg 0$.
+
+\vspace{0.5em}
+
+	\noindent
+	Hint: Show that $\Ext^i_R(M,N)$ is a finitely generated $R$-module.
+\end{problem}
+
+\vfill
+
+
+\begin{problem}
+	Let $f\!: A \to B$ be a map of complexes. Show that $f$ is nullhomotopic if and only if $f$ factors through the canonical map $A \to \cone(\id_A)$.
+\end{problem}
+
+\vfill
+
+
+\begin{problem} Let $\mathcal{A}$ be an abelian category.
+	\begin{enumerate}[a)]
+		\item Show that $\ker(x \xrightarrow{\,0\,} y) = 1_x$,  $\coker(x \xrightarrow{\,0\,} y) = 1_y$, and $\im(x \xrightarrow{0} y) = 0 \longrightarrow y$.
+		\item Show that $f$ is a mono if and only if $fg = 0$ implies $g = 0$ for all $g$.
+		\item Show that $f$ is a mono if and only if $\ker f = 0$.
+	\end{enumerate}
+\end{problem}
+
+
+
+\end{document} 
