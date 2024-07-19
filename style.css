@@ -296,3 +296,13 @@ div.horizontalgap {
     position:absolute;
 }
 
+
+
+
+.teaching {
+	width: 600px;
+	align-content: left;
+  	align-items: center;
+	align-text: center;
+	margin: 0 auto;
+}
