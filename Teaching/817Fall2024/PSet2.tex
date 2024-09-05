@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+%\DeclareMathOperator{\dim}{dim}
+\DeclareMathOperator{\Z}{Z}
+
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\def\ov#1{\overline{#1}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Fall 2024}
+\lhead{Introduction to Modern Algebra I}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 2 \\}
+	Due Wednesday, September 11
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Please do not refer to theorems by their number in the course notes, as that can change.
+
+
+\
+
+
+
+
+\begin{problem}
+
+\begin{enumerate}[(a)]
+
+\item Show that every $\alpha \in S_n$ and every $k$-cycle $(i_1 \,\,\, i_2 \, \cdots \, i_k)  \in S_n$ satisfy
+
+$$\alpha \, (i_1 \,\,\, i_2 \, \cdots \, i_k) \, \alpha^{-1} =
+  (\alpha (i_1) \quad \alpha (i_2) \quad \cdots \quad \alpha (i_k)).$$
+
+
+\noindent
+Hint: when writing your solution, you might find it helpful to consider $\alpha^{-1}(j)$ for each $j \in [n]$.
+
+
+\item Prove that the center of $S_n$ is trivial.
+
+\end{enumerate}
+\end{problem}
+
+
+
+
+\begin{problem}
+Find $\Z(D_{2n})$ for $n \geqslant 3$.  
+
+\noindent Hint: your answer will depend on whether $n$ is even or odd.
+\end{problem}
+
+
+
+\end{document}
