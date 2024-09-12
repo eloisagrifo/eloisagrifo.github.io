@@ -1,0 +1,168 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\GL}{GL}
+%\DeclareMathOperator{\dim}{dim}
+
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\DeclareMathOperator{\Z}{Z}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Fall 2024}
+\lhead{Introduction to Modern Algebra I}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 3 \\}
+	Due Wednesday, September 18
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Please do not refer to theorems by their number in the course notes, as that can change.
+
+
+\
+
+
+
+
+
+\begin{problem}
+Show that for every integer $n \geqslant 2$, there is no nontrivial group homomorphism $\ZZ/n \longrightarrow \ZZ$.
+\end{problem}
+
+\
+
+\noindent
+\hspace{0.5em}
+\fbox{
+\begin{minipage}{0.95\textwidth}
+\vspace{0.2em}
+For groups $G$ and $H$, the group $G \times H$, known as the {\bf product of $G$ and $H$}, refers to the set 
+$$G \times H \colonequals \{ (g,h) \mid g \in G, h \in H \}$$
+equipped with the multiplication rule 
+$$(g_1, h_1) \cdot (g_2, h_2) \colonequals (g_1 \cdot_G g_2, h_1 \cdot_H h_2).$$ 
+You may take it as a known fact that the product of two groups is also a group.
+\vspace{0.2em}
+\end{minipage}
+}
+ 
+ 
+\ 
+ 
+\begin{problem}
+	Let $G$ and $H$ be groups, and consider elements $g \in G$ and $h \in H$.
+
+\vspace{-0.2em}
+
+\begin{enumerate}[label=2.\arabic*.]
+
+\item\label{order divides} Show that if $g^n = e$ for some integer $n \geqslant 1$, then $|g|$ divides $n$.
+
+\item\label{order of pairs} Show that $|g|$ and $|h|$ are both finite, then $|(g,h)| = \lcm(|g|,|h|)$.
+
+
+\item Show that if at least one of $g$ or $h$ has infinite order, then $(g,h)$ also has infinite order.
+
+\end{enumerate}
+\end{problem}
+ 
+
+
+\begin{problem}
+For each of the following pairs of groups, show that the two groups are not isomorphic.
+
+\begin{enumerate}[label=3.\arabic*.,itemsep=0.5em]
+\item $(\C, +)$ and $(\Q, +)$.
+  
+\item $(\R \setminus \{0\}, \cdot)$ and $(\R, +)$.
+
+\item $\ZZ/2 \times \ZZ/2$ and $\ZZ/4$.
+
+\item $Q_8 \times \ZZ/3$ and $S_4$.
+
+\end{enumerate}
+\end{problem} 
+
+
+
+
+
+\begin{problem}
+Let 
+$$G=\prod_{i\in \N} \ZZ = \{ (n_i)_{i \geqslant 0} \mid n_i \in \ZZ \}$$ 
+be the group whose elements are sequences of integers, equipped with the operation given by componentwise addition. Let $H=(\Z,+)$. Show that $G\times H \cong G$.
+\end{problem}
+
+\noindent
+Note: this gives us an example of groups $G,H$ such that there is an isomorphism $G\times H\cong G$ but $H$ is nontrivial. Since $G\times H \cong G$ can be rewritten as $G\times H\cong G\times \{e\}$, this shows that in general one cannot cancel groups in isomorphisms between direct products.
+
+
+
+
+\end{document}
