@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\GL}{GL}
+%\DeclareMathOperator{\dim}{dim}
+
+\newcommand{\Orb}{\mathcal{O}}
+%\DeclareMathOperator{\Orb}{Orb}
+
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\DeclareMathOperator{\Z}{Z}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Fall 2024}
+\lhead{Introduction to Modern Algebra I}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 4 \\}
+	Due Wednesday, September 25
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Please do not refer to theorems by their number in the course notes, as that can change.
+
+
+\
+
+
+
+\begin{problem}
+Prove that if $f\!:G\to H$ is a group homomorphism and $K\leq H$ then the {\bf preimage} of $K$, defined as 
+$$f^{-1}(K) \colonequals \{g\in G | f(g)\in K\}$$ 
+is a subgroup of $G$.
+\end{problem}
+
+\begin{problem}
+Let $G$ be a group and $a\in G$.  Let 
+$$C_G(a) \colonequals \{x\in G\mid xa=ax\}.$$
+Prove that $C_G(a)$, called the {\bf centralizer} of $a$ in $G$, is a subgroup of $G$.
+\end{problem}
+
+
+\begin{problem}
+	Let $G$ be a group and $H$ and $H'$ subgroups of $G$. Prove that $H\cup H'$ is a subgroup of $G$ if and only if $H\subseteq H'$ or $H'\subseteq H$.
+\end{problem}
+
+
+\begin{problem}
+Suppose $H$ and $K$ are subgroups of $G$ of relatively prime (hence, finite) order.  Prove that $H\cap K=\{ e \}$.
+\end{problem}
+
+\begin{problem}
+Let $G$ be a group and $x\in G$. Consider the map $\psi_x\!:G\to G$ that for each $a \in G$ is given by 
+$$\psi_x(a)=xax^{-1}.$$
+\begin{enumerate}[label=(\alph*)]
+\item Prove that $\psi_x\in \Aut(G)$ for all $x\in G$. 
+
+\item Prove that $\{\psi_x\mid x\in G\}$ is a subgroup of $\operatorname{Aut}(G)$.
+
+\end{enumerate}
+\end{problem}
+
+
+
+
+
+
+\begin{problem}
+Prove Lagrange's Theorem: 
+\begin{quote}
+If $H$ is a subgroup of a finite group $G$, then $|H|$ divides $|G|$. 
+\end{quote}
+
+\noindent
+{\em Hint}: Let $H$ act on $G$ by left multiplication, that is, define $h \cdot g= hg$ for any $h\in H$ and $g\in G$. You may use without checking that this is a group action. What is the size of each orbit?
+\end{problem}
+
+
+\end{document}
