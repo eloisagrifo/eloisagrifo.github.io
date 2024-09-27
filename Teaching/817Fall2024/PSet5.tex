@@ -1,0 +1,213 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\GL}{GL}
+\def\norm{\mathrel{\unlhd}}
+%\DeclareMathOperator{\dim}{dim}
+
+\def\norm{\mathrel{\unlhd}}
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\DeclareMathOperator{\Z}{Z}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Fall 2024}
+\lhead{Introduction to Modern Algebra I}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 5 \\}
+	Due Thursday, October 3
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Please do not refer to theorems by their number in the course notes, as that can change.
+
+
+\
+
+
+
+
+
+\begin{problem}
+	Let $f\!: G \to H$ be a group homomorphism. Show that $\ker f$ is a normal subgroup of $G$.
+\end{problem}
+
+
+
+\begin{problem}
+Let $H$ and $K$ be normal subgroups of a group $G$ such that $H\cap K=\{ e\}$.  Prove that $xy=yx$ for all $x\in H, y\in K$.	
+\end{problem}
+
+
+\begin{problem} 
+Let $f\!: G \to H$ be a group homomorphism.
+\begin{enumerate}[label=(3.\arabic*)]
+\item Prove that if $K\norm H$ then the preimage $f^{-1}(K)$ of $K$ is a normal subgroup of $G$.
+\item Give an example showing that if $L \norm G$ then $f(L)$ might not be a normal subgroup of $H$.	
+\end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}
+Let $G$ be a group, $S$ a subset of $G$, and $H=\langle S \rangle$.  
+
+\begin{enumerate}[label=(4.\arabic*)]
+\item Prove that $H\triangleleft G$ if and only if $gsg^{-1}\in H$ for every $s\in S$ and $g\in G$.
+
+\item Let 
+$$[G,G] \colonequals \{aba^{-1}b^{-1}\mid a,b\in G\}$$ 
+be the set of commutators in $G$.
+Prove that $H \norm G$.
+
+
+\end{enumerate}
+\end{problem}
+
+
+
+
+
+\begin{problem}
+Show that any subgroup of index two is normal. More precisely: show that if $G$ is a group, $H$ is a subgroup of $G$, and $[G:H]=2$, then $H$ is normal.	
+\end{problem}
+
+
+
+
+\begin{problem}
+	Let $G$ be any group. Show that if $G/\Z(G)$ is cyclic, then $G$ is abelian.
+\end{problem} 
+
+
+
+
+%\begin{problem}
+%\end{problem} 
+%
+%
+%
+%\item Let $H$ be a subgroup and $x\in G$.  
+%\begin{enumerate}
+%
+%\item 
+%\item Prove that $xHx^{-1}$ is a subgroup of $G$.
+%
+%\medskip
+%{\bf Solution:}  Let $\psi_x:G\to G$ be the automorphism defined by $\psi_x(g)=xgx^{-1}$.  (See Homework \# 2.) Then $\psi_x(H)=xHx^{-1}$.  As the image of a subgroup under a homomorphism is a subgroup, we can conclude that $xHx^{-1}$ is a subgroup of $G$.
+%
+%\medskip
+%\item Prove that $H\cong xHx^{-1}$.
+%
+%\medskip
+%\noindent {\bf Solution:}  The map $\psi_x$ restricted to $H$ is the desired isomorphism.
+%
+%\item Suppose $|H|=n$ and $H$ is the only subgroup of $G$ of order $n$.  Prove that $H$ is normal.
+%
+%\medskip
+%\noindent {\bf Solution:} Let $x\in G$.  As $H\cong xHx^{-1}$, $|xHx^{-1}|=|H|$.  Since $H$ is the unique subgroup of $G$ of order $n$, this implies $xHX^{-1}=H$.  Hence, $H$ is normal.
+%
+%\end{enumerate}
+%
+%\medskip
+%
+%\item Let $H$ and $K$ be normal subgroups of a group $G$ such that $H\cap K=\{1\}$.  Prove that $xy=yx$ for all $x\in H, y\in K$.
+%
+%\medskip
+%\noindent {\bf Solution:} Let $x\in H$ and $y\in K$.  As $H$ is normal, $k^{-1}hk\in H$.  Hence, $h^{-1}k^{-1}hk\in H$.  Similarly, as $K$ is normal, $h^{-1}k^{-1}h\in K$, so $h^{-1}k^{-1}hk\in K$.  Thus, $h^{-1}k^{-1}hk\in H\cap K=\{1\}$, so $hk=kh$.
+%
+%\medskip
+%
+%
+%\item Let $G$ be a group and $S$ a subset of $G$.  Let $H=\langle S \rangle$.  Prove that $H\triangleleft G$ if and only if $gsg^{-1}\in H$ for every $s\in S$ and $g\in G$.
+%
+%\medskip
+%\noindent {\bf Solution:} Suppose $gsg^{-1}\in H$ for all $s\in S$.  Let $h\in H$ and $g\in G$. Then $h=s_1^{e_1}s_2^{e_2}\cdots s_n^{e_n}$ for some $s_1,\dots,s_n\in S$ and $e_1,\dots,e_n\in \{\pm 1\}$.   Let $g\in G$.  Then
+%$$ghg^{-1}=(gs_1^{e_1}g^{-1})(gs_2^{e_2}g^{-1})\cdots (gs_n^{e_n}g^{-1}).$$
+%Note that if $e_i=-1$ then $gs_i^{-1}g^{-1}=(gs_ig^{-1})^{-1}\in H$.   Thus, $gs_i^{e_i}g^{-1}\in H$ for all $i$, and hence $ghg^{-1}\in H$.  Therefore, $H\triangleleft G$.  The reverse implication is trivial.
+%
+%\medskip
+%
+%
+%\item Let $G$ be a group, $S=\{aba^{-1}b^{-1}\mid a,b\in G\}$, and $H=\langle S \rangle$.  Prove that $H\triangleleft G$.
+%
+%\medskip
+%\noindent {\bf Solution:} Let $g\in G$ and $s=aba^{-1}b^{-1}$.  Note that $gsg^{-1}=xyx^{-1}y^{-1}\in S\subseteq H$, where $x=gag^{-1}$ and $y=gbg^{-1}$.  Hence, $H\triangleleft G$ by the previous exercise.
+%
+%\medskip
+%
+%\item Let $G$ be a group and $Z=\operatorname{Z}(G)$.  Suppose $G/Z$ is cyclic.  Prove that $G$ is abelian.
+%
+%\medskip
+%\noindent {\bf Solution:} Let $G/Z=\langle xZ \rangle$ for some $x\in G$.  Let $a,b\in G$.  Then $aZ=x^iZ$ and $bZ=x^jZ$ for some $i,j$.  Hence, $a=x^iz_1$ and $b=x^jz_2$ for some $z_1,z_2\in G$.  Then $ba=(x^jz_2)(x^iz_1)=x^{j+i}z_1z_2=(x^iz_1)(x^jz_2)=ab$.  Hence, $G$ is abelian.
+%\end{enumerate}
+
+
+
+\end{document}
