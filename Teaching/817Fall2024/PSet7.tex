@@ -37,6 +37,8 @@
 \DeclareMathOperator{\GL}{GL}
 \def\norm{\mathrel{\unlhd}}
 %\DeclareMathOperator{\dim}{dim}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
 
 \def\norm{\mathrel{\unlhd}}
 \DeclareMathOperator{\lcm}{lcm}
@@ -99,14 +101,31 @@ I will post the .tex code for these problems for you to use if you wish to type 
 
 
 \begin{problem}
+Prove the converse to Lagrange's theorem is false: find a group $G$ and a positive integer $d$ such that $d$ divides the order of $G$ but $G$ does not have any subgroups of order $d$.		
+\end{problem}
+
+
+
+\begin{problem}
 Let $G$ be a group and $H$ a subgroup of $G$. Show that $N_G(H)/C_G(H)$ is isomorphic to a subgroup of the automorphism group $\Aut(H)$ of $H$.
 \end{problem}
 
 
+
 \begin{problem}
-Prove the converse to Lagrange's theorem is false: find a group $G$ and an integer $d>0$ such that $d$ divides the order of $G$ but $G$ does not have any subgroups of order $d$.		
+Let $G$ be a nonabelian group of order $21$. Find the number and the sizes of the conjugacy classes of $G$, with justification.
 \end{problem}
 
 
+\begin{problem}
+	Let $G$ be a group acting on a set $S$.
+	
+\begin{enumerate}[label=(5.\arabic*)]	
+\item Let $s, t \in S$ be elements in the same orbit. Show that there exists $g \in G$ such that
+		$$\Stab_G(s) = g \, \Stab_G(t) \, g^{-1}.$$
+\item Show that if the action is transitive, then the kernel of the associated permutation representation $\rho\!: G \to \Perm(S)$ is
+$$\ker(\rho) = \bigcap_{g \in G} g \, \Orb_G(s) \, g^{-1}.$$
+\end{enumerate}
+\end{problem}
 
 \end{document}
