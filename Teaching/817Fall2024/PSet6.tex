@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\GL}{GL}
+\def\norm{\mathrel{\unlhd}}
+%\DeclareMathOperator{\dim}{dim}
+
+\def\norm{\mathrel{\unlhd}}
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\DeclareMathOperator{\Z}{Z}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Fall 2024}
+\lhead{Introduction to Modern Algebra I}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 6 \\}
+	Due Wednesday, October 30
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Please do not refer to theorems by their number in the course notes, as that can change.
+
+
+\
+
+
+
+
+\begin{problem}
+Let $H$ be a subgroup of $G$.
+\begin{enumerate}[label=(1.\arabic*)]
+\item Fix $g \in G$. Prove that $gHg^{-1}=\{ghg^{-1} \mid h\in H\}$ is a subgroup of $G$ of the same order as $H$.
+
+\noindent
+Note: we are not assuming that $H$ is finite, so you must show that there is a bijection between $H$ and $gHg^{-1}$.
+
+\item Show that if $H$ is the unique subgroup of $G$ of order $|H|$ then $H \norm G$.
+\end{enumerate}
+\end{problem}
+
+
+
+
+\begin{problem}$\,$
+\begin{enumerate}[label=(2.\arabic*)]
+\item Let $A$ and $B$ be groups and let $f\!: A \to B$ be any homomorphism of groups. Prove that if $A$ is finite, then $|\operatorname{im}(f)|$ divides $|A|$.
+
+
+\item Let $G$ be a finite group, $H$ and $N$ subgroups of $G$ such that $|H|$ and $[G : N]$ are relatively prime. Prove that if $N \norm G$ then $H \subseteq N$.
+
+\end{enumerate}
+\end{problem}
+
+
+
+
+\begin{problem}
+Let $G$ be a finite group. Prove that if the order of $G$ is even, then $G$ must have an element of order $2$.
+
+\vspace{0.3em}
+
+\noindent
+You are NOT allowed to use Cauchy's theorem, in case we prove it before this problem set is due.
+
+\noindent
+Hint: Consider the set $S=\{g\in G\mid g\neq g^{-1}\}$, and show that $S$ has an even number of elements.
+\end{problem}
+
+
+\begin{problem}
+Let $G$ be a group of order $6$. Prove that $G$ is cyclic or $G\cong S_3$. 
+
+
+\noindent
+Hint:  By the previous problem, $G$ has a subgroup $H$ of order 2.  Consider the action of G on the left cosets of $H$.
+\end{problem}
+
+
+
+\begin{problem}
+Suppose that $G$ is an abelian group acting transitively and faithfully on a set $X$.  Prove that $|G|=|X|$.
+\end{problem}
+
+
+
+\end{document}
