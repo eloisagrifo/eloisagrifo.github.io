@@ -1,0 +1,155 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Syl}{Syl}
+\def\norm{\mathrel{\unlhd}}
+\newcommand{\sdp}{\rtimes}
+%\DeclareMathOperator{\dim}{dim}
+
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\DeclareMathOperator{\Z}{Z}
+\newcommand{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\Zc}{Z}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Stab}{Stab}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem{lemma}{Lemma}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Fall 2024}
+\lhead{Introduction to Modern Algebra I}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 9\\}
+	Due Wednesday, November 20
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Please do not refer to theorems by their number in the course notes, as that can change.
+
+
+\vspace{2em}
+
+
+
+\noindent
+The following lemma can be used without proof in this problem set:
+
+
+\begin{lemma}
+Let $K$ be a finite cyclic group and let $H$ be an arbitrary group. Suppose $\phi\!: K \to \Aut(H)$ and $\theta\!: K \to \Aut(H)$ are homomorphisms whose images are conjugate subgroups of $\Aut(H)$; that is, suppose there is $\sigma \in \Aut(H)$ such that $\sigma \phi(K) \sigma^{-1} = \theta(K)$. Then $H \sdp_\phi K \cong H \sdp_\theta K$. 
+\end{lemma}
+
+
+
+\begin{problem}$\,$
+\begin{enumerate}[label=(1.\arabic*), itemsep=0.1em]
+\item Show that there exists a nonabelian group of order $63$.
+
+\item Give a presentation for the group you found, with justification.	
+\end{enumerate}
+\end{problem}
+
+
+
+
+
+
+
+\begin{problem}
+	Let $G$ be a group of order $75 = 5^2 \cdot 3$ which contains an element of order $25$. Prove that $G$ is cyclic.
+\end{problem}
+
+
+
+\begin{problem}
+Let $G$ be a group of order $231 = 3\cdot 7\cdot 11$.  Prove that there is a unique Sylow $11$-subgroup of $G$, and that it is contained in $\operatorname{Z}(G)$.
+\end{problem}
+
+
+
+
+\begin{problem}
+Prove that there are precisely two groups of order $105 = 3 \cdot 5 \cdot 7$ up to isomorphism. You can use the following lemma without proof:
+
+\noindent
+Hint: here are a few facts you likely want to prove:
+
+\vspace{-0.5em}
+\begin{itemize}[itemsep=-0.2em]
+	\item There is either a unique Sylow $5$-subgroup or a unique Sylow $7$-subgroup of $G$. 
+
+\item $G$ has a cyclic subgroup of order $35$.
+\end{itemize}
+\end{problem}
+
+
+
+
+
+\end{document}
