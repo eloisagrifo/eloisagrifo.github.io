@@ -1,0 +1,182 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Syl}{Syl}
+\def\norm{\mathrel{\unlhd}}
+\newcommand{\sdp}{\rtimes}
+%\DeclareMathOperator{\dim}{dim}
+
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\DeclareMathOperator{\Z}{Z}
+\newcommand{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\Zc}{Z}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\ev}{ev}
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem{lemma}{Lemma}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL $\mid$ Fall 2024}
+\lhead{Introduction to Modern Algebra I}
+
+
+\begin{center}
+	{\LARGE Problem Set 10\\}
+	Due Wednesday, December 4
+\end{center}
+
+\vspace{0.5em}
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of ring or Lagrange's Theorem). Please do not refer to theorems by their number in the course notes, as that can change.
+
+
+\vspace{2em}
+
+
+
+
+\begin{problem}
+Let $R$ be a ring.	
+
+\begin{enumerate}[label=(1.\arabic*),itemsep=-0.1em]
+\vspace{-0.5em}
+\item Prove that an ideal $I$ of $R$ is proper if and only if $I$ contains no units.
+
+\item Assume $R$ is commutative.  Show that $R$ is a field if and only if its only ideals are $\{0\}$ and~$R$.
+
+\item Show that the only ideals of $R = \Mat_{2 \times 2}(\R)$ are $\{0\}$ and $R$, and yet $R$ is not a division ring.
+\end{enumerate}
+\end{problem}
+
+
+  
+
+
+\begin{problem}
+Let $a$ and $b$ be nonzero integers. Prove that $(a,b)=(d)$ where $d=\gcd(a,b)$.
+\end{problem}
+
+
+
+\begin{problem}
+Let $I$ and $J$ be ideals of a commutative ring $R$ with $1 \neq 0$. 
+You can use without proof that $I+J$, $I \cap J$, and $IJ$ are ideals of $R$.
+
+\begin{enumerate}[label=(3.\arabic*), itemsep=-0.1em]
+\vspace{-0.1em}
+\item Show that $IJ \subseteq I \cap J$.
+
+\item Give an example where $IJ \neq I \cap J$.
+
+\item Suppose that $I + J = R$. Show that $IJ = I \cap J$.
+
+
+\item Suppose $m$ and $n$ are distinct maximal ideals of a commutative ring $R$.  Prove that $mn=m\cap n$. 
+
+\noindent
+Hint: First consider $m + n$.
+
+
+\item Suppose that $I + J = R$. Show that there is a ring isomorphism $R/(I\cap J) \cong  R/I\times R/J$. 
+
+\end{enumerate}
+\end{problem}
+
+
+
+
+\begin{problem}
+	Let $I = (2,x)$ in $R = \ZZ[x]$.
+	
+\begin{enumerate}[label=(4.\arabic*), itemsep=-0.1em]
+\vspace{-0.5em}
+
+\item Show that $\mathfrak{m} = (2, x)$ is a maximal ideal.
+	
+\item Show that $(2,x)$ is not a principal ideal.
+\end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}
+Define $N\!: \C \to \R$ to be the square of the complex norm; that is,  
+$$N(a+bi) = (a+bi)(a-bi) = a^2+b^2.$$
+You can use without proof that $N$ satisfies $N(\alpha \beta)=N(\alpha)N(\beta)$ for any $\alpha, \beta \in \C$.
+
+\begin{enumerate}[label=(5.\arabic*),itemsep=0.1em]
+\vspace{-0.5em}
+\item Show that the only units of $\ZZ[i]$ are $\pm 1$ and $\pm i$.
+
+\item Prove that the only units of the ring $\ZZ[\sqrt{-5}]$ are $\pm 1$.
+  
+\item Are there units in $\ZZ[\sqrt{2}]$ other than $\pm 1$? 
+\end{enumerate}
+\end{problem}
+
+
+\end{document}
