@@ -306,3 +306,46 @@ div.horizontalgap {
 	align-text: center;
 	margin: 0 auto;
 }
+
+
+
+
+.outreach1 {
+  width: 50%;
+  vertical-align:middle;
+  margin-left: 40px;
+  align-items: center;
+  text-align: justify;
+  vertical-align:middle;
+}
+
+.outreach2 {
+  width: 25%;
+  padding: 30px;
+  margin-right: 20px;
+margin-left: 20px;
+  align-items: center;
+  text-align: justify;
+  vertical-align:middle;
+}
+
+
+
+.outreach {
+	margin:auto;
+  	text-align:center;
+  	vertical-align:middle;
+   	display: flex;
+    	align-items: center;
+	width: 1250;
+}
+
+
+
+.outreach3 {
+  width: 25%;
+  margin-right: 20px;
+  align-items: center;
+  text-align: justify;
+  vertical-align:middle;
+}
