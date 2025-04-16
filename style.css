@@ -349,3 +349,28 @@ margin-left: 20px;
   text-align: justify;
   vertical-align:middle;
 }
+
+
+@media screen and (max-width: 600px) {
+
+	.outreach1 {
+  		width: 100%;
+		align-items: center;
+}
+
+	.outreach2 {
+  		width: 100%;
+  		text-align: justify;
+		text-align-last: center;
+		padding: 20px;
+		text-size-adjust: none;
+}
+
+	.outreach {
+		text-align: justify;
+		display: flex;
+    		flex-wrap: wrap;
+		flex-direction: column;
+		width: 100%;
+}
+
