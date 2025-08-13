@@ -159,6 +159,15 @@ article {
 	width: 1250;
 }
 
+.row {
+	margin:auto;
+  	text-align:center;
+  	vertical-align:middle;
+   	display: flex;
+    	align-items: center;
+	width: 1250;
+}
+
 @media screen and (max-width: 600px) {
 
 	.profile1 {
