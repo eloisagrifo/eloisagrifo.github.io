@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{stmaryrd}
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+%\DeclareMathOperator{\dim}{dim}
+
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\DeclareMathOperator{\Z}{Z}
+\newcommand{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\pdim}{pdim}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Math 906}
+\chead{Problem Set 1}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 1 \\}
+	Due Wednesday, January 28, 2026
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of depth or Hilbert's Syzygy Theorem). Please do not refer to theorems by their number in the course notes, as that can change.
+
+
+\vspace{2em}
+
+
+\noindent
+Turn in {\bf 5 problems} of your choosing. Any problem you do not turn is now a known theorem.
+
+
+\begin{problem}
+Let $(R, \m, k)$ be a noetherian local ring and let $M$ be a finitely generated $R$-module.
+	Show that 
+	\[ \beta_{i}(M) = \dim_k \left(  \Tor^R_i(M, k) \right) = \dim_k \left( \Ext_R^i(M,k) \right).\]
+\end{problem}
+
+
+
+
+\begin{problem}
+	Let $R$ be a local domain and $M$ be a finitely generated $R$-module with $\pdim(M) < \infty$.
+	\begin{enumerate}[label=\alph*)]
+		\item Show that if $F$ is any finite free resolution for $M$ over $R$, then
+		\[\sum_{i} (-1)^i \rank (F_i) = \rank (M).\]
+		In particular,
+		\[\sum_{i} (-1)^i \beta_i(M) = \rank (M).\]
+		\item Show that if $I$ is a nonzero proper ideal in $R$ and $M$ is an $R/I$-module, then
+		\[ \sum_{i \geqslant 0} \beta_{2i}^R(M) = \sum_{i \geqslant 0}  \beta_{2i+1}^R(M) .\]
+	\end{enumerate}	
+\end{problem}
+
+
+
+
+\begin{problem}
+	Let $Q = k [ x,y,z, w ]$, $I = (xy,yz,zw)$, and $M = Q/I$. Assume $\pdim(M) = 2$.
+	
+	\begin{enumerate}[label=\alph*)]
+		\item Find the betti numbers of $M$ without finding the minimal free resolution for $M$.
+		\item Find the minimal free resolution for $M$, with proof.
+		\item Check your work with Macaulay2. Include your Macaulay2 code as a .m2 file with comments.
+	\end{enumerate}
+\end{problem}
+
+
+
+
+\end{document}
