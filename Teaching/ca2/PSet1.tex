@@ -46,6 +46,7 @@
 \DeclareMathOperator{\Z}{Z}
 \newcommand{\ZZ}{\mathbb{Z}}
 \DeclareMathOperator{\pdim}{pdim}
+\DeclareMathOperator{\kos}{kos}
 
 
 \title{}
@@ -88,7 +89,7 @@ I will post the .tex code for these problems for you to use if you wish to type 
 
 
 \noindent
-Turn in {\bf 5 problems} of your choosing. Any problem you do not turn is now a known theorem.
+Turn in {\bf 4 problems} of your choosing. Any problem you do not turn is now a known theorem.
 
 
 \begin{problem}
@@ -100,11 +101,9 @@ Let $(R, \m, k)$ be a noetherian local ring and let $M$ be a finitely generated 
 
 
 
-
-
 \begin{problem}
 	Let $R$ be a local/graded domain and $M$ be a finitely generated (graded) $R$-module.
-	\begin{enumerate}[label=\alph*)]
+	\begin{enumerate}[label=\alph*), itemsep=-0.1em]
 		\item Show that if $F$ is any finite free resolution for $M$ over $R$, then
 		\[\sum_{i} (-1)^i \rank (F_i) = \rank (M).\]
 		In particular,
@@ -116,21 +115,86 @@ Let $(R, \m, k)$ be a noetherian local ring and let $M$ be a finitely generated 
 
 
 
-
-
 \begin{problem}
 	Let $Q = k [ x,y,z, w ]$, $I = (xy,yz,zw)$, and $M = Q/I$. Assume $\pdim(M) = 2$.
 	
-	\begin{enumerate}[label=\alph*)]
+	\begin{enumerate}[label=\alph*), itemsep=-0.1em]
 		\item Find the betti numbers $\beta_i(M)$ without finding the minimal free resolution for $M$.
 		\item Find the minimal free resolution for $M$, with proof.
-		\item Find the betti table of $M$. 
+		\item Find the graded betti numbers and the betti table of $M$. 
 		\item Check your work with Macaulay2. Include your Macaulay2 code as a .m2 file with comments.
 	\end{enumerate}
 \end{problem}
 
 
+\begin{problem}
+	Let $R$ be a noetherian ring, $I = (x_1, \ldots, x_n)$ an ideal in $R$, and $M$ a finitely generated $R$-module. Show that if $IM = M$, then $\kos(\underline{x};M)$ is exact.
+\end{problem}
 
+
+\begin{problem}
+Let $(R, \m, k)$ be a regular local ring and $\underline{x} = x_1, \ldots, x_n \in R$ and $\underline{y} = y_1, \ldots, y_m \in R$ be such that $(\underline{x}) = (\underline{y}) = I$.
+
+\begin{enumerate}[label=\alph*), itemsep=-0.1em]
+	\item Show that if $\underline{x}$ and $\underline{y}$ are minimal generating sets for $I$, then $\kos(\underline{x})$ and $\kos(\underline{y})$ are isomorphic complexes.
+	\item Give an example showing that Koszul homology may depend on the choice of generators for $I$.
+\end{enumerate}
+\end{problem}
+
+
+
+\newpage
+
+\noindent
+\hspace{0.5em}
+\fbox{
+\begin{minipage}{0.95\textwidth}
+\vspace{0.2em}
+Let $k$ be a field and let $f_1, \ldots, f_n$ be monomials in $k[x_1, \ldots, x_d]$, minimally generating the ideal $I = (f_1, \ldots, f_n)$. For each subset $J \subseteq [n] := \{ 1, \ldots, n\}$, set
+\[ f_J = \lcm(f_j \mid j \in J). \]
+
+
+
+The {\bf Taylor resolution} of $R/I$ is the complex $(T,\partial)$ defined as follows:
+
+\begin{itemize}
+	\item In homological degree $s$, $T_s$ is the free $R$-module on basis $e_J$ with
+	\[ J = \{ j_1, \ldots, j_s \} \subseteq [n]\]
+	ranging over all the subsets of $[n]$ of size $|J|=s$.
+	\item For each basis element $e_J$ with $|J|=s$, the differential is defined as
+	\[ \partial(e_J) = \sum_{i=1}^s (-1)^{i+1} \frac{f_J}{f_{J \setminus \{ j_i\}}} e_{J \setminus \{ j_i \}}. \]
+\end{itemize}
+
+
+In her 1960s PhD thesis, Diana Taylor proved that this is a free resolution for $I$, which is now known as the {\bf Taylor resolution}. We will use her theorem without proof.
+
+\vspace{0.4em}
+
+Note: any monomial ideal has a unique minimal generating set consisting of monomials, so we can talk about the Taylor resolution of a monomial ideal $I$.
+\vspace{0.2em}
+\end{minipage}
+}
+ 
+ 
+\ 
+ 
+\begin{problem}
+Let $k$ be a field and let $f_1, \ldots, f_n$ be monomials in $k[x_1, \ldots, x_d]$, minimally generating the monomial ideal $I = (f_1, \ldots, f_n)$. 
+	\begin{enumerate}[label=\alph*), itemsep=-0.1em]
+		\item Find the Taylor resolution of $I = (xy,xz,yz) \subseteq k[x,y,z]$, clearly indicating each basis element.
+		\item Use the Taylor resolution of $I = (xy,xz,yz)$ to find the minimal resolution for $I$.
+		
+		\noindent
+		Note that the goal of this problem is to understand how to minimize a nonminimal free resolution.
+		
+		\item Let $I = (f_1, \ldots, f_n)$ be a squarefree monomial ideal. Show that the Taylor resolution of $I$ is minimal if and only if for each $i$ there exists a variable $y_i$ such that $y_i \mid f_i$ but $y_i \nmid f_j$ for all $j \neq i$.
+	\end{enumerate}
+\end{problem} 
+
+ 
+
+
+ 
 
 
 \end{document}
