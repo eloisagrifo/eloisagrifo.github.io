@@ -1,0 +1,128 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{stmaryrd}
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+%\DeclareMathOperator{\dim}{dim}
+\DeclareMathOperator{\HH}{H}
+
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+\DeclareMathOperator{\Z}{Z}
+\newcommand{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\pdim}{pdim}
+\DeclareMathOperator{\kos}{kos}
+\DeclareMathOperator{\embdim}{embdim}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Math 906}
+\chead{Problem Set 2}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 2 \\}
+	Due Wednesday, February 18, 2026
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of depth or Hilbert's Syzygy Theorem). Please do not refer to theorems by their number in the course notes, as that can change.
+
+
+\vspace{2em}
+
+
+\noindent
+Turn in {\bf 5 problems} of your choosing. Any problem you do not turn is now a known theorem.
+
+\
+
+\noindent
+\hspace{0.5em}
+\fbox{
+\begin{minipage}{0.95\textwidth}
+\vspace{0.2em}
+Let $R$ be a ring. The {\bf support} of a complex of $R$-modules $M$ is defined as
+\[ \Supp(M) \colonequals \{ P \in \Spec(R) \mid M_P \text{ is not exact} \}.\vspace{0.4em} \]
+
+\end{minipage}
+}
+
+
+
+\begin{problem}
+	Let $R$ be a ring and $I = (x_1, \ldots, x_n)$ for some $\underline{x} = x_1, \ldots, x_n \in R$.
+	\begin{enumerate}[label=\alph*), itemsep=-0.1em]
+		\item Show that for all complexes $M$ of $R$-modules,
+		\[ \Supp(M) = \bigcup_i \Supp(\HH_i(M)).\]
+		\item Show that $\Supp(\kos(\underline{x})) = \Supp(R/I)$.
+	\end{enumerate}
+\end{problem}
+
+
+
+ 
+
+
+ 
+
+
+\end{document}
