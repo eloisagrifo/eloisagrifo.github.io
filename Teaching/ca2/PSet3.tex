@@ -1,0 +1,136 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{stmaryrd}
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\coker}{coker}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+%\DeclareMathOperator{\dim}{dim}
+\DeclareMathOperator{\HH}{H}
+
+\DeclareMathOperator{\lcm}{lcm}
+
+\def\ra{\rightarrow}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ov}[1]{\overline{#1}}
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\pdim}{pdim}
+\DeclareMathOperator{\kos}{kos}
+\DeclareMathOperator{\embdim}{embdim}
+\DeclareMathOperator{\depth}{depth}
+\DeclareMathOperator{\grade}{grade}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Math 906}
+\chead{Problem Set 3}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Problem Set 3 \\}
+	Due Wednesday, March 9, 2026
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own final draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You cannot use any resources besides me, your classmates, and our course notes.
+
+
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. You may use any result  stated or proven in class or in a homework problem, provided you reference it appropriately by either stating the result or stating its name (e.g. the definition of depth or Hilbert's Syzygy Theorem). Please do not refer to theorems by their number in the course notes, as that can change.
+
+
+\vspace{2em}
+
+
+\noindent
+Turn in {\bf 5 problems} of your choosing. Any problem you do not turn is now a known theorem.
+
+\
+
+
+
+\begin{problem}
+	Let $R$ be a noetherian ring and let $P$ be a prime ideal containing an ideal $I$.
+	
+	\begin{enumerate}[label=\alph*), itemsep=-0.1em]
+		\item Show that $\grade(I_P) \geqslant \grade(I)$.
+		\item Give an example where $\grade(I_P) > \grade(I)$.
+	\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+		Let $R$ be a noetherian local ring and consider a short exact sequence of nonzero finitely generated $R$-modules
+	\[ \xymatrix{
+ 0 \arrow[r] & A \arrow[r] & B \arrow[r] & C \arrow[r] & 0.}
+\]
+Show that the following hold:
+\[\begin{aligned}
+ \depth(B) & \geqslant \min \lbrace \depth(A), \depth(C) \rbrace\\
+ \depth(A) & \geqslant \min \lbrace \depth(B), \depth(C)+1 \rbrace\\
+ \depth(C) & \geqslant	\min \lbrace \depth(B), \depth(A)-1 \rbrace.
+ \end{aligned}\]
+\end{problem}
+
+
+\begin{problem}
+Let $(R, \m, k)$ be a noetherian local ring and let $M$ be any finitely generated module of infinite projective dimension. Show that $\depth(\Omega_{i+1}(M)) \geqslant \depth(R)$ for all $i \geqslant \depth(R)$.
+\end{problem}
+
+
+\begin{problem}
+	Let $(R, \m, k)$ be a noetherian local ring. Show that $R$ is regular if and only if every finitely generated $R$-module with $\depth(M) = \depth(R)$ is free.
+\end{problem}
+
+
+\end{document}
