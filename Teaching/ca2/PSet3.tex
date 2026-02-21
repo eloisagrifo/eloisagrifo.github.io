@@ -108,6 +108,7 @@ Turn in {\bf 5 problems} of your choosing. Any problem you do not turn is now a 
 	\end{enumerate}
 \end{problem}
 
+\vfill
 
 \begin{problem}
 		Let $R$ be a noetherian local ring and consider a short exact sequence of nonzero finitely generated $R$-modules
@@ -122,6 +123,7 @@ Show that the following hold:
  \end{aligned}\]
 \end{problem}
 
+\vfill
 
 \begin{problem}
 Let $(R, \m, k)$ be a noetherian local ring and let $M$ be any finitely generated module of infinite projective dimension. Show that $\depth(\Omega_{i+1}(M)) \geqslant \depth(R)$ for all $i \geqslant \depth(R)$.
@@ -131,6 +133,34 @@ Let $(R, \m, k)$ be a noetherian local ring and let $M$ be any finitely generate
 \begin{problem}
 	Let $(R, \m, k)$ be a noetherian local ring. Show that $R$ is regular if and only if every finitely generated $R$-module with $\depth(M) = \depth(R)$ is free.
 \end{problem}
+
+
+
+\vfill
+
+
+\begin{problem}
+	Let $k$ be any field. Determine if each of the following rings are regular or Cohen-Macaulay, and carefully justify your answers.
+	\begin{enumerate}[label=\alph*), itemsep=-0.1em]
+		\item $A = k \llbracket x,y,z \rrbracket /(x+y+z)$.
+		\item $B = k \llbracket x,y,z,w \rrbracket/(x,y) \cap (z,w)$.
+		\item $C = k \llbracket x,y,z,w \rrbracket/(x^2,xy,yz,zw,w^2)$.
+	\end{enumerate}
+\end{problem}
+
+
+\newpage
+
+\begin{problem}
+	Determine if each of the following rings are regular or Cohen-Macaulay using Macaulay2. Do not loading any packages besides \texttt{Complexes}.
+	
+	\begin{enumerate}[label=\alph*), itemsep=-0.1em]
+		\item $R = \mathbb{F}_{101}[ X ]/I_2(X)$, where $X$ is a generic $2 \times 3$ matrix.
+		\item $S = \mathbb{F}_{73}[x^3, x^2y, xy^2, y^3]$.
+		\item $V = \mathbb{Q} \begin{bmatrix} ux & uy & uz \\ vx & vy & vz \end{bmatrix} \subseteq \frac{\mathbb{Q}[u,v,x,y,z]}{(x^3+y^3+z^3)}$.
+	\end{enumerate}
+\end{problem}
+ 
 
 
 \end{document}
