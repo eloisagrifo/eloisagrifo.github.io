@@ -93,7 +93,7 @@ I will post the .tex code for these problems for you to use if you wish to type 
 
 
 \noindent
-Turn in {\bf 5 problems} of your choosing. Any problem you do not turn is now a known theorem.
+Turn in {\bf 5 problems} of your choosing. Any problem you do not turn in is now a known theorem.
 
 \
 
@@ -130,8 +130,6 @@ Let $(R, \m, k)$ be a noetherian local ring and let $M$ be any finitely generate
 \end{problem}
 
 
-\vfill
-
 \begin{problem}
 	Let $(R, \m, k)$ be a noetherian local ring. Show that $R$ is regular if and only if every finitely generated $R$-module with $\depth(M) = \depth(R)$ is free.
 \end{problem}
@@ -154,7 +152,7 @@ Let $(R, \m, k)$ be a noetherian local ring and let $M$ be any finitely generate
 \newpage
 
 \begin{problem}
-	Determine if each of the following rings are regular or Cohen-Macaulay using Macaulay2. Do not loading any packages besides \texttt{Complexes}.
+	Determine if each of the following rings are regular or Cohen-Macaulay using Macaulay2. Do not load any packages besides possibly \texttt{Complexes}.
 	
 	\begin{enumerate}[label=\alph*), itemsep=-0.1em]
 		\item $R = \mathbb{F}_{101}[ X ]/I_2(X)$, where $X$ is a generic $2 \times 3$ matrix.
@@ -163,8 +161,7 @@ Let $(R, \m, k)$ be a noetherian local ring and let $M$ be any finitely generate
 	\end{enumerate}
 \end{problem}
  
- 
- 
+
 
 \begin{problem}
 	Let $(R, \m, k)$ be a noetherian local ring and let $I$ be a proper ideal of finite projective dimension.
@@ -176,6 +173,43 @@ Let $(R, \m, k)$ be a noetherian local ring and let $M$ be any finitely generate
 	We say $I$ is {\bf perfect} if $\grade(I) = \pdim(R/I)$.
 	\item Assume $R$ is Cohen-Macaulay. Show that $I$ is perfect if and only if $R/I$ is a Cohen-Macaulay $R$-module.	
 	\end{enumerate}
+\end{problem}
+
+
+	\begin{problem}
+	Let $k$ be any field and $R = k[x^2,xy,y^2]$.
+	
+	
+\vspace{-0.5em}
+	\begin{enumerate}[label=\alph*), itemsep=-0.1em]
+		\item Is $x^2, xy, y^2$ a regular sequence on $R$?
+		\item Is $R$ a Cohen-Macaulay ring? Give an answer with proof.
+		\item Use Macaulay2 to check whether $\Q[x^2,xy,y^2]$ is a Cohen-Macaulay ring.
+	\end{enumerate}
+\end{problem}
+
+\
+
+\noindent
+\fbox{\begin{minipage}{\textwidth}
+An $R$-module $F$ is \emph{faithfully flat} if $F$ is flat and $F \otimes_R M \neq 0$ for every nonzero $R$-module $M$.
+\end{minipage}} 
+
+\vspace{1em}
+
+\begin{problem}
+Show that the following are equivalent:	
+\begin{enumerate}[label=\arabic*), itemsep=-0.1em]
+		\item $F$ is faithfully flat.
+		\item $F$ is flat and for every proper ideal $I$, $IF \neq F$.
+		\item $F$ is flat and for every maximal ideal $\m$, $\m F \neq F$.
+		\item Given $R$-module homomorphisms $A \xrightarrow{f} B \xrightarrow{g} C$ with $gf=0$, is exact if and only if 
+		\[A \xrightarrow{f} B \xrightarrow{g} F \otimes_R C \text{ is exact if and only if } F \otimes_R A \xrightarrow{1 \otimes f} F \otimes_R B \xrightarrow{1 \otimes g} F \otimes_R C \text{ is exact.} \]
+	\end{enumerate}
+\end{problem}
+
+\begin{problem}
+	Show that any flat local homomorphism must be faithfully flat.
 \end{problem}
 
 
