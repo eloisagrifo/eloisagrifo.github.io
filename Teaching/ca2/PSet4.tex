@@ -51,6 +51,7 @@
 \DeclareMathOperator{\embdim}{embdim}
 \DeclareMathOperator{\depth}{depth}
 \DeclareMathOperator{\grade}{grade}
+\DeclareMathOperator{\injdim}{injdim}
 
 
 \title{}
@@ -103,18 +104,21 @@ Turn in {\bf 4 problems} of your choosing. Any problem you do not turn in is now
 Let $(R, \m)$ be a noetherian local ring. Show that if exists a nonzero finitely generated injective $R$-module $E$, then $\dim(R) = 0$. 
 \end{problem}
 
+\vfill
+
 
 \begin{problem}
 	Let $k$ be a field and $R = k \llbracket x \rrbracket$. Find the injective dimension and Bass numbers of $R$, and write down the modules in a minimal injective resolution for $R$.
 \end{problem}
 
-
+\vfill
 
 
 \begin{problem}
-	Let $(R, \m, k)$ be a noetherian local ring. Show that if $R$ is injective then $R \cong E(R/\m)$.
+	Let $(R, \m, k)$ be a noetherian ring. Show that if $R$ is injective then $R \cong E(R/\m)$.
 \end{problem}
 
+\vfill
 
 \begin{problem}
 	Let $(R, \m, k)$ be a noetherian local ring.
@@ -126,10 +130,12 @@ Let $(R, \m)$ be a noetherian local ring. Show that if exists a nonzero finitely
 	\end{enumerate}
 \end{problem}
 
+\vfill
 
 \begin{problem}
 	Let $k$ be a field.
 	
+	\vspace{-0.5em}
 	\begin{enumerate}[label=\alph*), itemsep=-0.1em]
 		\item Give an example (with proof) of a complete intersection ring $A$ that is not regular.
 		\item Show that
@@ -140,6 +146,28 @@ Let $(R, \m)$ be a noetherian local ring. Show that if exists a nonzero finitely
 	is Cohen-Macaulay but not Gorenstein.
 	\item Give an example (with proof) of a noetherian local ring $B$ that is not Cohen-Macaulay.
 	\end{enumerate}
+\end{problem}
+
+\vfill
+
+\begin{problem}
+	Let $(R, \m, k)$ be an artinian local ring. Show that $R$ is Gorenstein if and only if all proper ideals $I$ satisfy $(0 : (0 : I)) = I$.
+\end{problem}
+
+\vfill
+
+\begin{problem}
+	Let $R$ be a noetherian local ring. The following two facts will be used together in class, but the proofs are unrelated.
+
+\vspace{-0.5em}
+\begin{enumerate}[label=\alph*), itemsep=-0.1em]
+\item Show that for all proper ideals $I$, if $E$ is an injective $R$-module then $\Hom_R(R/I, E)$ is an injective module over $R/I$.
+\item Let
+\[ \xymatrix{
+ 0 \arrow[r] &	E_1 \arrow[r] & \cdots \arrow[r] & E_n \arrow[r] & 0
+}\]
+ be an exact sequence of $R$-modules with $n \geqslant 3$. Show that if $E_1, \ldots, E_{n-1}$ are all injective, then so is $E_n$.
+\end{enumerate}
 \end{problem}
 
 
