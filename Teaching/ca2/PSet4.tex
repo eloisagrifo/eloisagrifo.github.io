@@ -115,7 +115,7 @@ Let $(R, \m)$ be a noetherian local ring. Show that if exists a nonzero finitely
 
 
 \begin{problem}
-	Let $(R, \m, k)$ be a noetherian ring. Show that if $R$ is injective then $R \cong E(R/\m)$.
+	Let $(R, \m, k)$ be a noetherian local ring. Show that if $R$ is injective then $R \cong E(R/\m)$.
 \end{problem}
 
 \vfill
@@ -154,10 +154,10 @@ Let $(R, \m)$ be a noetherian local ring. Show that if exists a nonzero finitely
 	Let $(R, \m, k)$ be an artinian local ring. Show that $R$ is Gorenstein if and only if all proper ideals $I$ satisfy $(0 : (0 : I)) = I$.
 \end{problem}
 
-\vfill
+\newpage
 
 \begin{problem}
-	Let $R$ be a noetherian local ring. The following two facts will be used together in class, but the proofs are unrelated.
+	Let $R$ be a noetherian ring.
 
 \vspace{-0.5em}
 \begin{enumerate}[label=\alph*), itemsep=-0.1em]
@@ -167,6 +167,16 @@ Let $(R, \m)$ be a noetherian local ring. Show that if exists a nonzero finitely
  0 \arrow[r] &	E_1 \arrow[r] & \cdots \arrow[r] & E_n \arrow[r] & 0
 }\]
  be an exact sequence of $R$-modules with $n \geqslant 3$. Show that if $E_1, \ldots, E_{n-1}$ are all injective, then so is $E_n$.
+\item Fix a proper ideal $I$, $n \geqslant 1$, and let $M$ be an $R$-module such that $\Ext^i_R(R/I,M) =0$ for all $i \neq n$.
+Show that if
+\[ \xymatrix{
+ 0 \arrow[r] &	E^0 \arrow[r]^-{\partial^0} & E^1 \arrow[r] & \cdots
+}\]
+is an injective resolution for $M$, then
+\[ \xymatrix@C=1.3em{
+ 0 \arrow[r] & \coker (\partial^{n-1}_*) \arrow[rr]^-{\partial^n_*} && \Hom_R(R/I, E^{n+1}) \arrow[rr]^-{\partial^{n+1}_*} &&  \Hom_R(R/I, E^{n+2}) \arrow[rr]^-{\partial^{n+2}_*} && \cdots
+}\]
+is an injective resolution for $\Ext^n_R(R/I,M)$, where $\partial^i_* = \Hom_R(R/I, \partial^i)$.
 \end{enumerate}
 \end{problem}
 
