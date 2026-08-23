@@ -1,0 +1,142 @@
+\DocumentMetadata{
+  testphase   = latest,
+  lang        = en-US,
+  pdfstandard = {UA-2,A-4F},
+  tagging     = on,
+  tagging-setup = {math/setup=mathml-SE}
+}
+
+\documentclass[12pt]{article}
+
+\tagpdfsetup{math/alt/use=true}
+
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{stmaryrd}
+
+\usepackage[colorlinks=true,citecolor=teal,linkcolor=teal,urlcolor=teal]{hyperref}
+
+\hypersetup{
+  pdftitle={Math 871 Topology I -- Problem Set 1},
+  pdfauthor={Elo\'isa Grifo},
+  pdfsubject={Math 871 Fall 2026},
+  pdfdisplaydoctitle=true
+}
+
+\ExplSyntaxOn
+\pdfmanagement_add:nnn
+  {Info}
+  {Title}
+  {(Problem Set 1)}
+\pdfmanagement_add:nnn
+  {Info}
+  {Author}
+  {(Eloisa Grifo)}
+\ExplSyntaxOff
+
+
+
+
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+%the next line is needed to solve a very annoying issue
+\tikzcdset{ampersand replacement=\&}
+
+%moves the footnote to the bottom of the page
+\usepackage[bottom]{footmisc}
+
+
+%for list spacing under the tagging project's links
+\ExplSyntaxOn
+\keys_define:nn { template/list/std }
+  {
+    roomy .code:n =
+      {
+        \setlength{\itemsep}{1em} % space between items
+        \setlength{\topsep}{6pt}  % space above/below the list
+        \setlength{\parsep}{0pt}  % space between paragraphs within an item
+      }
+  }
+\ExplSyntaxOff
+
+
+\newtheorem{definition}{Definition}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathcal{T}}
+
+\title{Math 871 Topology I\\[-0.1em]
+\large Problem Set 1}
+\author{}
+\date{}
+
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \begin{center}
+    {\large\bfseries \@title\par}
+  \end{center}
+}
+\makeatother
+
+
+
+\begin{document}
+\maketitle
+
+
+	
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Math 871}
+\chead{Worksheet 1}
+
+
+
+
+
+{\bf Instructions:}
+You will submit your work on gradescope as a pdf. If you choose to handwrite your work, please write neatly, and make sure everything is clearly legible in the scan.
+As a matter of good proof writing style, use complete sentences and correct grammar. You may use any result proven in class or in a homework problem, provided you reference it appropriately by either stating the result or its name. Please do not refer to theorems by their number in the course notes, as that can change.
+
+You are strongly encouraged to work with your classmates and to discuss the problems with me. However, you should write your own final solutions.
+Never submit something for grading that you do not completely understand. 
+See the course syllabus for the AI policy for this class.
+	
+\vspace{2em}
+
+\begin{enumerate}[roomy]
+
+
+\item Let $X$ be a set. Set
+\[ \T = \{U \subseteq X \mid X \setminus U \text{ is infinite}\} \cup \{\emptyset, X\}.\] 
+Show that $\T$ is a topology on $X$ if and only if $X$ is finite.	
+	
+
+\item Prove or disprove: is
+	\[ \T = \{(-\infty, a] \mid a \in \R\} \cup \{\emptyset, \R\}\]
+	a topology on $\R$?
+	
+
+\item Let $\{ \T_{\alpha} \}_{\alpha}$ be a collection of topologies on a set $X$.
+
+\begin{enumerate}
+\item Prove or disprove: is $\displaystyle\bigcap_\alpha \T_{\alpha}$ always a topology on $X$?
+\item Prove or disprove: is $\displaystyle\bigcup_\alpha \T_{\alpha}$ always a topology on $X$?
+
+\noindent
+Either show that it is always a topology or given an example where it is not, with proof.
+\end{enumerate}
+\end{enumerate}
+
+
+\end{document}
