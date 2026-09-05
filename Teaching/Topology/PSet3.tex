@@ -1,0 +1,144 @@
+\DocumentMetadata{
+  testphase   = latest,
+  lang        = en-US,
+  pdfstandard = {UA-2,A-4F},
+  tagging     = on,
+  tagging-setup = {math/setup=mathml-SE}
+}
+
+\documentclass[12pt]{article}
+
+\tagpdfsetup{math/alt/use=true}
+
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{mathrsfs}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{stmaryrd}
+
+\usepackage[colorlinks=true,citecolor=teal,linkcolor=teal,urlcolor=teal]{hyperref}
+
+\hypersetup{
+  pdftitle={Math 871 Topology I -- Problem Set 3},
+  pdfauthor={Elo\'isa Grifo},
+  pdfsubject={Math 871 Fall 2026},
+  pdfdisplaydoctitle=true
+}
+
+\ExplSyntaxOn
+\pdfmanagement_add:nnn
+  {Info}
+  {Title}
+  {(Problem Set 3)}
+\pdfmanagement_add:nnn
+  {Info}
+  {Author}
+  {(Eloisa Grifo)}
+\ExplSyntaxOff
+
+
+
+
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+%the next line is needed to solve a very annoying issue
+\tikzcdset{ampersand replacement=\&}
+
+%moves the footnote to the bottom of the page
+\usepackage[bottom]{footmisc}
+
+
+%for list spacing under the tagging project's links
+\ExplSyntaxOn
+\keys_define:nn { template/list/std }
+  {
+    roomy .code:n =
+      {
+        \setlength{\itemsep}{1em} % space between items
+        \setlength{\topsep}{6pt}  % space above/below the list
+        \setlength{\parsep}{0pt}  % space between paragraphs within an item
+      }
+  }
+\ExplSyntaxOff
+
+
+\newtheorem{definition}{Definition}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\B}{\mathscr{B}}
+
+\title{Math 871 Topology I\\[-0.1em]
+\large Problem Set 3}
+\author{}
+\date{}
+
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \begin{center}
+    {\large\bfseries \@title\par}
+  \end{center}
+}
+\makeatother
+
+
+
+\begin{document}
+\maketitle
+
+
+	
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Math 871}
+\chead{Problem Set 3}
+
+
+
+
+
+{\bf Instructions:}
+You will submit your work on gradescope as a pdf. If you choose to handwrite your work, please write neatly, and make sure everything is clearly legible in the scan.
+As a matter of good proof writing style, use complete sentences and correct grammar. You may use any result proven in class or in a homework problem, provided you reference it appropriately by either stating the result or its name. Please do not refer to theorems by their number in the course notes, as that can change.
+
+You are strongly encouraged to work with your classmates and to discuss the problems with me. However, you should write your own final solutions.
+Never submit something for grading that you do not completely understand. 
+See the course syllabus for the AI policy for this class.
+	
+\vspace{2em}
+
+\begin{enumerate}[roomy]
+
+
+\item Consider the integers $\Z$ equipped with the finite complement topology. Compare the product topology on $\Z \times \Z$ with the finite complement topology on $\Z \times \Z$: determine if they are equal, and if not, if one is finer than the other, or if they are incomparable.
+
+
+
+\item Consider the usual order on $\N$. Show that the dictionary topology on $\N \times \N$ is not the discrete topology.
+
+
+\item Let $(X, \T_X)$ and $(Y, \T_Y)$ be topological spaces. 
+
+
+\begin{enumerate}
+\item Show that if $A$ is closed in $X$ and $B$ is closed in $Y$, then $A \times B$ is closed in $X \times Y$.
+
+
+\item Show that if $A$ and $B$ are nonempty, and $A \times B$ is closed in $X \times Y$, then $A$ is closed in $X$.
+
+\noindent
+Note that analogously, we can conclude that $B$ is closed in $Y$.
+\end{enumerate} 
+
+
+\end{enumerate}
+\end{document}
