@@ -1,0 +1,203 @@
+\DocumentMetadata{
+  testphase   = latest,
+  lang        = en-US,
+  pdfstandard = {UA-2,A-4F},
+  tagging     = on,
+  tagging-setup = {math/setup=mathml-SE}
+}
+
+\documentclass[12pt]{article}
+
+\tagpdfsetup{math/alt/use=true}
+
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{mathrsfs}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{stmaryrd}
+
+\usepackage[colorlinks=true,citecolor=teal,linkcolor=teal,urlcolor=teal]{hyperref}
+
+\hypersetup{
+  pdftitle={Math 871 Topology I -- Problem Set 7},
+  pdfauthor={Elo\'isa Grifo},
+  pdfsubject={Math 871 Fall 2026},
+  pdfdisplaydoctitle=true
+}
+
+\ExplSyntaxOn
+\pdfmanagement_add:nnn
+  {Info}
+  {Title}
+  {(Problem Set 7)}
+\pdfmanagement_add:nnn
+  {Info}
+  {Author}
+  {(Eloisa Grifo)}
+\ExplSyntaxOff
+
+
+
+
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+%the next line is needed to solve a very annoying issue
+\tikzcdset{ampersand replacement=\&}
+
+
+%for list spacing under the tagging project's links
+\ExplSyntaxOn
+\keys_define:nn { template/list/std }
+  {
+    roomy .code:n =
+      {
+        \setlength{\itemsep}{1em} % space between items
+        \setlength{\topsep}{6pt}  % space above/below the list
+        \setlength{\parsep}{0pt}  % space between paragraphs within an item
+      }
+  }
+\ExplSyntaxOff
+
+
+\newtheorem{definition}{Definition}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\B}{\mathscr{B}}
+\newcommand{\inte}{^{\text{int}}}
+
+\DeclareMathOperator{\Bd}{Bd}
+
+
+\title{Math 871 Topology I \\ Problem Set 7}
+\author{}
+\date{}
+
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \begin{center}
+    {\large\bfseries \@title\par}
+  \end{center}
+}
+\makeatother
+
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+
+
+%this allows me to nest solutions inside the enumerate
+\ExplSyntaxOn
+\DeclareInstanceCopy{block}{thm-plain-3}{thm-plain-2}
+\ExplSyntaxOff
+
+\begin{document}
+\maketitle
+
+
+	
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Math 871}
+\chead{Problem Set 7}
+
+
+
+
+\begin{enumerate}[roomy]
+
+\item The topological space given by $\R$ under the standard topology is a topological field: the following operations are all continuous when we view $\R \times \R$ with the product topology:
+\[ 
+\begin{tikzcd}[row sep = 0.05em, column sep = 0.8em]
+\mu \colon \R \times \R \arrow[r] \& \R 
+\&
+\mathcal{s} \colon \R \times \R \arrow[r] \& \R
+\&
+a \colon \R \arrow[r] \& \R
+\&
+i \colon \R \setminus \{ 0 \} \arrow[r] \& \R
+\\
+(x, y) \arrow[r, mapsto] \& xy
+\& (x, y) \arrow[r, mapsto] \& x+y 
+\& x \arrow[r, mapsto] \& -x 
+\& x \arrow[r, mapsto] \& \frac{1}{x}.
+\end{tikzcd}
+\]
+You may assume all four of these functions are continuous without proof.
+
+\begin{enumerate}
+	\item Let $X$ be any topological space and $f,g \colon X \longrightarrow \R$ be continuous functions.
+ Show that the following functions are all continuous:
+\[ 
+\begin{tikzcd}[row sep = 0.05em, column sep = 0.6em]
+f \cdot g \colon X \arrow[r] \& \R 
+\&
+f + g \colon X \arrow[r] \& \R
+\&
+-f \colon X \arrow[r] \& \R
+\\
+x \arrow[r, mapsto] \& f(x)g(x) 
+\& x \arrow[r, mapsto] \& f(x)+g(x) 
+\& x \arrow[r, mapsto] \& -f(x).
+\end{tikzcd}
+\]
+Moreover, show that if $g(x) \neq 0$ for all $x \in X$, then the following is continuous:
+\[ \begin{tikzcd}[row sep = 0.1em]
+ 	\frac{1}{g} \colon X \arrow[r] \& \R \setminus \{0\} \\
+ 	x \arrow[r, mapsto] \& \frac{1}{g(x)}.
+\end{tikzcd}\]
+
+\item Show that the following is a closed subset of $\R \times \R$:
+\[ C = \left\lbrace \left( x, \frac{1}{x} \right) \mid x \in X \right\rbrace .\]
+\end{enumerate}
+
+
+
+
+\item A continuous map between topological spaces $f \colon X \to Y$ is 
+\[ 
+\begin{aligned}
+\text{an {\bf open map} if } & \hspace{2em} U \text{ open in } X \implies f(U) \text{ open in } Y	 \\
+\text{a {\bf closed map} if } & \hspace{2em} C \text{ closed in } X \implies f(C) \text{ closed in } Y.
+\end{aligned}
+\]
+
+\begin{enumerate}
+
+\item Let $f \colon X \longrightarrow Y$ be a function and $\B$ a basis for the topology on $X$. Show that if $f(U)$ is open for all $U \in \B$, then
+then $f$ is an open map.
+
+\item Prove that if $\{ X_\alpha \}_{\alpha \in I}$ is any collection of topological spaces, then under the product topology the projection maps
+\[ \pi_\beta \colon \prod_{\alpha \in I} X_\alpha \to X_\beta\] 
+are open maps for all $\beta \in I$.
+  
+ 
+\item Give an example showing that projection maps need not be closed.
+
+\noindent
+Hint: You can find a counterexample using $\pi_1 \colon \R \times \R \to \R$.
+\end{enumerate}
+
+
+
+\item Let $X$ and $Y$ be topological spaces and let $f \colon X \longrightarrow Y$ be any function.
+
+\begin{enumerate}
+	\item Show that if $f$ is continuous, then $f$ sends convergent sequences to convergent sequences, meaning that for every sequence $(x_n)$ in $X$ converging to $x$, the sequence $(f(x_n))$ converges to $f(x)$.
+
+\item We say $X$ is {\bf Fr\'echet} if for every subset $S \subseteq X$ and every $s \in \overline{S}$, there exists a sequence $(s_n)$ of points in $S$ converging to $s$. Show that if $X$ is Fr\'echet and $f$ sends convergent sequences to convergent sequences, then $f$ is continuous.
+\end{enumerate}
+
+
+
+\end{enumerate}
+\end{document}
