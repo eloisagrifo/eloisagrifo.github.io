@@ -1,0 +1,144 @@
+\DocumentMetadata{
+  testphase   = latest,
+  lang        = en-US,
+  pdfstandard = {UA-2,A-4F},
+  tagging     = on,
+  tagging-setup = {math/setup=mathml-SE}
+}
+
+\documentclass[12pt]{article}
+
+\tagpdfsetup{math/alt/use=true}
+
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{mathrsfs}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{stmaryrd}
+
+\usepackage[colorlinks=true,citecolor=teal,linkcolor=teal,urlcolor=teal]{hyperref}
+
+\hypersetup{
+  pdftitle={Math 871 Topology I -- Problem Set 8},
+  pdfauthor={Elo\'isa Grifo},
+  pdfsubject={Math 871 Fall 2026},
+  pdfdisplaydoctitle=true
+}
+
+\ExplSyntaxOn
+\pdfmanagement_add:nnn
+  {Info}
+  {Title}
+  {(Problem Set 8 solutions)}
+\pdfmanagement_add:nnn
+  {Info}
+  {Author}
+  {(Eloisa Grifo)}
+\ExplSyntaxOff
+
+
+
+
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+%the next line is needed to solve a very annoying issue
+\tikzcdset{ampersand replacement=\&}
+
+
+%for list spacing under the tagging project's links
+\ExplSyntaxOn
+\keys_define:nn { template/list/std }
+  {
+    roomy .code:n =
+      {
+        \setlength{\itemsep}{1em} % space between items
+        \setlength{\topsep}{6pt}  % space above/below the list
+        \setlength{\parsep}{0pt}  % space between paragraphs within an item
+      }
+  }
+\ExplSyntaxOff
+
+
+\newtheorem{definition}{Definition}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\B}{\mathscr{B}}
+\newcommand{\inte}{^{\text{int}}}
+\newcommand{\e}{\varepsilon}
+
+\DeclareMathOperator{\Bd}{Bd}
+
+
+\title{Math 871 Topology I \\ Problem Set 8}
+\author{}
+\date{}
+
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \begin{center}
+    {\large\bfseries \@title\par}
+  \end{center}
+}
+\makeatother
+
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+
+
+%this allows me to nest solutions inside the enumerate
+\ExplSyntaxOn
+\DeclareInstanceCopy{block}{thm-plain-3}{thm-plain-2}
+\ExplSyntaxOff
+
+\begin{document}
+\maketitle
+
+
+	
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Math 871}
+\chead{Problem Set 8}
+
+
+
+\begin{enumerate}[roomy]
+
+\item Consider the box topology on $\R^{\omega}$, and let $A$ be the subset of $\R^{\omega}$ consisting of all the sequences whose terms are strictly positive:
+\[A = \{ x = (x_n)_{n \geqslant 1} \in \R^{\omega} \mid x_n > 0 \text{ for all } n \geqslant 1 \}.\]
+
+\begin{enumerate}
+\item Let $z = (0)_{n \geqslant 1} \in \R^{\omega}$ be the constant sequence equal to zero. Show that $z \in \overline{A}$.
+
+\item Show that there is no sequence of elements of $A$ converging to $z$.
+
+Hint: given any sequence $(a_n)_{n \geqslant 1}$ of elements of $A$, let
+\[ a_n = (x_{n,1},x_{n,2},x_{n,3}, \ldots ) = (x_{n,i})_{i \geqslant 1}\]
+and consider the open set
+\[ U = \prod_{n =1}^\infty (-x_{n,n}, x_{n,n}).\]
+
+\item Conclude that $\R^{\omega}$ with the box topology is not metrizable.
+\end{enumerate}
+
+
+%We showed in class that the box topology on $\R^I$ is always finer than the uniform topology for any set $I$. In this next problem, we will show that the box topology is strictly finer than the uniform topology on $\R^{\omega}$.
+
+\item Let $\overline{\rho}$ be the uniform metric on $\R^{\omega}$.
+Given $x = (x_n)_{n \geqslant 1} \in \R^{\omega}$ and $0 < \e \leqslant 1$, let
+\[ U(x, \e) = \prod_{n = 1}^\infty (x_n-\e, x_n + \e).\]
+Let $z = (0)_{n \geqslant 1} \in \R^{\omega}$ be the constant sequence equal to zero. 
+Show that $U(z,1)$ is not open in the uniform topology.
+
+\end{enumerate}
+\end{document}
