@@ -1,0 +1,142 @@
+\DocumentMetadata{
+  testphase   = latest,
+  lang        = en-US,
+  pdfstandard = {UA-2,A-4F},
+  tagging     = on,
+  tagging-setup = {math/setup=mathml-SE}
+}
+
+\documentclass[12pt]{article}
+
+\tagpdfsetup{math/alt/use=true}
+
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{mathrsfs}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{stmaryrd}
+
+\usepackage[colorlinks=true,citecolor=teal,linkcolor=teal,urlcolor=teal]{hyperref}
+
+\hypersetup{
+  pdftitle={Math 871 Topology I -- Problem Set 9},
+  pdfauthor={Elo\'isa Grifo},
+  pdfsubject={Math 871 Fall 2026},
+  pdfdisplaydoctitle=true
+}
+
+\ExplSyntaxOn
+\pdfmanagement_add:nnn
+  {Info}
+  {Title}
+  {(Problem Set 8 solutions)}
+\pdfmanagement_add:nnn
+  {Info}
+  {Author}
+  {(Eloisa Grifo)}
+\ExplSyntaxOff
+
+
+
+
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+%the next line is needed to solve a very annoying issue
+\tikzcdset{ampersand replacement=\&}
+
+
+%for list spacing under the tagging project's links
+\ExplSyntaxOn
+\keys_define:nn { template/list/std }
+  {
+    roomy .code:n =
+      {
+        \setlength{\itemsep}{1em} % space between items
+        \setlength{\topsep}{6pt}  % space above/below the list
+        \setlength{\parsep}{0pt}  % space between paragraphs within an item
+      }
+  }
+\ExplSyntaxOff
+
+
+\newtheorem{definition}{Definition}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\B}{\mathscr{B}}
+\newcommand{\inte}{^{\text{int}}}
+\newcommand{\e}{\varepsilon}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Bd}{Bd}
+
+
+\title{Math 871 Topology I \\ Problem Set 9}
+\author{}
+\date{}
+
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \begin{center}
+    {\large\bfseries \@title\par}
+  \end{center}
+}
+\makeatother
+
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+
+
+%this allows me to nest solutions inside the enumerate
+\ExplSyntaxOn
+\DeclareInstanceCopy{block}{thm-plain-3}{thm-plain-2}
+\ExplSyntaxOff
+
+\begin{document}
+\maketitle
+
+
+	
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Math 871}
+\chead{Problem Set 9}
+
+
+
+\begin{enumerate}[roomy]
+
+\item Let $p \colon X \longrightarrow Y$ be a continuous map between topological spaces.
+
+\begin{enumerate}
+\item Show that if there is a continuous map $f \colon Y \rightarrow X$ such that $p \circ f = \id_Y$, then $p$ is a quotient map.
+
+\item Prove that every retraction is a quotient map. 
+\end{enumerate}
+
+
+\item Let $X = \R$ with the standard topology and define an equivalence relation on $X$ by
+\[ x \sim y \iff x-y \in \Q.\]
+Let $Y = X/\sim$ be the quotient of $X$ by $\sim$. Show that $Y$ is not Hausdorff.
+
+\noindent
+Hint: what is the topology on $Y$?
+
+
+\item Consider the unit disk $D^2$, the subspace of $\R^2$ under the standard topology given by
+\[ D^2 = \{ (x,y) \in \R^2 \mid x^2 + y^2 \leqslant 1 \}. \]
+Define an equivalence relation $\sim$ on $D^2$ by
+\[ (x_1, y_1) \sim (x_2, y_2) \iff x_1=x_2.\]
+Show that $D^2/\sim$ is homeomorphic to the interval $[-1, 1]$ under the standard topology.
+
+\end{enumerate}
+\end{document}
