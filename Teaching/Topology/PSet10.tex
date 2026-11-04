@@ -1,0 +1,129 @@
+\DocumentMetadata{
+  testphase   = latest,
+  lang        = en-US,
+  pdfstandard = {UA-2,A-4F},
+  tagging     = on,
+  tagging-setup = {math/setup=mathml-SE}
+}
+
+\documentclass[12pt]{article}
+
+\tagpdfsetup{math/alt/use=true}
+
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{mathrsfs}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{stmaryrd}
+
+\usepackage[colorlinks=true,citecolor=teal,linkcolor=teal,urlcolor=teal]{hyperref}
+
+\hypersetup{
+  pdftitle={Math 871 Topology I -- Problem Set 10},
+  pdfauthor={Elo\'isa Grifo},
+  pdfsubject={Math 871 Fall 2026},
+  pdfdisplaydoctitle=true
+}
+
+\ExplSyntaxOn
+\pdfmanagement_add:nnn
+  {Info}
+  {Title}
+  {(Problem Set 10 solutions)}
+\pdfmanagement_add:nnn
+  {Info}
+  {Author}
+  {(Eloisa Grifo)}
+\ExplSyntaxOff
+
+
+
+
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+%the next line is needed to solve a very annoying issue
+\tikzcdset{ampersand replacement=\&}
+
+
+%for list spacing under the tagging project's links
+\ExplSyntaxOn
+\keys_define:nn { template/list/std }
+  {
+    roomy .code:n =
+      {
+        \setlength{\itemsep}{1em} % space between items
+        \setlength{\topsep}{6pt}  % space above/below the list
+        \setlength{\parsep}{0pt}  % space between paragraphs within an item
+      }
+  }
+\ExplSyntaxOff
+
+
+\newtheorem{definition}{Definition}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\B}{\mathscr{B}}
+\newcommand{\inte}{^{\text{int}}}
+\newcommand{\e}{\varepsilon}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Bd}{Bd}
+
+
+\title{Math 871 Topology I \\ Problem Set 10}
+\author{}
+\date{}
+
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \begin{center}
+    {\large\bfseries \@title\par}
+  \end{center}
+}
+\makeatother
+
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+
+
+%this allows me to nest solutions inside the enumerate
+\ExplSyntaxOn
+\DeclareInstanceCopy{block}{thm-plain-3}{thm-plain-2}
+\ExplSyntaxOff
+
+\begin{document}
+\maketitle
+
+
+	
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Math 871}
+\chead{Problem Set 10}
+
+
+
+\begin{enumerate}[roomy]
+\item Let $A$ and $B$ nonempty open subsets of a topological space $Z$. 
+Prove that if both $A \cap B$ and $A \cup B$ are connected, then each of $A$ and $B$ is connected.
+
+\item Let $X$ be a connected space and endow $\R$ with the standard topology and $[0,1] \subseteq \R$ with the subspace topology.
+Let $f,g \colon X \longrightarrow [0,1]$ be continuous functions and assume that $f$ is surjective. 
+Show that there exists $x \in X$ with $f(x) = g(x)$.
+
+
+\item Let $X$ and $Y$ be topological spaces and $f \colon X \longrightarrow Y$ a continuous function. Define an equivalence relation on $X$ by $x_1 \sim x_2$ if and only if $f(x_1) = f(x_2)$. 
+Show that if $X$ is connected and $Y$ is Hausdorff, then the quotient space $X/\sim$ with the quotient topology is both connected and Hausdorff.
+
+\end{enumerate}
+\end{document}
