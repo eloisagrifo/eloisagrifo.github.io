@@ -1,0 +1,133 @@
+\DocumentMetadata{
+  testphase   = latest,
+  lang        = en-US,
+  pdfstandard = {UA-2,A-4F},
+  tagging     = on,
+  tagging-setup = {math/setup=mathml-SE}
+}
+
+\documentclass[12pt]{article}
+
+\tagpdfsetup{math/alt/use=true}
+
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{mathrsfs}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{stmaryrd}
+
+\usepackage[colorlinks=true,citecolor=teal,linkcolor=teal,urlcolor=teal]{hyperref}
+
+\hypersetup{
+  pdftitle={Math 871 Topology I -- Problem Set 11},
+  pdfauthor={Elo\'isa Grifo},
+  pdfsubject={Math 871 Fall 2026},
+  pdfdisplaydoctitle=true
+}
+
+\ExplSyntaxOn
+\pdfmanagement_add:nnn
+  {Info}
+  {Title}
+  {(Problem Set 11 solutions)}
+\pdfmanagement_add:nnn
+  {Info}
+  {Author}
+  {(Eloisa Grifo)}
+\ExplSyntaxOff
+
+
+%moves the footnote to the bottom of the page
+\usepackage[bottom]{footmisc}
+
+
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+%the next line is needed to solve a very annoying issue
+\tikzcdset{ampersand replacement=\&}
+
+
+%for list spacing under the tagging project's links
+\ExplSyntaxOn
+\keys_define:nn { template/list/std }
+  {
+    roomy .code:n =
+      {
+        \setlength{\itemsep}{1em} % space between items
+        \setlength{\topsep}{6pt}  % space above/below the list
+        \setlength{\parsep}{0pt}  % space between paragraphs within an item
+      }
+  }
+\ExplSyntaxOff
+
+
+\newtheorem{definition}{Definition}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\B}{\mathscr{B}}
+\newcommand{\inte}{^{\text{int}}}
+\newcommand{\e}{\varepsilon}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Bd}{Bd}
+
+
+\title{Math 871 Topology I \\ Problem Set 11}
+\author{}
+\date{}
+
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \begin{center}
+    {\large\bfseries \@title\par}
+  \end{center}
+}
+\makeatother
+
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+
+
+%this allows me to nest solutions inside the enumerate
+\ExplSyntaxOn
+\DeclareInstanceCopy{block}{thm-plain-3}{thm-plain-2}
+\ExplSyntaxOff
+
+\begin{document}
+\maketitle
+
+
+	
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\rhead{UNL}
+\lhead{Math 871}
+\chead{Problem Set 11}
+
+
+
+\begin{enumerate}[roomy]
+\item Let $\T_1$ and $\T_2$ be topologies on $X$ such that both $(X, \T_1)$ and $(X, \T_2)$ are compact Hausdorff spaces. Show that if there exists $U \in \T_1$ such that $U \notin \T_2$, then there exists $V \in \T_2$ such that $V \notin \T_1$.
+
+
+\item Let $A$ and $B$ be disjoint compact subspaces of the Hausdorff space $X$.
+
+\begin{enumerate}
+\item Show that for each $a \in A$ there exist disjoint open sets $U$ and $V$ such that $a \in U$ and $B \subseteq V$.
+
+\item Show that there exist disjoint open sets $U$ and $V$ such that $A \subseteq U$ and $B \subseteq V$. 
+\end{enumerate}
+
+
+
+\end{enumerate}
+\end{document}
